@@ -1,0 +1,217 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  color: #000;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 50px;
+  background: #fff;
+}
+
+.logo {
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.logo i {
+  margin-right: 8px;
+}
+
+nav a {
+  margin: 0 15px;
+  text-decoration: none;
+  font-weight: 500;
+  color: #000;
+}
+
+nav a:hover {
+  color: #ff9800;
+}
+
+.contact {
+  display: flex;
+  align-items: center;
+}
+
+.contact i {
+  font-size: 20px;
+  margin-right: 8px;
+  color: #673ab7;
+}
+
+.contact span {
+  font-size: 12px;
+}
+
+.contact strong {
+  font-size: 14px;
+}
+
+/* ---------- Hero background + tread + blurred car ---------- */
+
+.hero {
+  position: relative;
+  margin: 20px 50px;
+  border-radius: 28px;
+  overflow: visible; /* allow the blurred car to extend a bit */
+  padding: 40px;
+  /* This outer background is subtle so the inner panel color is vivid */
+  background: transparent;
+}
+
+/* inner rounded panel that matches screenshot */
+.hero-inner {
+  position: relative;
+  z-index: 5; /* content above the decorative layers */
+  background: linear-gradient(90deg, #5b2fe3 0%, #5f3bd8 35%, #4b2bd4 100%);
+  border-radius: 28px;
+  color: #fff;
+  padding: 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 360px;
+  box-shadow:
+    inset 0 10px 30px rgba(0,0,0,0.12),   /* inner depth */
+    0 6px 30px rgba(0,0,0,0.08);          /* subtle outer shadow */
+}
+
+/* left column text */
+.hero-text {
+  max-width: 55%;
+  z-index: 6;
+}
+
+.hero-text h1 {
+  font-size: 56px;
+  line-height: 1.02;
+  font-weight: 800;
+  margin-bottom: 20px;
+  color: #ffffff;
+  text-shadow: 0 4px 20px rgba(0,0,0,0.25);
+}
+
+.hero-text p {
+  color: rgba(255,255,255,0.9);
+  max-width: 70%;
+  margin-bottom: 22px;
+}
+
+/* booking card stays on top, right side */
+.booking-form {
+  z-index: 10;
+  width: 340px;
+  background: #fff;
+  border-radius: 16px;
+  padding: 26px;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.12);
+  color: #111;
+}
+
+/* Blurred car image — placed absolutely to the right and slightly behind inner panel */
+.hero-car {
+  position: absolute;
+  right: 6%;
+  top: 18%;
+  z-index: 2; /* behind content but above the purple panel base so it blends */
+  width: 46%;
+  max-width: 520px;
+  height: auto;
+  transform: translateZ(0);
+  filter: blur(8px) saturate(1.05) contrast(0.95);
+  opacity: 0.95;
+  pointer-events: none;
+  /* gives a subtle dark vignette at the car edges */
+  mix-blend-mode: normal;
+}
+
+/* tire tread overlay using the tire.svg file */
+.hero::before {
+  content: "";
+  position: absolute;
+  left: 4%;
+  top: 18%;
+  z-index: 3;   /* between car (z=2) and content (z=5) */
+  width: 60%;
+  height: 70%;
+  border-radius: 20px;
+  background-image: url('tire.svg');
+  background-repeat: repeat;
+  background-position: left center;
+  opacity: 0.08;       /* make it very subtle like the screenshot */
+  transform: rotate(-8deg) scale(1.05); /* angle like the reference */
+  pointer-events: none;
+  filter: blur(1px);
+}
+
+/* small additional radial highlight to mimic the brighter center */
+.hero::after {
+  content: "";
+  position: absolute;
+  right: 18%;
+  top: 28%;
+  width: 50%;
+  height: 60%;
+  z-index: 4;
+  background: radial-gradient(circle at 30% 40%, rgba(255,255,255,0.06), rgba(255,255,255,0) 35%);
+  border-radius: 50%;
+  pointer-events: none;
+}
+.features {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 60px 8%;
+  background: #fff;
+  gap: 60px;
+  text-align: center;
+}
+
+.feature {
+  max-width: 260px;
+}
+
+.feature i {
+  font-size: 36px;
+  margin-bottom: 14px;
+  color: #000;
+}
+
+.feature h3 {
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.feature p {
+  font-size: 14px;
+  color: #555;
+  line-height: 1.5;
+}
+
+/* Responsive stacking for smaller devices */
+@media (max-width: 768px) {
+  .features {
+    flex-direction: column;
+    gap: 40px;
+  }
+}
+
+/* make sure the inner content remains responsive */
+@media (max-width: 980px) {
+  .hero-inner { padding: 40px; flex-direction: column; gap: 28px; min-height: 520px; }
+  .hero-text { max-width: 100%; text-align: center; }
+  .hero-text h1 { font-size: 36px; }
+  .booking-form { width: 92%; margin: 0 auto; }
+  .hero-car { display: none; } /* hide blurred car on smaller screens */
+  .hero::before { left: 6%; top: 8%; width: 90%; height: 30%; transform: rotate(-2deg); opacity: 0.06; }
+}
