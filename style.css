@@ -461,3 +461,318 @@ nav a:hover {
   transform: translateY(-2px);
   box-shadow: 0 6px 18px rgba(92, 81, 255, 0.4);
 }
+.cars-section {
+  padding: 60px 50px; /* matches hero section */
+  background: #fff;
+}
+
+.cars-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.cars-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.cars-header h2 {
+  font-size: 42px;
+  font-weight: 700;
+  color: #000;
+}
+
+.cars-header .view-all {
+  font-size: 14px;
+  font-weight: 600;
+  color: #000;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.cars-header .view-all:hover {
+  color: #6c63ff;
+}
+
+.cars-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(360px, 1fr)); /* wider cards */
+  gap: 36px; /* more spacing */
+}
+
+.card {
+  background: #f8f8f8;
+  border-radius: 14px;
+  height: 320px; /* taller cards */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 22px; /* text inside cards slightly bigger */
+  font-weight: 600;
+  color: #333;
+  box-shadow: 0 6px 16px rgba(0,0,0,0.12);
+}
+
+
+.car-card {
+  background: #fff;
+  border-radius: 14px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.06);
+  padding: 16px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.car-card img {
+  width: 100%;
+  height: 150px;
+  object-fit: contain;
+  margin-bottom: 14px;
+}
+
+.car-info h3 {
+  font-size: 16px;
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+
+.car-info .car-type {
+  display: block;
+  font-size: 13px;
+  color: #777;
+  margin-bottom: 4px;
+}
+
+.car-price {
+  display: block;
+  font-size: 16px;
+  font-weight: 700;
+  color: #6c63ff;
+  margin-bottom: 12px;
+}
+
+.car-features {
+  display: flex;
+  justify-content: space-around;
+  font-size: 12px;
+  color: #555;
+  margin-bottom: 16px;
+}
+
+.car-features i {
+  margin-right: 4px;
+  color: #6c63ff;
+}
+
+.btn-details {
+  background: #6c63ff;
+  color: #fff;
+  border: none;
+  padding: 10px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.btn-details:hover {
+  background: #5a54d4;
+}
+.facts-section {
+  background: #673de6; /* purple background */
+  color: #fff;
+  padding: 50px 20px;
+  border-radius: 20px;
+  margin-top: 50px;
+}
+
+.facts-container {
+  max-width: 1100px;
+  margin: auto;
+  text-align: center;
+}
+
+.facts-container h2 {
+  font-size: 36px;
+  font-weight: 900;
+  margin-bottom: 10px;
+}
+
+.facts-container p {
+  max-width: 700px;
+  margin: auto;
+  font-size: 15px;
+  color: #e5e5e5;
+}
+
+.facts-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 25px;
+  margin-top: 40px;
+}
+
+.fact-card {
+  background: #fff;
+  color: #000;
+  border-radius: 14px;
+  padding: 20px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.fact-icon {
+  background: #ff9800;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  font-size: 22px;
+  color: white;
+  margin: auto;
+  margin-bottom: 15px;
+}
+
+.fact-card h3 {
+  font-size: 24px;
+  font-weight: 900;
+  margin: 0;
+}
+
+.fact-card span {
+  font-size: 14px;
+  color: #444;
+}
+
+/* Enjoy Every Mile Section */
+.enjoy-section {
+  background: #6c2ef5;
+  color: #fff;
+  border-radius: 12px;
+  padding: 50px 20px;
+  text-align: center;
+  margin: 40px auto;
+}
+.enjoy-section h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+.enjoy-section p {
+  max-width: 600px;
+  margin: 0 auto 25px;
+  font-size: 0.95rem;
+}
+.search-box {
+  display: flex;
+  justify-content: center;
+  max-width: 400px;
+  margin: 0 auto;
+}
+.search-box input {
+  flex: 1;
+  padding: 10px;
+  border-radius: 8px 0 0 8px;
+  border: none;
+  outline: none;
+}
+.search-box button {
+  background: #ffb400;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 0 8px 8px 0;
+  cursor: pointer;
+  font-weight: bold;
+}
+/* Footer Styling */
+.footer {
+  background: #fff;
+  padding: 70px 0 40px; /* taller footer to match image */
+  font-family: Arial, sans-serif;
+  border-top: 1px solid #ddd;
+}
+
+.footer-container {
+  width: 100%;
+  max-width: var(--section-max-width); /* exactly match blue section width */
+  padding: 0 var(--section-side-padding); /* keep same side padding */
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 50px; /* more spacing between columns */
+}
+
+.footer-column {
+  flex: 1;
+  min-width: 220px; /* slightly bigger for better balance */
+}
+
+.footer-logo {
+  font-size: 20px; /* bigger logo text */
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.footer-logo i {
+  font-size: 24px; /* bigger icon */
+}
+
+.footer p {
+  font-size: 16px; /* increased text size */
+  margin: 12px 0;
+}
+
+.footer-social i {
+  font-size: 20px;
+  margin-right: 12px;
+  cursor: pointer;
+}
+
+.footer-info {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.footer-info i {
+  font-size: 20px;
+  color: orange;
+}
+
+.footer-info p {
+  font-size: 16px;
+  margin: 0;
+}
+
+.footer-column h4 {
+  font-size: 18px; /* bigger headings */
+  margin-bottom: 14px;
+}
+
+.footer-column ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-column ul li {
+  font-size: 16px;
+  margin-bottom: 8px;
+}
+
+.footer-bottom {
+  text-align: center;
+  padding-top: 25px;
+  font-size: 14px;
+  color: gray;
+  border-top: 1px solid #eee;
+}
