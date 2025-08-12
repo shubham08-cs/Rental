@@ -108,14 +108,189 @@ nav a:hover {
 
 /* booking card stays on top, right side */
 .booking-form {
-  z-index: 10;
-  width: 340px;
-  background: #fff;
-  border-radius: 16px;
-  padding: 26px;
-  box-shadow: 0 12px 30px rgba(0,0,0,0.12);
+  display: flex;
+  gap: 20px;
+  background: rgba(255, 255, 255, 0.25);
+  padding: 25px;
+  border-radius: 15px;
+  backdrop-filter: blur(15px);
+  box-shadow: 0 6px 25px rgba(0, 0, 0, 0.1);
+  flex-wrap: wrap;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 200px;
+}
+
+.form-group label {
+  font-size: 14px;
+  color: #444;
+  font-weight: 600;
+  margin-bottom: 6px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.form-group input {
+  border: 1px solid #ccc;
+  padding: 10px 12px;
+  border-radius: 8px;
+  font-size: 14px;
+  outline: none;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.form-group input:focus {
+  border-color: #6c63ff;
+  box-shadow: 0 0 8px rgba(108, 99, 255, 0.2);
+}
+
+.booking-form button {
+  background: linear-gradient(135deg, #6c63ff, #5a54d4);
+  color: #fff;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 15px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: background 0.3s, transform 0.2s;
+}
+.booking-form button:hover {
+  background: linear-gradient(135deg, #5a54d4, #6c63ff);
+  transform: translateY(-2px);
+}
+
+@media (max-width: 768px) {
+  .booking-form {
+    flex-direction: column;
+  }
+}
+/* ===== center section styles ===== */
+.center-block {
+  width: 100%;
+  display: flex;
+  justify-content: center; /* centers the inner container horizontally */
+  margin: 60px 0;          /* adjust vertical spacing as you like */
+  box-sizing: border-box;
+}
+
+.center-inner {
+  width: 100%;
+  max-width: 1100px;      /* controls how wide the centered block grows */
+  display: flex;
+  gap: 48px;
+  align-items: flex-start;
+  padding: 0 24px;        /* side padding so it doesn't touch edges on mobile */
+  box-sizing: border-box;
+}
+
+/* left image */
+.center-left img {
+  width: 420px;           /* desired image size on desktop */
+  height: 360px;
+  object-fit: cover;
+  border-radius: 18px;
+  display: block;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.06);
+}
+
+/* right list */
+.center-right {
+  flex: 1;
+  min-width: 320px;
+}
+
+.steps {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.steps li {
+  display: flex;
+  gap: 18px;
+  margin-bottom: 26px;
+  align-items: flex-start;
+}
+
+/* purple circular number */
+.step-num {
+  min-width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: #6f4cff;           /* modify to match your purple */
+  color: #fff;
+  font-weight: 700;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  flex-shrink: 0;
+  box-shadow: 0 4px 10px rgba(111,76,255,0.15);
+}
+
+/* title + description */
+.step-content h4 {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 700;
   color: #111;
 }
+
+.step-content p {
+  margin: 8px 0 0;
+  color: #707070;
+  font-size: 13px;
+  line-height: 1.6;
+  max-width: 560px;
+}
+
+/* ===== Responsive: stack on smaller screens ===== */
+@media (max-width: 980px) {
+  .center-inner {
+    gap: 28px;
+  }
+
+  .center-left img {
+    width: 360px;
+    height: 300px;
+  }
+}
+
+@media (max-width: 720px) {
+  .center-inner {
+    flex-direction: column;
+    align-items: center;  /* centers both image and right column */
+    text-align: left;
+  }
+
+  .center-left img {
+    width: 92%;
+    height: auto;
+    max-width: 520px;
+  }
+
+  .center-right {
+    width: 100%;
+    margin-top: 18px;
+  }
+
+  .steps li {
+    align-items: center;
+  }
+
+  .step-content p {
+    max-width: 100%;
+  }
+}
+
+
 
 /* Blurred car image — placed absolutely to the right and slightly behind inner panel */
 .hero-car {
