@@ -390,3 +390,4 @@ nav a:hover {
   .hero-car { display: none; } /* hide blurred car on smaller screens */
   .hero::before { left: 6%; top: 8%; width: 90%; height: 30%; transform: rotate(-2deg); opacity: 0.06; }
 }
+
