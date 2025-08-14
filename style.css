@@ -34,7 +34,7 @@ nav a {
 }
 
 nav a:hover {
-  color: #ff9800;
+  color: orange;
 }
 
 .contact {
@@ -62,7 +62,8 @@ nav a:hover {
   position: relative;
   margin: 20px 50px;
   border-radius: 28px;
-  overflow: visible; /* allow the blurred car to extend a bit */
+  overflow: visible;
+  /* allow the blurred car to extend a bit */
   padding: 40px;
   /* This outer background is subtle so the inner panel color is vivid */
   background: transparent;
@@ -71,7 +72,8 @@ nav a:hover {
 /* inner rounded panel that matches screenshot */
 .hero-inner {
   position: relative;
-  z-index: 5; /* content above the decorative layers */
+  z-index: 5;
+  /* content above the decorative layers */
   background: linear-gradient(90deg, #5b2fe3 0%, #5f3bd8 35%, #4b2bd4 100%);
   border-radius: 28px;
   color: #fff;
@@ -81,8 +83,10 @@ nav a:hover {
   align-items: center;
   min-height: 360px;
   box-shadow:
-    inset 0 10px 30px rgba(0,0,0,0.12),   /* inner depth */
-    0 6px 30px rgba(0,0,0,0.08);          /* subtle outer shadow */
+    inset 0 10px 30px rgba(0, 0, 0, 0.12),
+    /* inner depth */
+    0 6px 30px rgba(0, 0, 0, 0.08);
+  /* subtle outer shadow */
 }
 
 /* left column text */
@@ -97,11 +101,11 @@ nav a:hover {
   font-weight: 800;
   margin-bottom: 20px;
   color: #ffffff;
-  text-shadow: 0 4px 20px rgba(0,0,0,0.25);
+  text-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
 }
 
 .hero-text p {
-  color: rgba(255,255,255,0.9);
+  color: rgba(255, 255, 255, 0.9);
   max-width: 70%;
   margin-bottom: 22px;
 }
@@ -161,43 +165,74 @@ nav a:hover {
   gap: 8px;
   transition: background 0.3s, transform 0.2s;
 }
+
 .booking-form button:hover {
   background: linear-gradient(135deg, #5a54d4, #6c63ff);
   transform: translateY(-2px);
 }
 
+.booking-form label {
+  font-size: 14px;
+  color: #444;
+  font-weight: 600;
+  margin-bottom: 6px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.booking-form label input[type="date"] {
+  border: 1px solid #ccc;
+  padding: 10px 12px;
+  border-radius: 8px;
+  font-size: 14px;
+  outline: none;
+  transition: border-color 0.3s, box-shadow 0.3s;
+  background-color: #fff;
+}
+
+.booking-form label input[type="date"]:focus {
+  border-color: #6c63ff;
+  box-shadow: 0 0 8px rgba(108, 99, 255, 0.2);
+}
+
 @media (max-width: 768px) {
-  .booking-form {
-    flex-direction: column;
+  .booking-form label {
+    width: 100%;
   }
 }
 /* ===== center section styles ===== */
 .center-block {
   width: 100%;
   display: flex;
-  justify-content: center; /* centers the inner container horizontally */
-  margin: 60px 0;          /* adjust vertical spacing as you like */
+  justify-content: center;
+  /* centers the inner container horizontally */
+  margin: 60px 0;
+  /* adjust vertical spacing as you like */
   box-sizing: border-box;
 }
 
 .center-inner {
   width: 100%;
-  max-width: 1100px;      /* controls how wide the centered block grows */
+  max-width: 1100px;
+  /* controls how wide the centered block grows */
   display: flex;
   gap: 48px;
   align-items: flex-start;
-  padding: 0 24px;        /* side padding so it doesn't touch edges on mobile */
+  padding: 0 24px;
+  /* side padding so it doesn't touch edges on mobile */
   box-sizing: border-box;
 }
 
 /* left image */
 .center-left img {
-  width: 420px;           /* desired image size on desktop */
+  width: 420px;
+  /* desired image size on desktop */
   height: 360px;
   object-fit: cover;
   border-radius: 18px;
   display: block;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.06);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
 }
 
 /* right list */
@@ -224,7 +259,8 @@ nav a:hover {
   min-width: 36px;
   height: 36px;
   border-radius: 50%;
-  background: #6f4cff;           /* modify to match your purple */
+  background: #6f4cff;
+  /* modify to match your purple */
   color: #fff;
   font-weight: 700;
   display: inline-flex;
@@ -232,7 +268,7 @@ nav a:hover {
   justify-content: center;
   font-size: 14px;
   flex-shrink: 0;
-  box-shadow: 0 4px 10px rgba(111,76,255,0.15);
+  box-shadow: 0 4px 10px rgba(111, 76, 255, 0.15);
 }
 
 /* title + description */
@@ -266,7 +302,8 @@ nav a:hover {
 @media (max-width: 720px) {
   .center-inner {
     flex-direction: column;
-    align-items: center;  /* centers both image and right column */
+    align-items: center;
+    /* centers both image and right column */
     text-align: left;
   }
 
@@ -297,7 +334,8 @@ nav a:hover {
   position: absolute;
   right: 6%;
   top: 18%;
-  z-index: 2; /* behind content but above the purple panel base so it blends */
+  z-index: 2;
+  /* behind content but above the purple panel base so it blends */
   width: 46%;
   max-width: 520px;
   height: auto;
@@ -315,15 +353,18 @@ nav a:hover {
   position: absolute;
   left: 4%;
   top: 18%;
-  z-index: 3;   /* between car (z=2) and content (z=5) */
+  z-index: 3;
+  /* between car (z=2) and content (z=5) */
   width: 60%;
   height: 70%;
   border-radius: 20px;
   background-image: url('tire.svg');
   background-repeat: repeat;
   background-position: left center;
-  opacity: 0.08;       /* make it very subtle like the screenshot */
-  transform: rotate(-8deg) scale(1.05); /* angle like the reference */
+  opacity: 0.08;
+  /* make it very subtle like the screenshot */
+  transform: rotate(-8deg) scale(1.05);
+  /* angle like the reference */
   pointer-events: none;
   filter: blur(1px);
 }
@@ -337,10 +378,11 @@ nav a:hover {
   width: 50%;
   height: 60%;
   z-index: 4;
-  background: radial-gradient(circle at 30% 40%, rgba(255,255,255,0.06), rgba(255,255,255,0) 35%);
+  background: radial-gradient(circle at 30% 40%, rgba(255, 255, 255, 0.06), rgba(255, 255, 255, 0) 35%);
   border-radius: 50%;
   pointer-events: none;
 }
+
 .features {
   display: flex;
   justify-content: center;
@@ -383,13 +425,42 @@ nav a:hover {
 
 /* make sure the inner content remains responsive */
 @media (max-width: 980px) {
-  .hero-inner { padding: 40px; flex-direction: column; gap: 28px; min-height: 520px; }
-  .hero-text { max-width: 100%; text-align: center; }
-  .hero-text h1 { font-size: 36px; }
-  .booking-form { width: 92%; margin: 0 auto; }
-  .hero-car { display: none; } /* hide blurred car on smaller screens */
-  .hero::before { left: 6%; top: 8%; width: 90%; height: 30%; transform: rotate(-2deg); opacity: 0.06; }
+  .hero-inner {
+    padding: 40px;
+    flex-direction: column;
+    gap: 28px;
+    min-height: 520px;
+  }
+
+  .hero-text {
+    max-width: 100%;
+    text-align: center;
+  }
+
+  .hero-text h1 {
+    font-size: 36px;
+  }
+
+  .booking-form {
+    width: 92%;
+    margin: 0 auto;
+  }
+
+  .hero-car {
+    display: none;
+  }
+
+  /* hide blurred car on smaller screens */
+  .hero::before {
+    left: 6%;
+    top: 8%;
+    width: 90%;
+    height: 30%;
+    transform: rotate(-2deg);
+    opacity: 0.06;
+  }
 }
+
 /* Existing styles remain the same above... */
 
 /* ====== Attractive "View All Cars" Button ====== */
@@ -408,6 +479,7 @@ nav a:hover {
   box-shadow: 0 6px 20px rgba(255, 87, 34, 0.4);
   transition: all 0.3s ease;
 }
+
 .btn-view:hover {
   transform: translateY(-3px) scale(1.05);
   box-shadow: 0 8px 24px rgba(255, 87, 34, 0.6);
@@ -424,6 +496,7 @@ nav a:hover {
   box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
   width: 300px;
 }
+
 .booking-form h2 {
   font-size: 20px;
   font-weight: 700;
@@ -431,6 +504,7 @@ nav a:hover {
   text-align: center;
   color: #4b2bd4;
 }
+
 .booking-form select,
 .booking-form input {
   padding: 10px 14px;
@@ -440,11 +514,13 @@ nav a:hover {
   outline: none;
   transition: 0.3s;
 }
+
 .booking-form select:focus,
 .booking-form input:focus {
   border-color: #6c63ff;
   box-shadow: 0 0 8px rgba(108, 99, 255, 0.2);
 }
+
 .btn-book {
   background: linear-gradient(135deg, #6c63ff, #5a54d4);
   color: #fff;
@@ -456,13 +532,16 @@ nav a:hover {
   font-weight: 600;
   transition: all 0.3s ease;
 }
+
 .btn-book:hover {
   background: linear-gradient(135deg, #5a54d4, #6c63ff);
   transform: translateY(-2px);
   box-shadow: 0 6px 18px rgba(92, 81, 255, 0.4);
 }
+
 .cars-section {
-  padding: 60px 50px; /* matches hero section */
+  padding: 60px 50px;
+  /* matches hero section */
   background: #fff;
 }
 
@@ -500,28 +579,32 @@ nav a:hover {
 
 .cars-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(360px, 1fr)); /* wider cards */
-  gap: 36px; /* more spacing */
+  grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
+  /* wider cards */
+  gap: 36px;
+  /* more spacing */
 }
 
 .card {
   background: #f8f8f8;
   border-radius: 14px;
-  height: 320px; /* taller cards */
+  height: 320px;
+  /* taller cards */
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 22px; /* text inside cards slightly bigger */
+  font-size: 22px;
+  /* text inside cards slightly bigger */
   font-weight: 600;
   color: #333;
-  box-shadow: 0 6px 16px rgba(0,0,0,0.12);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
 }
 
 
 .car-card {
   background: #fff;
   border-radius: 14px;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.06);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
   padding: 16px;
   text-align: center;
   display: flex;
@@ -584,8 +667,10 @@ nav a:hover {
 .btn-details:hover {
   background: #5a54d4;
 }
+
 .facts-section {
-  background: #673de6; /* purple background */
+  background: #673de6;
+  /* purple background */
   color: #fff;
   padding: 50px 20px;
   border-radius: 20px;
@@ -623,7 +708,7 @@ nav a:hover {
   color: #000;
   border-radius: 14px;
   padding: 20px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 .fact-icon {
@@ -660,22 +745,26 @@ nav a:hover {
   text-align: center;
   margin: 40px auto;
 }
+
 .enjoy-section h2 {
   font-size: 2rem;
   font-weight: 700;
   margin-bottom: 15px;
 }
+
 .enjoy-section p {
   max-width: 600px;
   margin: 0 auto 25px;
   font-size: 0.95rem;
 }
+
 .search-box {
   display: flex;
   justify-content: center;
   max-width: 400px;
   margin: 0 auto;
 }
+
 .search-box input {
   flex: 1;
   padding: 10px;
@@ -683,6 +772,7 @@ nav a:hover {
   border: none;
   outline: none;
 }
+
 .search-box button {
   background: #ffb400;
   color: #fff;
@@ -692,31 +782,38 @@ nav a:hover {
   cursor: pointer;
   font-weight: bold;
 }
+
 /* Footer Styling */
 .footer {
   background: #fff;
-  padding: 70px 0 40px; /* taller footer to match image */
+  padding: 70px 0 40px;
+  /* taller footer to match image */
   font-family: Arial, sans-serif;
   border-top: 1px solid #ddd;
 }
 
 .footer-container {
   width: 100%;
-  max-width: var(--section-max-width); /* exactly match blue section width */
-  padding: 0 var(--section-side-padding); /* keep same side padding */
+  max-width: var(--section-max-width);
+  /* exactly match blue section width */
+  padding: 0 var(--section-side-padding);
+  /* keep same side padding */
   margin: 0 auto;
   display: flex;
   flex-wrap: wrap;
-  gap: 50px; /* more spacing between columns */
+  gap: 50px;
+  /* more spacing between columns */
 }
 
 .footer-column {
   flex: 1;
-  min-width: 220px; /* slightly bigger for better balance */
+  min-width: 220px;
+  /* slightly bigger for better balance */
 }
 
 .footer-logo {
-  font-size: 20px; /* bigger logo text */
+  font-size: 20px;
+  /* bigger logo text */
   font-weight: bold;
   display: flex;
   align-items: center;
@@ -724,11 +821,13 @@ nav a:hover {
 }
 
 .footer-logo i {
-  font-size: 24px; /* bigger icon */
+  font-size: 24px;
+  /* bigger icon */
 }
 
 .footer p {
-  font-size: 16px; /* increased text size */
+  font-size: 16px;
+  /* increased text size */
   margin: 12px 0;
 }
 
@@ -755,7 +854,8 @@ nav a:hover {
 }
 
 .footer-column h4 {
-  font-size: 18px; /* bigger headings */
+  font-size: 18px;
+  /* bigger headings */
   margin-bottom: 14px;
 }
 
@@ -775,4 +875,23 @@ nav a:hover {
   font-size: 14px;
   color: gray;
   border-top: 1px solid #eee;
+}
+.footer-column ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-column ul li {
+  margin-bottom: 8px;
+}
+
+.footer-column ul li a {
+  color: #444;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-column ul li a:hover {
+  color: #6c63ff;
+  text-decoration: underline;
 }
