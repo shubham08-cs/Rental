@@ -1,3 +1,4 @@
+/* ===== RESET & BASE STYLES ===== */
 * {
   margin: 0;
   padding: 0;
@@ -7,23 +8,40 @@
 body {
   font-family: 'Poppins', sans-serif;
   color: #000;
+  overflow-x: hidden;
 }
 
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* ===== HEADER & NAVIGATION ===== */
 header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 15px 50px;
+  padding: 15px 5%;
   background: #fff;
+  position: relative;
+  z-index: 100;
 }
 
 .logo {
   font-size: 20px;
   font-weight: 600;
+  display: flex;
+  align-items: center;
 }
 
 .logo i {
   margin-right: 8px;
+}
+
+nav {
+  display: flex;
+  align-items: center;
 }
 
 nav a {
@@ -31,6 +49,7 @@ nav a {
   text-decoration: none;
   font-weight: 500;
   color: #000;
+  transition: color 0.3s;
 }
 
 nav a:hover {
@@ -56,24 +75,48 @@ nav a:hover {
   font-size: 14px;
 }
 
-/* ---------- Hero background + tread + blurred car ---------- */
+/* Hamburger Menu */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  gap: 5px;
+  margin-left: auto;
+}
 
+.hamburger span {
+  width: 25px;
+  height: 3px;
+  background: #000;
+  border-radius: 3px;
+  transition: all 0.3s ease;
+}
+
+.hamburger.active span:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+.hamburger.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.active span:nth-child(3) {
+  transform: rotate(-45deg) translate(5px, -5px);
+}
+
+/* ===== HERO SECTION ===== */
 .hero {
   position: relative;
-  margin: 20px 50px;
+  margin: 20px 5%;
   border-radius: 28px;
   overflow: visible;
-  /* allow the blurred car to extend a bit */
   padding: 40px;
-  /* This outer background is subtle so the inner panel color is vivid */
   background: transparent;
 }
 
-/* inner rounded panel that matches screenshot */
 .hero-inner {
   position: relative;
   z-index: 5;
-  /* content above the decorative layers */
   background: linear-gradient(90deg, #5b2fe3 0%, #5f3bd8 35%, #4b2bd4 100%);
   border-radius: 28px;
   color: #fff;
@@ -82,25 +125,22 @@ nav a:hover {
   justify-content: space-between;
   align-items: center;
   min-height: 360px;
-  box-shadow:
+  box-shadow: 
     inset 0 10px 30px rgba(0, 0, 0, 0.12),
-    /* inner depth */
     0 6px 30px rgba(0, 0, 0, 0.08);
-  /* subtle outer shadow */
 }
 
-/* left column text */
 .hero-text {
   max-width: 55%;
   z-index: 6;
 }
 
 .hero-text h1 {
-  font-size: 56px;
+  font-size: clamp(32px, 5vw, 56px);
   line-height: 1.02;
   font-weight: 800;
   margin-bottom: 20px;
-  color: #ffffff;
+  color: #fff;
   text-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
 }
 
@@ -110,22 +150,24 @@ nav a:hover {
   margin-bottom: 22px;
 }
 
-/* booking card stays on top, right side */
+/* ===== VERTICAL BOOKING FORM ===== */
 .booking-form {
   display: flex;
-  gap: 20px;
+  flex-direction: column;
+  gap: 15px;
   background: rgba(255, 255, 255, 0.25);
   padding: 25px;
   border-radius: 15px;
   backdrop-filter: blur(15px);
   box-shadow: 0 6px 25px rgba(0, 0, 0, 0.1);
-  flex-wrap: wrap;
+  width: 100%;
+  max-width: 400px;
 }
 
 .form-group {
   display: flex;
   flex-direction: column;
-  flex: 1 1 200px;
+  width: 100%;
 }
 
 .form-group label {
@@ -133,21 +175,22 @@ nav a:hover {
   color: #444;
   font-weight: 600;
   margin-bottom: 6px;
-  display: flex;
-  align-items: center;
-  gap: 6px;
 }
 
-.form-group input {
+.form-group input,
+.form-group select {
   border: 1px solid #ccc;
-  padding: 10px 12px;
+  padding: 12px 15px;
   border-radius: 8px;
   font-size: 14px;
   outline: none;
   transition: border-color 0.3s, box-shadow 0.3s;
+  background: rgba(255, 255, 255, 0.9);
+  width: 100%;
 }
 
-.form-group input:focus {
+.form-group input:focus,
+.form-group select:focus {
   border-color: #6c63ff;
   box-shadow: 0 0 8px rgba(108, 99, 255, 0.2);
 }
@@ -156,14 +199,14 @@ nav a:hover {
   background: linear-gradient(135deg, #6c63ff, #5a54d4);
   color: #fff;
   border: none;
-  padding: 12px 20px;
+  padding: 14px;
   border-radius: 8px;
   cursor: pointer;
-  font-size: 15px;
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  transition: background 0.3s, transform 0.2s;
+  font-size: 16px;
+  font-weight: 600;
+  transition: all 0.3s;
+  margin-top: 10px;
+  width: 100%;
 }
 
 .booking-form button:hover {
@@ -171,190 +214,29 @@ nav a:hover {
   transform: translateY(-2px);
 }
 
-.booking-form label {
-  font-size: 14px;
-  color: #444;
-  font-weight: 600;
-  margin-bottom: 6px;
-  display: flex;
-  flex-direction: column;
-  gap: 6px;
-}
+/* Remove all horizontal form specific styles and media queries */
 
-.booking-form label input[type="date"] {
-  border: 1px solid #ccc;
-  padding: 10px 12px;
-  border-radius: 8px;
-  font-size: 14px;
-  outline: none;
-  transition: border-color 0.3s, box-shadow 0.3s;
-  background-color: #fff;
-}
-
-.booking-form label input[type="date"]:focus {
-  border-color: #6c63ff;
-  box-shadow: 0 0 8px rgba(108, 99, 255, 0.2);
-}
-
-@media (max-width: 768px) {
-  .booking-form label {
-    width: 100%;
-  }
-}
-/* ===== center section styles ===== */
-.center-block {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  /* centers the inner container horizontally */
-  margin: 60px 0;
-  /* adjust vertical spacing as you like */
-  box-sizing: border-box;
-}
-
-.center-inner {
-  width: 100%;
-  max-width: 1100px;
-  /* controls how wide the centered block grows */
-  display: flex;
-  gap: 48px;
-  align-items: flex-start;
-  padding: 0 24px;
-  /* side padding so it doesn't touch edges on mobile */
-  box-sizing: border-box;
-}
-
-/* left image */
-.center-left img {
-  width: 420px;
-  /* desired image size on desktop */
-  height: 360px;
-  object-fit: cover;
-  border-radius: 18px;
-  display: block;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
-}
-
-/* right list */
-.center-right {
-  flex: 1;
-  min-width: 320px;
-}
-
-.steps {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
-.steps li {
-  display: flex;
-  gap: 18px;
-  margin-bottom: 26px;
-  align-items: flex-start;
-}
-
-/* purple circular number */
-.step-num {
-  min-width: 36px;
-  height: 36px;
-  border-radius: 50%;
-  background: #6f4cff;
-  /* modify to match your purple */
-  color: #fff;
-  font-weight: 700;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 14px;
-  flex-shrink: 0;
-  box-shadow: 0 4px 10px rgba(111, 76, 255, 0.15);
-}
-
-/* title + description */
-.step-content h4 {
-  margin: 0;
-  font-size: 16px;
-  font-weight: 700;
-  color: #111;
-}
-
-.step-content p {
-  margin: 8px 0 0;
-  color: #707070;
-  font-size: 13px;
-  line-height: 1.6;
-  max-width: 560px;
-}
-
-/* ===== Responsive: stack on smaller screens ===== */
-@media (max-width: 980px) {
-  .center-inner {
-    gap: 28px;
-  }
-
-  .center-left img {
-    width: 360px;
-    height: 300px;
-  }
-}
-
-@media (max-width: 720px) {
-  .center-inner {
-    flex-direction: column;
-    align-items: center;
-    /* centers both image and right column */
-    text-align: left;
-  }
-
-  .center-left img {
-    width: 92%;
-    height: auto;
-    max-width: 520px;
-  }
-
-  .center-right {
-    width: 100%;
-    margin-top: 18px;
-  }
-
-  .steps li {
-    align-items: center;
-  }
-
-  .step-content p {
-    max-width: 100%;
-  }
-}
-
-
-
-/* Blurred car image — placed absolutely to the right and slightly behind inner panel */
+/* Hero Decorative Elements */
 .hero-car {
   position: absolute;
   right: 6%;
   top: 18%;
   z-index: 2;
-  /* behind content but above the purple panel base so it blends */
   width: 46%;
   max-width: 520px;
   height: auto;
-  transform: translateZ(0);
   filter: blur(8px) saturate(1.05) contrast(0.95);
   opacity: 0.95;
   pointer-events: none;
-  /* gives a subtle dark vignette at the car edges */
   mix-blend-mode: normal;
 }
 
-/* tire tread overlay using the tire.svg file */
 .hero::before {
   content: "";
   position: absolute;
   left: 4%;
   top: 18%;
   z-index: 3;
-  /* between car (z=2) and content (z=5) */
   width: 60%;
   height: 70%;
   border-radius: 20px;
@@ -362,14 +244,11 @@ nav a:hover {
   background-repeat: repeat;
   background-position: left center;
   opacity: 0.08;
-  /* make it very subtle like the screenshot */
   transform: rotate(-8deg) scale(1.05);
-  /* angle like the reference */
   pointer-events: none;
   filter: blur(1px);
 }
 
-/* small additional radial highlight to mimic the brighter center */
 .hero::after {
   content: "";
   position: absolute;
@@ -383,6 +262,7 @@ nav a:hover {
   pointer-events: none;
 }
 
+/* ===== FEATURES SECTION ===== */
 .features {
   display: flex;
   justify-content: center;
@@ -391,10 +271,12 @@ nav a:hover {
   background: #fff;
   gap: 60px;
   text-align: center;
+  flex-wrap: wrap;
 }
 
 .feature {
   max-width: 260px;
+  flex: 1 1 200px;
 }
 
 .feature i {
@@ -415,133 +297,83 @@ nav a:hover {
   line-height: 1.5;
 }
 
-/* Responsive stacking for smaller devices */
-@media (max-width: 768px) {
-  .features {
-    flex-direction: column;
-    gap: 40px;
-  }
+/* ===== HOW IT WORKS SECTION ===== */
+.center-block {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin: 60px 0;
 }
 
-/* make sure the inner content remains responsive */
-@media (max-width: 980px) {
-  .hero-inner {
-    padding: 40px;
-    flex-direction: column;
-    gap: 28px;
-    min-height: 520px;
-  }
-
-  .hero-text {
-    max-width: 100%;
-    text-align: center;
-  }
-
-  .hero-text h1 {
-    font-size: 36px;
-  }
-
-  .booking-form {
-    width: 92%;
-    margin: 0 auto;
-  }
-
-  .hero-car {
-    display: none;
-  }
-
-  /* hide blurred car on smaller screens */
-  .hero::before {
-    left: 6%;
-    top: 8%;
-    width: 90%;
-    height: 30%;
-    transform: rotate(-2deg);
-    opacity: 0.06;
-  }
+.center-inner {
+  width: 100%;
+  max-width: 1100px;
+  display: flex;
+  gap: 48px;
+  align-items: flex-start;
+  padding: 0 5%;
+  box-sizing: border-box;
 }
 
-/* Existing styles remain the same above... */
+.center-left img {
+  width: 420px;
+  height: 360px;
+  object-fit: cover;
+  border-radius: 18px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
+}
 
-/* ====== Attractive "View All Cars" Button ====== */
-.btn-view {
-  background: linear-gradient(135deg, #ff9800, #ff5722);
+.center-right {
+  flex: 1;
+  min-width: 320px;
+}
+
+.steps {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.steps li {
+  display: flex;
+  gap: 18px;
+  margin-bottom: 26px;
+  align-items: flex-start;
+}
+
+.step-num {
+  min-width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: #6f4cff;
   color: #fff;
-  border: none;
-  padding: 14px 26px;
-  border-radius: 50px;
-  cursor: pointer;
-  font-size: 16px;
-  font-weight: 600;
+  font-weight: 700;
   display: inline-flex;
   align-items: center;
-  gap: 10px;
-  box-shadow: 0 6px 20px rgba(255, 87, 34, 0.4);
-  transition: all 0.3s ease;
-}
-
-.btn-view:hover {
-  transform: translateY(-3px) scale(1.05);
-  box-shadow: 0 8px 24px rgba(255, 87, 34, 0.6);
-}
-
-/* ====== Attractive "Book Your Car" Section ====== */
-.booking-form {
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-  background: rgba(255, 255, 255, 0.95);
-  padding: 25px 20px;
-  border-radius: 15px;
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
-  width: 300px;
-}
-
-.booking-form h2 {
-  font-size: 20px;
-  font-weight: 700;
-  margin-bottom: 8px;
-  text-align: center;
-  color: #4b2bd4;
-}
-
-.booking-form select,
-.booking-form input {
-  padding: 10px 14px;
-  border-radius: 8px;
-  border: 1px solid #ccc;
+  justify-content: center;
   font-size: 14px;
-  outline: none;
-  transition: 0.3s;
+  flex-shrink: 0;
+  box-shadow: 0 4px 10px rgba(111, 76, 255, 0.15);
 }
 
-.booking-form select:focus,
-.booking-form input:focus {
-  border-color: #6c63ff;
-  box-shadow: 0 0 8px rgba(108, 99, 255, 0.2);
+.step-content h4 {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 700;
+  color: #111;
 }
 
-.btn-book {
-  background: linear-gradient(135deg, #6c63ff, #5a54d4);
-  color: #fff;
-  border: none;
-  padding: 12px;
-  border-radius: 8px;
-  cursor: pointer;
-  font-size: 15px;
-  font-weight: 600;
-  transition: all 0.3s ease;
+.step-content p {
+  margin: 8px 0 0;
+  color: #707070;
+  font-size: 13px;
+  line-height: 1.6;
+  max-width: 560px;
 }
 
-.btn-book:hover {
-  background: linear-gradient(135deg, #5a54d4, #6c63ff);
-  transform: translateY(-2px);
-  box-shadow: 0 6px 18px rgba(92, 81, 255, 0.4);
-}
-
+/* ===== CARS SECTION ===== */
 .cars-section {
-  padding: 60px 50px;
-  /* matches hero section */
+  padding: 60px 5%;
   background: #fff;
 }
 
@@ -555,10 +387,12 @@ nav a:hover {
   justify-content: space-between;
   align-items: center;
   margin-bottom: 30px;
+  flex-wrap: wrap;
+  gap: 20px;
 }
 
 .cars-header h2 {
-  font-size: 42px;
+  font-size: clamp(28px, 4vw, 42px);
   font-weight: 700;
   color: #000;
 }
@@ -571,6 +405,7 @@ nav a:hover {
   display: flex;
   align-items: center;
   gap: 6px;
+  transition: color 0.3s;
 }
 
 .cars-header .view-all:hover {
@@ -579,27 +414,9 @@ nav a:hover {
 
 .cars-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
-  /* wider cards */
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   gap: 36px;
-  /* more spacing */
 }
-
-.card {
-  background: #f8f8f8;
-  border-radius: 14px;
-  height: 320px;
-  /* taller cards */
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 22px;
-  /* text inside cards slightly bigger */
-  font-weight: 600;
-  color: #333;
-  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
-}
-
 
 .car-card {
   background: #fff;
@@ -607,8 +424,12 @@ nav a:hover {
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
   padding: 16px;
   text-align: center;
-  display: flex;
-  flex-direction: column;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.car-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.1);
 }
 
 .car-card img {
@@ -645,6 +466,8 @@ nav a:hover {
   font-size: 12px;
   color: #555;
   margin-bottom: 16px;
+  flex-wrap: wrap;
+  gap: 8px;
 }
 
 .car-features i {
@@ -661,20 +484,21 @@ nav a:hover {
   cursor: pointer;
   font-size: 14px;
   font-weight: 600;
-  transition: 0.3s;
+  transition: background 0.3s;
+  width: 100%;
 }
 
 .btn-details:hover {
   background: #5a54d4;
 }
 
+/* ===== FACTS SECTION ===== */
 .facts-section {
   background: #673de6;
-  /* purple background */
   color: #fff;
-  padding: 50px 20px;
+  padding: 50px 5%;
   border-radius: 20px;
-  margin-top: 50px;
+  margin: 50px 5% 0;
 }
 
 .facts-container {
@@ -684,7 +508,7 @@ nav a:hover {
 }
 
 .facts-container h2 {
-  font-size: 36px;
+  font-size: clamp(28px, 4vw, 36px);
   font-weight: 900;
   margin-bottom: 10px;
 }
@@ -709,6 +533,11 @@ nav a:hover {
   border-radius: 14px;
   padding: 20px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s;
+}
+
+.fact-card:hover {
+  transform: translateY(-5px);
 }
 
 .fact-icon {
@@ -736,18 +565,18 @@ nav a:hover {
   color: #444;
 }
 
-/* Enjoy Every Mile Section */
+/* ===== ENJOY SECTION ===== */
 .enjoy-section {
   background: #6c2ef5;
   color: #fff;
   border-radius: 12px;
-  padding: 50px 20px;
+  padding: 50px 5%;
   text-align: center;
-  margin: 40px auto;
+  margin: 40px 5%;
 }
 
 .enjoy-section h2 {
-  font-size: 2rem;
+  font-size: clamp(24px, 4vw, 32px);
   font-weight: 700;
   margin-bottom: 15px;
 }
@@ -763,57 +592,56 @@ nav a:hover {
   justify-content: center;
   max-width: 400px;
   margin: 0 auto;
+  width: 100%;
 }
 
 .search-box input {
   flex: 1;
-  padding: 10px;
+  padding: 12px;
   border-radius: 8px 0 0 8px;
   border: none;
   outline: none;
+  font-size: 14px;
 }
 
 .search-box button {
   background: #ffb400;
   color: #fff;
-  padding: 10px 20px;
+  padding: 12px 20px;
   border: none;
   border-radius: 0 8px 8px 0;
   cursor: pointer;
   font-weight: bold;
+  transition: background 0.3s;
 }
 
-/* Footer Styling */
+.search-box button:hover {
+  background: #ffa000;
+}
+
+/* ===== FOOTER ===== */
 .footer {
   background: #fff;
-  padding: 70px 0 40px;
-  /* taller footer to match image */
-  font-family: Arial, sans-serif;
+  padding: 70px 5% 40px;
   border-top: 1px solid #ddd;
 }
 
 .footer-container {
   width: 100%;
-  max-width: var(--section-max-width);
-  /* exactly match blue section width */
-  padding: 0 var(--section-side-padding);
-  /* keep same side padding */
+  max-width: 1100px;
   margin: 0 auto;
   display: flex;
   flex-wrap: wrap;
   gap: 50px;
-  /* more spacing between columns */
 }
 
 .footer-column {
   flex: 1;
   min-width: 220px;
-  /* slightly bigger for better balance */
 }
 
 .footer-logo {
   font-size: 20px;
-  /* bigger logo text */
   font-weight: bold;
   display: flex;
   align-items: center;
@@ -822,19 +650,27 @@ nav a:hover {
 
 .footer-logo i {
   font-size: 24px;
-  /* bigger icon */
 }
 
 .footer p {
   font-size: 16px;
-  /* increased text size */
   margin: 12px 0;
+}
+
+.footer-social {
+  display: flex;
+  gap: 12px;
 }
 
 .footer-social i {
   font-size: 20px;
-  margin-right: 12px;
+  color: #444;
   cursor: pointer;
+  transition: color 0.3s;
+}
+
+.footer-social i:hover {
+  color: #6c63ff;
 }
 
 .footer-info {
@@ -855,27 +691,9 @@ nav a:hover {
 
 .footer-column h4 {
   font-size: 18px;
-  /* bigger headings */
   margin-bottom: 14px;
 }
 
-.footer-column ul {
-  list-style: none;
-  padding: 0;
-}
-
-.footer-column ul li {
-  font-size: 16px;
-  margin-bottom: 8px;
-}
-
-.footer-bottom {
-  text-align: center;
-  padding-top: 25px;
-  font-size: 14px;
-  color: gray;
-  border-top: 1px solid #eee;
-}
 .footer-column ul {
   list-style: none;
   padding: 0;
@@ -888,10 +706,217 @@ nav a:hover {
 .footer-column ul li a {
   color: #444;
   text-decoration: none;
-  transition: color 0.3s ease;
+  transition: color 0.3s;
 }
 
 .footer-column ul li a:hover {
   color: #6c63ff;
   text-decoration: underline;
+}
+
+.footer-bottom {
+  text-align: center;
+  padding-top: 25px;
+  font-size: 14px;
+  color: gray;
+  border-top: 1px solid #eee;
+  margin-top: 30px;
+}
+
+/* ===== BUTTON STYLES ===== */
+.btn-view {
+  background: linear-gradient(135deg, #ff9800, #ff5722);
+  color: #fff;
+  border: none;
+  padding: 14px 26px;
+  border-radius: 50px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  box-shadow: 0 6px 20px rgba(255, 87, 34, 0.4);
+  transition: all 0.3s ease;
+}
+
+.btn-view:hover {
+  transform: translateY(-3px) scale(1.05);
+  box-shadow: 0 8px 24px rgba(255, 87, 34, 0.6);
+}
+
+.btn-book {
+  background: #000;
+  color: #fff;
+  border: none;
+  padding: 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 15px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.btn-book:hover {
+  background: #333;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
+}
+
+/* ===== RESPONSIVE BREAKPOINTS ===== */
+@media (max-width: 1024px) {
+  .hero-inner {
+    flex-direction: column;
+    text-align: center;
+    padding: 40px;
+  }
+
+  .hero-text {
+    max-width: 100%;
+  }
+
+  .hero-text p {
+    max-width: 100%;
+  }
+
+  .booking-form {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .center-inner {
+    gap: 28px;
+  }
+
+  .center-left img {
+    width: 360px;
+    height: 300px;
+  }
+}
+
+@media (max-width: 768px) {
+  header {
+    padding: 15px 20px;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+
+  nav {
+    display: none;
+    flex-direction: column;
+    background: #fff;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    width: 220px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    padding: 15px;
+  }
+
+  nav.active {
+    display: flex;
+  }
+
+  nav a {
+    margin: 8px 0;
+  }
+
+  .hero {
+    margin: 10px;
+    padding: 20px;
+  }
+
+  .center-inner {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .center-right {
+    width: 100%;
+    margin-top: 18px;
+  }
+
+  .steps li {
+    align-items: center;
+  }
+
+  .step-content p {
+    max-width: 100%;
+  }
+
+  .cars-header {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .cars-header h2 {
+    margin-bottom: 12px;
+  }
+
+  /* Adjusted booking form for medium screens */
+  .booking-form {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    scroll-snap-type: x proximity;
+    -webkit-overflow-scrolling: touch;
+    padding-bottom: 15px;
+  }
+
+  .form-group {
+    flex: 0 0 auto;
+    width: 180px;
+    scroll-snap-align: start;
+  }
+
+  .booking-form button {
+    flex-shrink: 0;
+  }
+
+  /* Hide scrollbar */
+  .booking-form::-webkit-scrollbar {
+    display: none;
+  }
+  .booking-form {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-inner {
+    padding: 30px 20px;
+  }
+
+  .center-left img {
+    width: 100%;
+    height: auto;
+  }
+
+  .search-box {
+    flex-direction: column;
+  }
+
+  .search-box input {
+    border-radius: 8px;
+    margin-bottom: 10px;
+  }
+
+  .search-box button {
+    border-radius: 8px;
+    width: 100%;
+  }
+
+  /* Further adjustments for booking form on small screens */
+  .form-group {
+    width: 160px;
+  }
+
+  .booking-form button {
+    padding: 12px 15px;
+  }
 }
