@@ -5,15 +5,15 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Car Rental</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style1.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
-
 <body>
 
   <!-- Navbar -->
   <header>
+    
     <div class="logo">
       <i class="fas fa-car-side"></i> Car Rental
     </div>
@@ -396,7 +396,17 @@
         <p>© Copyright Car Rental 2025. Design by Shubham & Parth </p>
       </div>
     </footer>
-
+<script>
+  document.querySelector('.hamburger').addEventListener('click', function(){
+    document.querySelector('nav').classList.toggle('active');
+  });
+</script>
+<script>
+document.getElementById("hamburger").addEventListener("click", function() {
+  this.classList.toggle("active");
+  document.querySelector("nav").classList.toggle("active");
+});
+</script>
 </body>
 
 </html>
