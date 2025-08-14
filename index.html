@@ -1,6 +1,6 @@
-
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,6 +9,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
+
 <body>
 
   <!-- Navbar -->
@@ -17,354 +18,385 @@
       <i class="fas fa-car-side"></i> Car Rental
     </div>
     <nav>
-      <a href="#">Home</a>
-      <a href="#">Vehicles</a>
-      <a href="#">Details</a>
-      <a href="#">About Us</a>
-      <a href="#">Contact Us</a>
+      <a href="index.html">Home</a>
+      <a href="vehicles.html">Vehicles</a>
+      <a href="details.html">Details</a>
+      <a href="about.html">About Us</a>
+      <a href="contact.html">Contact Us</a>
     </nav>
     <div class="contact">
       <i class="fas fa-phone"></i>
       <div>
         <span>Need help?</span><br>
-        <strong>+996 247-1680</strong>
+        <strong>+91 9988001100</strong>
       </div>
     </div>
   </header>
 
   <!-- Hero Section -->
-<section class="hero">
-  <div class="hero-inner">
-    <div class="hero-text">
-      <h1>Experience the road<br>like never before</h1>
-      <p>Aliquam adipiscing velit semper morbi. Purus non eu cursus porttitor tristique et gravida. Quis nunc interdum gravida ullamcorper</p>
-      <button class="btn-view">🚗 View All Cars</button>
-    </div>
+  <section class="hero">
+    <div class="hero-inner">
+      <div class="hero-text">
+        <h1>Experience the road<br>like never before</h1>
+        <p>Rent. Ride. Repeat. <br>
+          Your Key to Hassle-Free Travel</p>
+          <a href="vehicles.html">
+        <button class="btn-view">🚗 View All Cars</button>
+          </a>
+      </div>
 
-    <div class="booking-form">
-      <h2>Book Your Car</h2>
-      <select><option>Car type</option></select>
-      <select><option>Place of rental</option></select>
-      <select><option>Place of return</option></select>
-      <input type="date" placeholder="Rental date">
-      <input type="date" placeholder="Return date">
-      <button class="btn-book">Book Now</button>
-    </div>
-  </div>
+      <div class="booking-form">
+        <h2>Book Your Car</h2>
+        <label>Car Type </label>
+        <select>
+          <option>Luxury</option>
+          <option>Sports</option>
+          <option>SUV</option>
+          <option>Sedan</option>
+          <option>Pick Up</option>
 
-  <!-- Blurred car image -->
-  <img class="hero-car" src="" alt="car blurred">
-
-<!-- Features Section -->
-<section class="features">
-  <div class="feature">
-    <i class="fas fa-map-marker-alt"></i>
-    <h3>Availability</h3>
-    <p>Diam tincidunt tincidunt erat at semper fermentum. Id ultricies quis</p>
-  </div>
-
-  <div class="feature">
-    <i class="fas fa-car"></i>
-    <h3>Comfort</h3>
-    <p>Gravida auctor fermentum morbi vulputate ac egestas orci</p>
-  </div>
-
-  <div class="feature">
-    <i class="fas fa-wallet"></i>
-    <h3>Savings</h3>
-    <p>Pretium convallis id diam sed commodo vestibulum lobortis volutpat.</p>
-  </div>
-</section>
-
-<!-- Center Section -->
-<section class="center-block">
-  <div class="center-inner">
-    <div class="center-left">
-      <img src="images/car.jfif" alt="Feature image">
-    </div>
-
-    <div class="center-right">
-      <ol class="steps">
-        <li>
-          <span class="step-num">1</span>
-          <div class="step-content">
-            <h4>Erat at semper</h4>
-            <p>Non amet fermentum est in enim at sit ullamcorper. Sit elementum rhoncus nullam feugiat. Risus sem fermentum…</p>
-          </div>
-        </li>
-
-        <li>
-          <span class="step-num">2</span>
-          <div class="step-content">
-            <h4>Urna nec vivamus risus duis arcu</h4>
-            <p>Aliquam adipiscing velit semper morbi. Purus non eu cursus porttitor tristique et gravida. Quis nunc interdum…</p>
-          </div>
-        </li>
-
-        <li>
-          <span class="step-num">3</span>
-          <div class="step-content">
-            <h4>Lobortis euismod imperdiet tempus</h4>
-            <p>Viverra scelerisque mauris et nullam molestie et. Augue adipiscing praesent nisl cras nunc luctus viverra nisi</p>
-          </div>
-        </li>
-
-        <li>
-          <span class="step-num">4</span>
-          <div class="step-content">
-            <h4>Cras nulla aliquet nam eleifend amet et</h4>
-            <p>Aliquam adipiscing velit semper morbi. Purus non eu cursus porttitor tristique et gravida. Quis nunc interdum…</p>
-          </div>
-        </li>
-      </ol>
-    </div>
-  </div>
-</section>
-<!-- Cars Listing Section -->
-<section class="cars-section">
-  <div class="cars-header">
-    <h2>Choose the car that <br>suits you</h2>
-    <a href="#" class="view-all">View All <i class="fas fa-arrow-right"></i></a>
-  </div>
-
-  <div class="cars-grid">
-    <!-- Single Car Card -->
-    <div class="car-card">
-      <img src="images/mercedes.jfif" alt="Mercedes">
-      <div class="car-info">
-        <h3>Mercedes</h3>
-        <span class="car-type">Sedan</span>
-        <span class="car-price">$25 <small>per day</small></span>
-      </div>
-      <div class="car-features">
-        <span><i class="fas fa-cogs"></i> Automat</span>
-        <span><i class="fas fa-gas-pump"></i> PB 95</span>
-        <span><i class="fas fa-snowflake"></i> Air Conditioner</span>
-      </div>
-      <button class="btn-details">View Details</button>
-    </div>
-
-    <!-- Repeat Cards -->
-    <div class="car-card">
-      <img src="images/polo.jfif" alt="Mercedes">
-      <div class="car-info">
-        <h3>Mercedes</h3>
-        <span class="car-type">Sport</span>
-        <span class="car-price">$50 <small>per day</small></span>
-      </div>
-      <div class="car-features">
-        <span><i class="fas fa-cogs"></i> Automat</span>
-        <span><i class="fas fa-gas-pump"></i> PB 95</span>
-        <span><i class="fas fa-snowflake"></i> Air Conditioner</span>
-      </div>
-      <button class="btn-details">View Details</button>
-    </div>
-
-    <div class="car-card">
-      <img src="images/porsche.jfif" alt="Mercedes">
-      <div class="car-info">
-        <h3>Mercedes</h3>
-        <span class="car-type">Sedan</span>
-        <span class="car-price">$45 <small>per day</small></span>
-      </div>
-      <div class="car-features">
-        <span><i class="fas fa-cogs"></i> Automat</span>
-        <span><i class="fas fa-gas-pump"></i> PB 95</span>
-        <span><i class="fas fa-snowflake"></i> Air Conditioner</span>
-      </div>
-      <button class="btn-details">View Details</button>
-    </div>
-
-    <div class="car-card">
-      <img src="images/bmw-m5.jfif" alt="Porsche">
-      <div class="car-info">
-        <h3>Porsche</h3>
-        <span class="car-type">SUV</span>
-        <span class="car-price">$40 <small>per day</small></span>
-      </div>
-      <div class="car-features">
-        <span><i class="fas fa-cogs"></i> Automat</span>
-        <span><i class="fas fa-gas-pump"></i> PB 95</span>
-        <span><i class="fas fa-snowflake"></i> Air Conditioner</span>
-      </div>
-      <button class="btn-details">View Details</button>
-    </div>
-
-    <div class="car-card">
-      <img src="images/g-wagon.jfif" alt="Toyota">
-      <div class="car-info">
-        <h3>Toyota</h3>
-        <span class="car-type">Sedan</span>
-        <span class="car-price">$35 <small>per day</small></span>
-      </div>
-      <div class="car-features">
-        <span><i class="fas fa-cogs"></i> Automat</span>
-        <span><i class="fas fa-gas-pump"></i> PB 95</span>
-        <span><i class="fas fa-snowflake"></i> Air Conditioner</span>
-      </div>
-      <button class="btn-details">View Details</button>
-    </div>
-
-    <div class="car-card">
-      <img src="images/porsche.jfif" alt="Porsche">
-      <div class="car-info">
-        <h3>Porsche</h3>
-        <span class="car-type">SUV</span>
-        <span class="car-price">$50 <small>per day</small></span>
-      </div>
-      <div class="car-features">
-        <span><i class="fas fa-cogs"></i> Automat</span>
-        <span><i class="fas fa-gas-pump"></i> PB 95</span>
-        <span><i class="fas fa-snowflake"></i> Air Conditioner</span>
-      </div>
-      <button class="btn-details">View Details</button>
-    </div>
-    <div class="car-card">
-      <img src="images/g-wagon.jfif" alt="Porsche">
-      <div class="car-info">
-        <h3>Porsche</h3>
-        <span class="car-type">SUV</span>
-        <span class="car-price">$50 <small>per day</small></span>
-      </div>
-      <div class="car-features">
-        <span><i class="fas fa-cogs"></i> Automat</span>
-        <span><i class="fas fa-gas-pump"></i> PB 95</span>
-        <span><i class="fas fa-snowflake"></i> Air Conditioner</span>
-      </div>
-      <button class="btn-details">View Details</button>
-    </div>
-    <div class="car-card">
-      <img src="images/polo.jfif" alt="Porsche">
-      <div class="car-info">
-        <h3>Porsche</h3>
-        <span class="car-type">SUV</span>
-        <span class="car-price">$50 <small>per day</small></span>
-      </div>
-      <div class="car-features">
-        <span><i class="fas fa-cogs"></i> Automat</span>
-        <span><i class="fas fa-gas-pump"></i> PB 95</span>
-        <span><i class="fas fa-snowflake"></i> Air Conditioner</span>
-      </div>
-      <button class="btn-details">View Details</button>
-    </div>
-  </div>
-  
-</section>
-<section class="facts-section">
-  <div class="facts-container">
-    <h2>Facts In Numbers</h2>
-    <p>Amet cras hac orci lacus. Faucibus ipsum arcu lectus nibh sapien bibendum ullamcorper in. 
-       Diam tincidunt tincidunt erat at semper fermentum</p>
-    
-    <div class="facts-grid">
-      <div class="fact-card">
-        <div class="fact-icon"><i class="fas fa-car"></i></div>
-        <h3>540+</h3>
-        <span>Cars</span>
-      </div>
-      <div class="fact-card">
-        <div class="fact-icon"><i class="fas fa-user"></i></div>
-        <h3>20k+</h3>
-        <span>Customers</span>
-      </div>
-      <div class="fact-card">
-        <div class="fact-icon"><i class="fas fa-calendar-alt"></i></div>
-        <h3>25+</h3>
-        <span>Years</span>
-      </div>
-      <div class="fact-card">
-        <div class="fact-icon"><i class="fas fa-tachometer-alt"></i></div>
-        <h3>20m+</h3>
-        <span>Miles</span>
-      </div>
-    </div>
-  </div>
-</section>
-<!-- Enjoy Every Mile Section -->
-<section class="enjoy-section">
-  <div class="enjoy-content">
-    <h2>Enjoy every mile with adorable companionship.</h2>
-    <p>Amet cras hac orci lacus. Faucibus ipsum arcu lectus nibh sapien bibendum ullamcorper in. Diam tincidunt tincidunt erat</p>
-    <div class="search-box">
-      <input type="text" placeholder="City">
-      <button>Search</button>
-    </div>
-  </div>
-</section>
-<!-- Footer Section -->
-<footer class="footer">
-  <div class="footer-container">
-
-    <div class="footer-column">
-      <div class="footer-logo">
-        <i class="fas fa-car"></i> Car Rental
-      </div>
-      <p>
-        Faucibus faucibus pellentesque dictum turpis.<br>
-        Id pellentesque turpis massa a id iaculis lorem t...
-      </p>
-      <div class="footer-social">
-        <i class="fab fa-facebook"></i>
-        <i class="fab fa-instagram"></i>
-        <i class="fab fa-x-twitter"></i>
-        <i class="fab fa-youtube"></i>
+        </select>
+        <label>Place Of Rental</label>
+        <select>
+          <option>Mumbai</option>
+          <option>Pune</option>
+          <option>Kolhapur</option>
+        </select>
+        <label>Place Of Return</label>
+        <select>
+          <option>Dropping Point 1</option>
+          <option>Dropping Point 2</option>
+          <option>Dropping Point 3</option>
+        </select>
+        <label>
+          Rental Date
+          <input type="date" name="rental-date">
+        </label>
+        <label>
+          Return Date
+          <input type="date" name="return-date">
+        </label>
+        <button class="btn-book">Book Now</button>
       </div>
     </div>
 
-    <div class="footer-column">
-      <div class="footer-info">
+    <!-- Blurred car image -->
+    <img class="hero-car" src="" alt="car blurred">
+
+    <!-- Features Section -->
+    <section class="features">
+      <div class="feature">
         <i class="fas fa-map-marker-alt"></i>
-        <p><strong>Address</strong><br>Oxford Ave. Cary, NC 27511</p>
+        <h3>Availability</h3>
+        <p>Cars Ready When You Are
+          24/7 Booking, Zero Hassle</p>
       </div>
-    </div>
 
-    <div class="footer-column">
-      <div class="footer-info">
-        <i class="fas fa-envelope"></i>
-        <p><strong>Email</strong><br>nwiger@yahoo.com</p>
+      <div class="feature">
+        <i class="fas fa-car"></i>
+        <h3>Comfort</h3>
+        <p>Ride in Pure Relaxation
+          Spacious, Clean, and Modern</p>
       </div>
-    </div>
 
-    <div class="footer-column">
-      <div class="footer-info">
-        <i class="fas fa-phone"></i>
-        <p><strong>Phone</strong><br>+537 547-6401</p>
+      <div class="feature">
+        <i class="fas fa-wallet"></i>
+        <h3>Savings</h3>
+        <p>More Miles, Less Spend
+          Best Rates, No Hidden Fees</p>
       </div>
-    </div>
+    </section>
 
-    <div class="footer-column">
-      <h4>Useful links</h4>
-      <ul>
-        <li>About us</li>
-        <li>Contact us</li>
-        <li>Gallery</li>
-        <li>Blog</li>
-        <li>F.A.Q</li>
-      </ul>
-    </div>
+    <!-- Center Section -->
+    <section class="center-block">
+      <div class="center-inner">
+        <div class="center-left">
+          <img src="images/car.jfif" alt="Feature image">
+        </div>
 
-    <div class="footer-column">
-      <h4>Vehicles</h4>
-      <ul>
-        <li>Sedan</li>
-        <li>Cabriolet</li>
-        <li>Pickup</li>
-        <li>Minivan</li>
-        <li>SUV</li>
-      </ul>
-    </div>
+        <div class="center-right">
+          <ol class="steps">
+            <li>
+              <span class="step-num">1</span>
+              <div class="step-content">
+                <h4>24 / 7 Availability</h4>
+                <p>Book your ride anytime, anywhere. We’re ready when you are, day or night.</p>
+              </div>
+            </li>
 
-    <div class="footer-column">
-      <h4>Download App</h4>
-      <img src="appstore.png" alt="App Store" style="width: 150px; margin-bottom: 10px;">
-      <img src="googleplay.png" alt="Google Play" style="width: 150px;">
-    </div>
-  </div>
+            <li>
+              <span class="step-num">2</span>
+              <div class="step-content">
+                <h4>Unmatched Comfort</h4>
+                <p>Spacious, clean, and modern cars designed for a smooth, stress-free drive.</p>
+              </div>
+            </li>
 
-  <div class="footer-bottom">
-    <p>© Copyright Car Rental 2025. Design by Shubham & Parth</p>
-  </div>
-</footer>
+            <li>
+              <span class="step-num">3</span>
+              <div class="step-content">
+                <h4>Affordable Rates</h4>
+                <p>Enjoy competitive prices with zero hidden fees — more miles, less spend.</p>
+              </div>
+            </li>
 
-</body>  
+            <li>
+              <span class="step-num">4</span>
+              <div class="step-content">
+                <h4>Easy Booking Process</h4>
+                <p>Quick online reservations so you can hit the road faster and smarter.</p>
+              </div>
+            </li>
+          </ol>
+        </div>
+      </div>
+    </section>
+    <!-- Cars Listing Section -->
+    <section class="cars-section">
+      <div class="cars-header">
+        <h2>Choose the car that <br>suits you</h2>
+        <a href="#" class="view-all">View All <i class="fas fa-arrow-right"></i></a>
+      </div>
+
+      <div class="cars-grid">
+        <!-- Single Car Card -->
+        <div class="car-card">
+          <img src="images/mercedes.jfif" alt="Mercedes">
+          <div class="car-info">
+            <h3>Mercedes</h3>
+            <span class="car-type">LUXURY</span>
+            <span class="car-price">₹15000 <small>per day</small></span>
+          </div>
+          <div class="car-features">
+            <span><i class="fas fa-cogs"></i> Automatic</span>
+            <span><i class="fas fa-gas-pump"></i> PB 95</span>
+            <span><i class="fas fa-snowflake"></i> Air Conditioner</span>
+          </div>
+          <button class="btn-details">View Details</button>
+        </div>
+
+        <!-- Repeat Cards -->
+        <div class="car-card">
+          <img src="images/polo.jfif" alt="Polo GT">
+          <div class="car-info">
+            <h3>Polo GT</h3>
+            <span class="car-type">SPORTS</span>
+            <span class="car-price">₹5000 <small>per day</small></span>
+          </div>
+          <div class="car-features">
+            <span><i class="fas fa-cogs"></i> No Automatic</span>
+            <span><i class="fas fa-gas-pump"></i> PB 95</span>
+            <span><i class="fas fa-snowflake"></i> Air Conditioner</span>
+          </div>
+          <button class="btn-details">View Details</button>
+        </div>
+
+        <div class="car-card">
+          <img src="images/porsche.jfif" alt="Porsche">
+          <div class="car-info">
+            <h3>Porsche</h3>
+            <span class="car-type">SEDAN</span>
+            <span class="car-price">₹7000 <small>per day</small></span>
+          </div>
+          <div class="car-features">
+            <span><i class="fas fa-cogs"></i> Automatic</span>
+            <span><i class="fas fa-gas-pump"></i> PB 95</span>
+            <span><i class="fas fa-snowflake"></i> Air Conditioner</span>
+          </div>
+          <button class="btn-details">View Details</button>
+        </div>
+
+        <div class="car-card">
+          <img src="images/bmw-m5.jfif" alt="bmw-m5">
+          <div class="car-info">
+            <h3>BMW M5</h3>
+            <span class="car-type">SPORTS</span>
+            <span class="car-price">₹17000 <small>per day</small></span>
+          </div>
+          <div class="car-features">
+            <span><i class="fas fa-cogs"></i> Automatic</span>
+            <span><i class="fas fa-gas-pump"></i> PB 95</span>
+            <span><i class="fas fa-snowflake"></i> Air Conditioner</span>
+          </div>
+          <button class="btn-details">View Details</button>
+        </div>
+
+        <div class="car-card">
+          <img src="images/g-wagon.jfif" alt="G-wagon">
+          <div class="car-info">
+            <h3>G Wagon</h3>
+            <span class="car-type">LUXURY</span>
+            <span class="car-price">₹12000 <small>per day</small></span>
+          </div>
+          <div class="car-features">
+            <span><i class="fas fa-cogs"></i> Automat</span>
+            <span><i class="fas fa-gas-pump"></i> PB 95</span>
+            <span><i class="fas fa-snowflake"></i> Air Conditioner</span>
+          </div>
+          <button class="btn-details">View Details</button>
+        </div>
+
+        <div class="car-card">
+          <img src="images/sedan.jfif" alt="Toyota">
+          <div class="car-info">
+            <h3>Toyota</h3>
+            <span class="car-type">SEDAN</span>
+            <span class="car-price">₹6000 <small>per day</small></span>
+          </div>
+          <div class="car-features">
+            <span><i class="fas fa-cogs"></i>No Automatic</span>
+            <span><i class="fas fa-gas-pump"></i> PB 95</span>
+            <span><i class="fas fa-snowflake"></i> Air Conditioner</span>
+          </div>
+          <button class="btn-details">View Details</button>
+        </div>
+        <div class="car-card">
+          <img src="images/pickup.jfif" alt="Pickup">
+          <div class="car-info">
+            <h3>Porsche</h3>
+            <span class="car-type">PICKUP</span>
+            <span class="car-price">₹4000 <small>per day</small></span>
+          </div>
+          <div class="car-features">
+            <span><i class="fas fa-cogs"></i>No Automatic</span>
+            <span><i class="fas fa-gas-pump"></i> PB 95</span>
+            <span><i class="fas fa-snowflake"></i> Air Conditioner</span>
+          </div>
+          <button class="btn-details">View Details</button>
+        </div>
+        <div class="car-card">
+          <img src="images/sedan-2.jfif" alt="sedan-2">
+          <div class="car-info">
+            <h3>Toyota Camry</h3>
+            <span class="car-type">SEDAN</span>
+            <span class="car-price">₹7000 <small>per day</small></span>
+          </div>
+          <div class="car-features">
+            <span><i class="fas fa-cogs"></i>No Automatic</span>
+            <span><i class="fas fa-gas-pump"></i> PB 95</span>
+            <span><i class="fas fa-snowflake"></i> Air Conditioner</span>
+          </div>
+          <button class="btn-details">View Details</button>
+        </div>
+      </div>
+
+    </section>
+    <section class="facts-section">
+      <div class="facts-container">
+        <h2>Facts In Numbers</h2>
+        <p>Happy Customers
+          Trusted by travelers across the city.</p>
+
+        <div class="facts-grid">
+          <div class="fact-card">
+            <div class="fact-icon"><i class="fas fa-car"></i></div>
+            <h3>540+</h3>
+            <span>Cars</span>
+          </div>
+          <div class="fact-card">
+            <div class="fact-icon"><i class="fas fa-user"></i></div>
+            <h3>20k+</h3>
+            <span>Customers</span>
+          </div>
+          <div class="fact-card">
+            <div class="fact-icon"><i class="fas fa-calendar-alt"></i></div>
+            <h3>25+</h3>
+            <span>Years</span>
+          </div>
+          <div class="fact-card">
+            <div class="fact-icon"><i class="fas fa-tachometer-alt"></i></div>
+            <h3>20m+</h3>
+            <span>Miles</span>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Enjoy Every Mile Section -->
+    <section class="enjoy-section">
+      <div class="enjoy-content">
+        <h2>Enjoy every mile with adorable companionship.</h2>
+        <p>Drive with ease in modern, well-maintained cars — designed for smooth journeys and lasting memories.</p>
+        <div class="search-box">
+          <input type="text" placeholder="City">
+          <button>Search</button>
+        </div>
+      </div>
+    </section>
+    <!-- Footer Section -->
+    <footer class="footer">
+      <div class="footer-container">
+
+        <div class="footer-column">
+          <div class="footer-logo">
+            <i class="fas fa-car"></i> Car Rental
+          </div>
+          <p>
+            Reliable, well-maintained cars for every journey.<br>
+            Book with ease and drive with confidence.
+          </p>
+          <div class="footer-social">
+            <i class="fab fa-facebook"></i>
+            <i class="fab fa-instagram"></i>
+            <i class="fab fa-x-twitter"></i>
+            <i class="fab fa-youtube"></i>
+          </div>
+        </div>
+
+        <div class="footer-column">
+          <div class="footer-info">
+            <i class="fas fa-map-marker-alt"></i>
+            <p><strong>Address</strong><br>India</p>
+          </div>
+        </div>
+
+        <div class="footer-column">
+          <div class="footer-info">
+            <i class="fas fa-envelope"></i>
+            <p><strong>Email</strong><br>car.rental@gmail.com</p>
+          </div>
+        </div>
+
+        <div class="footer-column">
+          <div class="footer-info">
+            <i class="fas fa-phone"></i>
+            <p><strong>Phone</strong><br>+91 9988001100</p>
+          </div>
+        </div>
+
+     <div class="footer-column">
+  <h4>Useful links</h4>
+  <ul>
+    <li><a href="About.html">About us</a></li>
+    <li><a href="Contact.html">Contact us</a></li>
+    <li><a href="Vehicles.html">Vehicles</a></li>
+    <li><a href="index.html">Home</a></li>
+  </ul>
+</div>
+
+<div class="footer-column">
+  <h4>Vehicles</h4>
+  <ul>
+    <li><a href="vehicles.html">Sedan</a></li>
+    <li><a href="vehicles.html">Luxury</a></li>
+    <li><a href="vehicles.html">Pickup</a></li>
+    <li><a href="vehicles.html">Sports</a></li>
+    <li><a href="vehicles.html">SUV</a></li>
+  </ul>
+</div>
+
+
+        <div class="footer-column">
+          <h4>Download App</h4>
+          <img src="images/playstore.jfif" alt="App Store" style="width: 70px; margin-bottom: 10px;">
+          <img src="images/appstore.jfif" alt="Google Play" style="width: 100px;">
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>© Copyright Car Rental 2025. Design by Shubham & Parth </p>
+      </div>
+    </footer>
+
+</body>
+
 </html>
