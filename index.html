@@ -2,37 +2,46 @@
 <html lang="en">
 
 <head>
+  
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Car Rental</title>
   <link rel="stylesheet" href="style.css">
+  <script src="hamburger.js"></script>
+
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
 
   <!-- Navbar -->
-  <header>
-    
-    <div class="logo">
-      <i class="fas fa-car-side"></i> Car Rental
-    </div>
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="vehicles.html">Vehicles</a>
-      <a href="details.html">Details</a>
-      <a href="about.html">About Us</a>
-      <a href="contact.html">Contact Us</a>
-    </nav>
-    <div class="contact">
-      <i class="fas fa-phone"></i>
-      <div>
-        <span>Need help?</span><br>
-        <strong>+91 9988001100</strong>
-      </div>
-    </div>
-  </header>
+<header>
+  <div class="logo">
+    <i class="fas fa-car"></i> Car Rental
+  </div>
 
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="cars.html">Cars</a>
+    <a href="services.html">Services</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+
+  <div class="contact">
+    <i class="fas fa-phone-alt"></i>
+    <div>
+      <span>Call Us</span>
+      <strong>+1 234 567 890</strong>
+    </div>
+  </div>
+
+  <!-- Hamburger Button -->
+  <div class="hamburger" id="hamburger">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</header>
   <!-- Hero Section -->
   <section class="hero">
     <div class="hero-inner">
@@ -40,7 +49,7 @@
         <h1>Experience the road<br>like never before</h1>
         <p>Rent. Ride. Repeat. <br>
           Your Key to Hassle-Free Travel</p>
-          <a href="vehicles.html">
+          <a href="cars.html">
         <button class="btn-view">🚗 View All Cars</button>
           </a>
       </div>
@@ -107,7 +116,7 @@
       </div>
     </section>
 
-    <!-- Center Section -->
+    <!-- Center Section --> 
     <section class="center-block">
       <div class="center-inner">
         <div class="center-left">
@@ -368,7 +377,7 @@
   <ul>
     <li><a href="About.html">About us</a></li>
     <li><a href="Contact.html">Contact us</a></li>
-    <li><a href="Vehicles.html">Vehicles</a></li>
+    <li><a href="cars.html">Vehicles</a></li>
     <li><a href="index.html">Home</a></li>
   </ul>
 </div>
@@ -376,11 +385,11 @@
 <div class="footer-column">
   <h4>Vehicles</h4>
   <ul>
-    <li><a href="vehicles.html">Sedan</a></li>
-    <li><a href="vehicles.html">Luxury</a></li>
-    <li><a href="vehicles.html">Pickup</a></li>
-    <li><a href="vehicles.html">Sports</a></li>
-    <li><a href="vehicles.html">SUV</a></li>
+    <li><a href="cars.html">Sedan</a></li>
+    <li><a href="cars.html">Luxury</a></li>
+    <li><a href="cars.html">Pickup</a></li>
+    <li><a href="cars.html">Sports</a></li>
+    <li><a href="cars.html">SUV</a></li>
   </ul>
 </div>
 
@@ -396,17 +405,7 @@
         <p>© Copyright Car Rental 2025. Design by Shubham & Parth </p>
       </div>
     </footer>
-<script>
-  document.querySelector('.hamburger').addEventListener('click', function(){
-    document.querySelector('nav').classList.toggle('active');
-  });
-</script>
-<script>
-document.getElementById("hamburger").addEventListener("click", function() {
-  this.classList.toggle("active");
-  document.querySelector("nav").classList.toggle("active");
-});
-</script>
+
 </body>
 
 </html>
