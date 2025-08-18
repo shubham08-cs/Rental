@@ -18,28 +18,16 @@ img {
   display: block;
 }
 
-/* ===== RESET & BASE STYLES ===== */
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-body {
-  font-family: 'Poppins', sans-serif;
-  color: #000;
-  overflow-x: hidden;
-}
-
-img {
-  max-width: 100%;
-  height: auto;
-  display: block;
-}
-
 /* ===== HEADER & NAVIGATION ===== */
-
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 5%;
+  background: #fff;
+  position: relative;
+  z-index: 100;
+}
 header {
   display: flex;
   justify-content: space-between;
@@ -102,35 +90,52 @@ nav a:hover {
   font-size: 14px;
 }
 
-/* Hamburger Menu */
-.hamburger {
-  display: none;
-  flex-direction: column;
-  cursor: pointer;
-  gap: 5px;
-  margin-left: auto;
+.logo {
+  font-size: 20px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
 }
 
-.hamburger span {
-  width: 25px;
-  height: 3px;
-  background: #000;
-  border-radius: 3px;
-  transition: all 0.3s ease;
+.logo i {
+  margin-right: 8px;
 }
 
-.hamburger.active span:nth-child(1) {
-  transform: rotate(45deg) translate(5px, 5px);
+nav {
+  display: flex;
+  align-items: center;
 }
 
-.hamburger.active span:nth-child(2) {
-  opacity: 0;
+nav a {
+  margin: 0 15px;
+  text-decoration: none;
+  font-weight: 500;
+  color: #000;
+  transition: color 0.3s;
 }
 
-.hamburger.active span:nth-child(3) {
-  transform: rotate(-45deg) translate(5px, -5px);
+nav a:hover {
+  color: orange;
 }
 
+.contact {
+  display: flex;
+  align-items: center;
+}
+
+.contact i {
+  font-size: 20px;
+  margin-right: 8px;
+  color: #673ab7;
+}
+
+.contact span {
+  font-size: 12px;
+}
+
+.contact strong {
+  font-size: 14px;
+}
 
 /* Hamburger Menu */
 .hamburger {
@@ -779,6 +784,81 @@ nav a:hover {
   border-top: 1px solid #eee;
   margin-top: 30px;
 }
+/* Extra Section */
+.footer-extra {
+  margin-top: 40px;
+  text-align: center;
+}
+
+.footer-extra h4 {
+  font-size: 18px;
+  margin-bottom: 15px;
+  color: #222;
+}
+
+.footer-form {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.footer-form input {
+  padding: 10px 15px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 14px;
+  min-width: 250px;
+}
+
+.footer-form button {
+  background: #6c63ff;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: background 0.3s ease;
+}
+
+.footer-form button:hover {
+  background: #574fdd;
+}
+/* App Store & Play Store Badges */
+.footer-apps {
+  margin-top: 15px;
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.footer-apps img {
+  height: 40px;
+  transition: transform 0.3s ease;
+}
+
+.footer-apps img:hover {
+  transform: scale(1.05);
+}
+/* General footer text spacing */
+.footer p,
+.footer-info p,
+.footer-column ul li,
+.footer-column h4 {
+  line-height: 1.6; /* more vertical breathing space */
+}
+
+/* Add spacing between blocks inside each column */
+.footer-column > *:not(:last-child) {
+  margin-bottom: 12px; /* space between logo, text, links, etc. */
+}
+
+/* Increase spacing between footer sections */
+.footer-container {
+  gap: 60px; /* spacing between columns */
+}
+
 
 /* ===== BUTTON STYLES ===== */
 .btn-view {
