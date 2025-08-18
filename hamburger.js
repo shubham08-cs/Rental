@@ -1,5 +1,4 @@
-
-  const hamburger = document.querySelector('.hamburger');
+const hamburger = document.querySelector('.hamburger');
   const nav = document.querySelector('nav');
 
   hamburger.addEventListener('click', () => {
@@ -42,4 +41,3 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   });
 });
-
