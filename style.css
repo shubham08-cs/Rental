@@ -1192,3 +1192,68 @@ body.no-scroll {
     display: none;
   }
 }
+/* ===== HAMBURGER MENU IMPROVEMENTS ===== */
+.hamburger {
+  z-index: 1001;
+  position: relative;
+  padding: 12px;
+}
+
+@media (max-width: 768px) {
+  .hamburger {
+    display: flex;
+  }
+  
+  nav {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+  }
+  
+  .no-scroll {
+    overflow: hidden;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+  }
+  
+  /* Header positioning for mobile */
+  header {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .hamburger {
+    position: absolute;
+    left: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  
+  .logo {
+    text-align: center;
+    margin: 0;
+  }
+  
+  /* Mobile menu styles */
+  nav {
+    display: none;
+    flex-direction: column;
+    background: #fff;
+    width: 100%;
+    padding: 10px 0;
+    border-top: 1px solid #ddd;
+  }
+  
+  nav.active {
+    display: flex;
+  }
+  
+  .overlay {
+    display: none;
+  }
+}
