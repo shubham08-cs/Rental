@@ -1,45 +1,59 @@
 document.addEventListener('DOMContentLoaded', function() {
-  // Menu toggle functionality
+  // Menu elements
   const hamburger = document.querySelector('.hamburger');
   const nav = document.querySelector('nav');
-  const overlay = document.querySelector('.overlay');
   const body = document.body;
-
-  if (hamburger && nav) {
-    // Toggle menu on hamburger click
-    hamburger.addEventListener('click', function(e) {
-      e.stopPropagation();
-      this.classList.toggle('active');
-      nav.classList.toggle('active');
-      
-      if (overlay) {
-        overlay.classList.toggle('active');
-      }
-      
-      body.classList.toggle('no-scroll');
-    });
-
-    // Close menu when clicking outside
-    document.addEventListener('click', function(e) {
-      if (!nav.contains(e.target) && !hamburger.contains(e.target)) {
-        hamburger.classList.remove('active');
-        nav.classList.remove('active');
-        if (overlay) overlay.classList.remove('active');
-        body.classList.remove('no-scroll');
-      }
-    });
-
-    // Close menu when clicking nav links
-    document.querySelectorAll('nav a').forEach(link => {
-      link.addEventListener('click', () => {
-        hamburger.classList.remove('active');
-        nav.classList.remove('active');
-        if (overlay) overlay.classList.remove('active');
-        body.classList.remove('no-scroll');
-      });
-    });
+  
+  // Only proceed if elements exist
+  if (!hamburger || !nav) {
+    console.error('Menu elements not found!');
+    return;
   }
 
-  // Your existing carousel/other JS can go here
-  // ...
+  // Toggle menu function
+  function toggleMenu() {
+    hamburger.classList.toggle('active');
+    nav.classList.toggle('active');
+    body.classList.toggle('no-scroll');
+    
+    // Add backdrop overlay if needed
+    if (nav.classList.contains('active')) {
+      const overlay = document.createElement('div');
+      overlay.className = 'nav-overlay';
+      document.body.appendChild(overlay);
+      
+      overlay.addEventListener('click', function() {
+        closeMenu();
+        overlay.remove();
+      });
+    } else {
+      const overlay = document.querySelector('.nav-overlay');
+      if (overlay) overlay.remove();
+    }
+  }
+
+  // Close menu function
+  function closeMenu() {
+    hamburger.classList.remove('active');
+    nav.classList.remove('active');
+    body.classList.remove('no-scroll');
+  }
+
+  // Event listeners
+  hamburger.addEventListener('click', function(e) {
+    e.stopPropagation();
+    toggleMenu();
+  });
+
+  // Close when clicking outside
+  document.addEventListener('click', function(e) {
+    if (!nav.contains(e.target) && !hamburger.contains(e.target)) {
+      closeMenu();
+    }
+  });
+
+  // Close when clicking links
+  document.querySelectorAll('nav a').forEach(link => {
+    link.addEventListener('click', closeMenu);
+  });
 });
