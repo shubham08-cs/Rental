@@ -6,7 +6,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Car Rental</title>
-  <link rel="stylesheet" href="Rental/css/about.css">
+  <link rel="stylesheet" href="about.css">
   <script src="vehicles.js"></script>
 
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
@@ -43,6 +43,211 @@
     <span></span>
   </div>
 </header>
+
+<!-- About Us Section -->
+  <section class="about-section">
+    
+    <!-- Title -->
+    <div class="about-title">
+      <h2>About Us</h2>
+      <p>Home / <span>About Us</span></p>
+    </div>
+
+    <!-- Top Content -->
+    <div class="about-grid">
+      <div>
+  <h3 class="about-heading">Where every drive feels truly extraordinary</h3>
+</div>
+
+
+      <div>
+        <h4>Wide Range of Brands</h4>
+        <p>We provide cars from multiple trusted brands so that you always have the perfect choice for your journey.</p>
+        
+        <h4>Maximum Freedom</h4>
+        <p>Enjoy unlimited kilometres with our flexible rental options. Travel without worries, the road is yours.</p>
+      </div>
+
+      <div>
+        <h4>24x7 Customer Support</h4>
+        <p>Our support team is always available to assist you during your trip. Just give us a call anytime you need help.</p>
+        
+        <h4>Flexible Rentals</h4>
+        <p>Whether you need a car for a day, a week or a month – we offer flexible plans that fit your needs.</p>
+      </div>
+    </div>
+
+    <!-- Video Section -->
+    <div class="video-container">
+      <img src="https://images.unsplash.com/photo-1502877338535-766e1452684a?auto=format&fit=crop&w=1200&q=60" alt="About Video">
+      <div class="play-button" onclick="openModal()">▶</div>
+    </div>
+
+    <!-- Stats -->
+    <div class="stats">
+      <div class="stat">
+        <h3>20k+</h3>
+        <p><b>Happy Customers</b></p>
+      </div>
+      <div class="stat">
+        <h3>540+</h3>
+        <p><b>Cars in Our Fleet</b></p>
+      </div>
+      <div class="stat">
+        <h3>25+</h3>
+        <p><b>Years of Experience</b></p>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- Video Modal -->
+  <div id="videoModal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal()">&times;</span>
+      <iframe id="youtubeVideo" width="100%" height="450" src="" frameborder="0" allowfullscreen></iframe>
+    </div>
+  </div>
+
+  <script>
+    function openModal() {
+      document.getElementById("videoModal").style.display = "flex";
+      document.getElementById("youtubeVideo").src = "https://www.youtube.com/embed/1V_xRb0x9aw?autoplay=1"; 
+    }
+    function closeModal() {
+      document.getElementById("videoModal").style.display = "none";
+      document.getElementById("youtubeVideo").src = ""; 
+    }
+  </script>
+
+
+
+  <!-- App Download Section -->
+  <section class="download-app">
+    <div class="app-container">
+   <div class="phone-image">
+  <img src="images/applemobile.png" alt="Mobile Image">
+</div>
+      <div class="app-content">
+        <p class="small-text">DOWNLOAD OUR APP</p>
+        <h2>Get our app today</h2>
+        <p class="desc">
+          Book a ride anytime, anywhere. It’s easy, fast and reliable. Download now to enjoy smooth travel in just a few taps.
+        </p>
+        <!-- Google Play -->
+<a href="https://play.google.com/store" target="_blank">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg" 
+       alt="Get it on Google Play" width="160">
+</a>
+
+<!-- App Store -->
+<a href="https://www.apple.com/app-store/" target="_blank">
+  <img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" 
+       alt="Download on the App Store" width="160">
+</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Reviews Section -->
+  <section class="reviews">
+    <h2>What our customers say</h2>
+    <div class="reviews-grid">
+      <div class="review-card">
+        <p class="quote">“</p>
+        <p class="review-text">
+          The booking was simple and the car was clean. Very happy with the service.
+        </p>
+        <div class="reviewer">
+          <img src="https://randomuser.me/api/portraits/men/45.jpg" alt="Customer">
+          <div>
+            <h4>Emanuel Boyle</h4>
+            <p>Kabul LLC</p>
+          </div>
+        </div>
+      </div>
+      <div class="review-card">
+        <p class="quote">“</p>
+        <p class="review-text">
+          The app is easy and quick to use. Great prices and helpful support.
+        </p>
+        <div class="reviewer">
+          <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Customer">
+          <div>
+            <h4>River Graves</h4>
+            <p>Bloom Gym</p>
+          </div>
+        </div>
+      </div>
+      <div class="review-card">
+        <p class="quote">“</p>
+        <p class="review-text">
+          Pickup and drop were on time. Cars are clean and in good condition. Recommended.
+        </p>
+        <div class="reviewer">
+          <img src="https://randomuser.me/api/portraits/women/40.jpg" alt="Customer">
+          <div>
+            <h4>Ryder Malone</h4>
+            <p>Haq LLC</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Section -->
+  <section class="faq-section">
+    <h2>Top Car Rental Questions</h2>
+
+    <div class="faq-item">
+      <button class="faq-question">How does it works?</button>
+      <div class="faq-answer">
+        <p>Our process is simple and hassle-free. Just choose your car, provide your details, and drive away with full support. No hidden fees, only transparent pricing.</p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question">Can I rent a car without a credit card?</button>
+      <div class="faq-answer">
+        <p>Yes, in many cases you can. We also accept debit cards and other payment methods for your convenience.</p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question">What are the requirements for renting a car?</button>
+      <div class="faq-answer">
+        <p>You need a valid driving licence, government ID, and must meet the minimum age requirements depending on the car type.</p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question">Does Car Rental allow me to tow with or attach a hitch to the rental vehicle?</button>
+      <div class="faq-answer">
+        <p>No, towing is not permitted with our rental vehicles for safety and insurance reasons.</p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question">Does Car Rental offer coverage products for purchase with my rental?</button>
+      <div class="faq-answer">
+        <p>Yes, we offer insurance and protection plans to give you peace of mind during your journey.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Looking for a car Section -->
+  <section class="cta-section">
+    <div class="cta-content">
+      <h2>Looking for a car?</h2>
+      <p class="phone">+91 98765 43210</p>
+      <p>Call us now and drive your dream car today with ease and comfort.</p>
+      <a href="#" class="cta-button">Book now</a>
+    </div>
+    <div class="cta-image"></div>
+  </section>
+
+  <script src="faq.js"></script>
+
 <!-- ===== FOOTER ===== -->
 <footer class="footer">
   <div class="footer-container">
