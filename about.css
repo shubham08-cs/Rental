@@ -712,14 +712,377 @@ body {
 }
 
 .footer-container {
+  max-width: 1100px;   /* constrains the width */
+  margin: 0 auto;      /* centers it */
+  padding: 0 5%;       /* adds extra space inside */
+}
+
+.footer-column {
+  flex: 1;
+  min-width: 220px;
+}
+
+.footer-logo {
+  font-size: 20px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.footer-logo i {
+  font-size: 24px;
+}
+
+.footer p {
+  font-size: 16px;
+  margin: 12px 0;
+}
+
+.footer-social {
+  display: flex;
+  gap: 12px;
+}
+
+.footer-social i {
+  font-size: 20px;
+  color: #444;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+.footer-social i:hover {
+  color: #6c63ff;
+}
+
+.footer-info {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.footer-info i {
+  font-size: 20px;
+  color: orange;
+}
+
+.footer-info p {
+  font-size: 16px;
+  margin: 0;
+}
+
+.footer-column h4 {
+  font-size: 18px;
+  margin-bottom: 14px;
+}
+
+.footer-column ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-column ul li {
+  margin-bottom: 8px;
+}
+
+.footer-column ul li a {
+  color: #444;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.footer-column ul li a:hover {
+  color: #6c63ff;
+  text-decoration: underline;
+}
+
+.footer-bottom {
+  text-align: center;
+  padding-top: 25px;
+  font-size: 14px;
+  color: gray;
+  border-top: 1px solid #eee;
+  margin-top: 30px;
+}
+
+/* Extra Section */
+.footer-extra {
+  margin-top: 40px;
+  text-align: center;
+}
+
+.footer-extra h4 {
+  font-size: 18px;
+  margin-bottom: 15px;
+  color: #222;
+}
+
+.footer-form {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.footer-form input {
+  padding: 10px 15px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 14px;
+  min-width: 250px;
+}
+
+.footer-form button {
+  background: #6c63ff;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: background 0.3s ease;
+}
+
+.footer-form button:hover {
+  background: #574fdd;
+}
+
+/* App Store & Play Store Badges */
+.footer-apps {
+  margin-top: 15px;
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.footer-apps img {
+  height: 40px;
+  transition: transform 0.3s ease;
+}
+
+.footer-apps img:hover {
+  transform: scale(1.05);
+}
+
+/* General footer text spacing */
+.footer p,
+.footer-info p,
+.footer-column ul li,
+.footer-column h4 {
+  line-height: 1.6;
+}
+
+/* Add spacing between blocks inside each column */
+.footer-column > *:not(:last-child) {
+  margin-bottom: 12px;
+}
+
+/* Increase spacing between footer sections */
+.footer-container {
+  gap: 60px;
+}
+
+/* ===== RESPONSIVE BREAKPOINTS ===== */
+@media (max-width: 768px) {
+  header {
+    padding: 15px 20px;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+
+  nav {
+    display: none;
+    flex-direction: column;
+    background: #fff;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    width: 220px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    padding: 15px;
+  }
+
+  nav.active {
+    display: flex;
+  }
+
+  nav a {
+    margin: 8px 0;
+  }
+
+  .contact {
+    display: none !important;
+  }
+
+  /* Header positioning for mobile */
+  header {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .hamburger {
+    position: absolute;
+    left: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  
+  .logo {
+    text-align: center;
+    margin: 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .footer-container {
+    flex-direction: column;
+    gap: 30px;
+  }
+  
+  .footer-form {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .footer-form input {
+    min-width: auto;
+    width: 100%;
+  }
+  
+  .footer-apps {
+    justify-content: center;
+  }
+}
+/* ===== RESET & BASE STYLES ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  color: #000;
+  overflow-x: hidden;
+}
+
+/* ===== HEADER & NAVIGATION ===== */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 5%;
+  background: #fff;
+  position: sticky;
+  top: 0;
+  left: 0;
   width: 100%;
-  margin: 0 auto;
+  z-index: 1000;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+  transition: box-shadow 0.3s ease, background 0.3s ease;
+}
+
+.logo {
+  font-size: 20px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+}
+
+.logo i {
+  margin-right: 8px;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+}
+
+nav a {
+  margin: 0 15px;
+  text-decoration: none;
+  font-weight: 500;
+  color: #000;
+  transition: color 0.3s;
+}
+
+nav a:hover {
+  color: orange;
+}
+
+.contact {
+  display: flex;
+  align-items: center;
+}
+
+.contact i {
+  font-size: 20px;
+  margin-right: 8px;
+  color: #673ab7;
+}
+
+.contact span {
+  font-size: 12px;
+}
+
+.contact strong {
+  font-size: 14px;
+}
+
+/* Hamburger Menu */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  gap: 5px;
+  margin-left: auto;
+}
+
+.hamburger span {
+  width: 25px;
+  height: 3px;
+  background: #000;
+  border-radius: 3px;
+  transition: all 0.3s ease;
+}
+
+.hamburger.active span:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+.hamburger.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.active span:nth-child(3) {
+  transform: rotate(-45deg) translate(5px, -5px);
+}
+
+/* ===== FOOTER ===== */
+/* ===== FOOTER FIX ===== */
+.footer {
+  background: #fff;
+  padding: 70px 5% 40px;
+  border-top: 1px solid #ddd;
+  width: 100%;              /* ✅ ensure it stretches */
+}
+
+.footer-container {
+  width: 100%;              /* ✅ full width */
+  max-width: 100%;          /* ✅ remove 1100px cap */
+  margin: 0;                /* ✅ no centering margin */
   display: flex;
   flex-wrap: wrap;
   gap: 60px;
-  padding: 0 5%; /* same as homepage & vehicle section */
+  padding: 0 5%;            /* ✅ still keep inner spacing */
   box-sizing: border-box;
 }
+
 
 .footer-column {
   flex: 1;
