@@ -1,637 +1,721 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Car Rental - Vehicles</title>
-  <link rel="stylesheet" href="vehicles.css">
-  <script src="vehicles.js"></script>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
-</head>
-<body>
-  <!-- Navbar -->
-  <header>
-    <div class="logo">
-      <i class="fas fa-car"></i> Car Rental
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Car Rental - Vehicles</title>
+    <link rel="stylesheet" href="vehicles.css" />
+    <script src="vehicles.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- Navbar -->
+    <header>
+      <div class="logo"><i class="fas fa-car"></i> Car Rental</div>
+
+      <nav id="nav">
+        <a href="index.html">Home</a>
+        <a href="vehicles.html" class="active">Vehicles</a>
+        <a href="details.html">Details</a>
+        <a href="about.html">About Us</a>
+        <a href="contact.html">Contact Us</a>
+      </nav>
+
+      <div class="contact">
+  <a href="tel:+919000000000" class="call-btn">
+    <i class="fas fa-phone-alt"></i> Call Us
+  </a>
+</div>
+
+      <!-- Hamburger Button -->
+      <div class="hamburger" id="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </header>
+
+    <!-- Vehicles Content -->
+    <div class="vehicles-container">
+      <h1 class="page-title">Select a vehicle group</h1>
+
+      <!-- Filter Section -->
+      <div class="filter-section">
+        <h2 class="filter-title">Filter by Type</h2>
+        <div class="filter-options">
+          <div class="filter-option active" data-filter="all">All vehicles</div>
+          <div class="filter-option" data-filter="sedan">Sedan</div>
+          <div class="filter-option" data-filter="sport">Sport</div>
+          <div class="filter-option" data-filter="luxury">Luxury</div>
+          <div class="filter-option" data-filter="suv">SUV</div>
+          <div class="filter-option" data-filter="pickup">Pick-Up</div>
+        </div>
+      </div>
+
+      <!-- Vehicles Grid -->
+      <div class="vehicles-grid">
+        <!-- Vehicle Card 1 -->
+        <div class="vehicle-card" data-type="luxury">
+          <div class="vehicle-image">
+            <img
+              src="images/mercedes.jfif"
+              alt="Mercedes Sedan"
+              onerror="this.src='https://placehold.co/300x200/4a69bd/white?text=Mercedes+Sedan'"
+            />
+          </div>
+          <div class="vehicle-info">
+            <h3 class="vehicle-name">Mercedes AMG GT C</h3>
+            <p class="vehicle-type">Luxury</p>
+            <div class="vehicle-price">₹15000 per day</div>
+            <div class="vehicle-features">
+              <div class="vehicle-feature">
+                <i class="fas fa-cog"></i>
+                <span>Automatic</span>
+              </div>
+              <div class="vehicle-feature">
+                <i class="fas fa-gas-pump"></i>
+                <span>P9 95</span>
+              </div>
+              <div class="vehicle-feature">
+                <i class="fas fa-snowflake"></i>
+                <span>Air Conditioner</span>
+              </div>
+            </div>
+            <a href="details.html" class="view-details-btn"
+              >View Details</a
+            >
+          </div>
+        </div>
+
+        <!-- Vehicle Card 2 -->
+        <div class="vehicle-card" data-type="sport">
+          <div class="vehicle-image">
+            <img
+              src="images/polo.jfif"
+              alt="Mercedes Sport"
+              onerror="this.src='https://placehold.co/300x200/e74c3c/white?text=Mercedes+Sport'"
+            />
+          </div>
+          <div class="vehicle-info">
+            <h3 class="vehicle-name">Polo GT</h3>
+            <p class="vehicle-type">Sports</p>
+            <div class="vehicle-price">₹5000 per day</div>
+            <div class="vehicle-features">
+              <div class="vehicle-feature">
+                <i class="fas fa-cog"></i>
+                <span>Manual</span>
+              </div>
+              <div class="vehicle-feature">
+                <i class="fas fa-gas-pump"></i>
+                <span>P9 95</span>
+              </div>
+              <div class="vehicle-feature">
+                <i class="fas fa-snowflake"></i>
+                <span>Air Conditioner</span>
+              </div>
+            </div>
+            <a href="vehicles.html" class="view-details-btn">View Details</a>
+          </div>
+        </div>
+
+        <!-- Vehicle Card 3 -->
+        <div class="vehicle-card" data-type="sport">
+          <div class="vehicle-image">
+            <img
+              src="images/porsche.jfif"
+              alt="Mercedes Luxury"
+              onerror="this.src='https://placehold.co/300x200/8e44ad/white?text=Mercedes+Luxury'"
+            />
+          </div>
+          <div class="vehicle-info">
+            <h3 class="vehicle-name">Porsche 911 GT3</h3>
+            <p class="vehicle-type">Sports</p>
+            <div class="vehicle-price">₹7000 per day</div>
+            <div class="vehicle-features">
+              <div class="vehicle-feature">
+                <i class="fas fa-cog"></i>
+                <span>Automatic</span>
+              </div>
+              <div class="vehicle-feature">
+                <i class="fas fa-gas-pump"></i>
+                <span>P9 95</span>
+              </div>
+              <div class="vehicle-feature">
+                <i class="fas fa-snowflake"></i>
+                <span>Air Conditioner</span>
+              </div>
+            </div>
+            <a href="vehicles.html" class="view-details-btn">View Details</a>
+          </div>
+        </div>
+
+        <!-- Vehicle Card 4 -->
+        <div class="vehicle-card" data-type="suv">
+          <div class="vehicle-image">
+            <img
+              src="images/suv-1.jfif"
+              alt="Porsche SUV"
+              onerror="this.src='https://placehold.co/300x200/f39c12/white?text=Porsche+SUV'"
+            />
+          </div>
+          <div class="vehicle-info">
+            <h3 class="vehicle-name">Nissan Rogue</h3>
+            <p class="vehicle-type">SUV</p>
+            <div class="vehicle-price">₹4000 per day</div>
+            <div class="vehicle-features">
+              <div class="vehicle-feature">
+                <i class="fas fa-cog"></i>
+                <span>Manual</span>
+              </div>
+              <div class="vehicle-feature">
+                <i class="fas fa-gas-pump"></i>
+                <span>P9 95</span>
+              </div>
+              <div class="vehicle-feature">
+                <i class="fas fa-snowflake"></i>
+                <span>Air Conditioner</span>
+              </div>
+            </div>
+            <a href="vehicles.html" class="view-details-btn">View Details</a>
+          </div>
+        </div>
+
+        <!-- Vehicle Card 5 -->
+        <div class="vehicle-card" data-type="sedan">
+          <div class="vehicle-image">
+            <img
+              src="images/sedan-1.jfif"
+              alt="Toyota Sedan"
+              onerror="this.src='https://placehold.co/300x200/27ae60/white?text=Toyota+Sedan'"
+            />
+          </div>
+          <div class="vehicle-info">
+            <h3 class="vehicle-name">Hyundai Elantra</h3>
+            <p class="vehicle-type">Sedan</p>
+            <div class="vehicle-price">₹3500 per day</div>
+            <div class="vehicle-features">
+              <div class="vehicle-feature">
+                <i class="fas fa-cog"></i>
+                <span>Manual</span>
+              </div>
+              <div class="vehicle-feature">
+                <i class="fas fa-gas-pump"></i>
+                <span>P9 95</span>
+              </div>
+              <div class="vehicle-feature">
+                <i class="fas fa-snowflake"></i>
+                <span>Air Conditioner</span>
+              </div>
+            </div>
+            <a href="vehicles.html" class="view-details-btn">View Details</a>
+          </div>
+        </div>
+
+        <!-- Vehicle Card 6 -->
+        <div class="vehicle-card" data-type="suv">
+          <div class="vehicle-image">
+            <img
+              src="images/suv-2.jfif"
+              alt="Porsche SUV"
+              onerror="this.src='https://placehold.co/300x200/e74c3c/white?text=Porsche+SUV'"
+            />
+          </div>
+          <div class="vehicle-info">
+            <h3 class="vehicle-name">Mahindra Scorpio Black N</h3>
+            <p class="vehicle-type">SUV</p>
+            <div class="vehicle-price">₹5000 per day</div>
+            <div class="vehicle-features">
+              <div class="vehicle-feature">
+                <i class="fas fa-cog"></i>
+                <span>Automatic</span>
+              </div>
+              <div class="vehicle-feature">
+                <i class="fas fa-gas-pump"></i>
+                <span>P9 95</span>
+              </div>
+              <div class="vehicle-feature">
+                <i class="fas fa-snowflake"></i>
+                <span>Air Conditioner</span>
+              </div>
+            </div>
+            <a href="vehicles.html" class="view-details-btn">View Details</a>
+          </div>
+        </div>
+
+        <!-- Vehicle Card 7 -->
+        <div class="vehicle-card" data-type="pickup">
+          <div class="vehicle-image">
+            <img
+              src="images/pickup.jfif"
+              alt="Mercedes Premium"
+              onerror="this.src='https://placehold.co/300x200/4a69bd/white?text=Mercedes+Premium'"
+            />
+          </div>
+          <div class="vehicle-info">
+            <h3 class="vehicle-name">Ford F-150 Raptor</h3>
+            <p class="vehicle-type">Pickup</p>
+            <div class="vehicle-price">₹2500 per day</div>
+            <div class="vehicle-features">
+              <div class="vehicle-feature">
+                <i class="fas fa-cog"></i>
+                <span>Manual</span>
+              </div>
+              <div class="vehicle-feature">
+                <i class="fas fa-gas-pump"></i>
+                <span>P9 95</span>
+              </div>
+              <div class="vehicle-feature">
+                <i class="fas fa-snowflake"></i>
+                <span>Air Conditioner</span>
+              </div>
+            </div>
+            <a href="vehicles.html" class="view-details-btn">View Details</a>
+          </div>
+        </div>
+
+        <!-- Vehicle Card 8 -->
+        <div class="vehicle-card" data-type="suv">
+          <div class="vehicle-image">
+            <img
+              src="images/suv-3.jfif"
+              alt="Toyota SUV"
+              onerror="this.src='https://placehold.co/300x200/27ae60/white?text=Toyota+SUV'"
+            />
+          </div>
+          <div class="vehicle-info">
+            <h3 class="vehicle-name">Chevrolet Suburban</h3>
+            <p class="vehicle-type">SUV</p>
+            <div class="vehicle-price">₹6000 per day</div>
+            <div class="vehicle-features">
+              <div class="vehicle-feature">
+                <i class="fas fa-cog"></i>
+                <span>Manual</span>
+              </div>
+              <div class="vehicle-feature">
+                <i class="fas fa-gas-pump"></i>
+                <span>P9 95</span>
+              </div>
+              <div class="vehicle-feature">
+                <i class="fas fa-snowflake"></i>
+                <span>Air Conditioner</span>
+              </div>
+            </div>
+            <a href="vehicles.html" class="view-details-btn">View Details</a>
+          </div>
+        </div>
+
+        <!-- Vehicle Card 9 -->
+        <div class="vehicle-card" data-type="luxury">
+          <div class="vehicle-image">
+            <img
+              src="images/g-wagon.jfif"
+              alt="G-Wagon"
+              onerror="this.src='https://placehold.co/300x200/8e44ad/white?text=Maybach+Luxury'"
+            />
+          </div>
+          <div class="vehicle-info">
+            <h3 class="vehicle-name">G- Wagon</h3>
+            <p class="vehicle-type">Luxury</p>
+            <div class="vehicle-price">₹17000 per day</div>
+            <div class="vehicle-features">
+              <div class="vehicle-feature">
+                <i class="fas fa-cog"></i>
+                <span>Automatic</span>
+              </div>
+              <div class="vehicle-feature">
+                <i class="fas fa-gas-pump"></i>
+                <span>P9 95</span>
+              </div>
+              <div class="vehicle-feature">
+                <i class="fas fa-snowflake"></i>
+                <span>Air Conditioner</span>
+              </div>
+            </div>
+            <a href="vehicles.html" class="view-details-btn">View Details</a>
+          </div>
+        </div>
+        <!-- Vehicle Card 10 -->
+        <div class="vehicle-card" data-type="luxury">
+          <div class="vehicle-image">
+            <img
+              src="images/luxury-1.jfif"
+              alt="Maybach Luxury"
+              onerror="this.src='https://placehold.co/300x200/8e44ad/white?text=Maybach+Luxury'"
+            />
+          </div>
+          <div class="vehicle-info">
+            <h3 class="vehicle-name">Rolls - Royce Phantom</h3>
+            <p class="vehicle-type">Luxury</p>
+            <div class="vehicle-price">₹25000 per day</div>
+            <div class="vehicle-features">
+              <div class="vehicle-feature">
+                <i class="fas fa-cog"></i>
+                <span>Automatic</span>
+              </div>
+              <div class="vehicle-feature">
+                <i class="fas fa-gas-pump"></i>
+                <span>P9 95</span>
+              </div>
+              <div class="vehicle-feature">
+                <i class="fas fa-snowflake"></i>
+                <span>Air Conditioner</span>
+              </div>
+            </div>
+            <a href="vehicles.html" class="view-details-btn">View Details</a>
+          </div>
+        </div>
+        <!-- Vehicle Card 11 -->
+        <div class="vehicle-card" data-type="sedan">
+          <div class="vehicle-image">
+            <img
+              src="images/sedan-2.jfif"
+              alt="Maybach Luxury"
+              onerror="this.src='https://placehold.co/300x200/8e44ad/white?text=Maybach+Luxury'"
+            />
+          </div>
+          <div class="vehicle-info">
+            <h3 class="vehicle-name">Toyota Camry</h3>
+            <p class="vehicle-type">Sedan</p>
+            <div class="vehicle-price">₹7000 per day</div>
+            <div class="vehicle-features">
+              <div class="vehicle-feature">
+                <i class="fas fa-cog"></i>
+                <span>Automatic</span>
+              </div>
+              <div class="vehicle-feature">
+                <i class="fas fa-gas-pump"></i>
+                <span>P9 95</span>
+              </div>
+              <div class="vehicle-feature">
+                <i class="fas fa-snowflake"></i>
+                <span>Air Conditioner</span>
+              </div>
+            </div>
+            <a href="vehicles.html" class="view-details-btn">View Details</a>
+          </div>
+        </div>
+        <!-- Vehicle Card 12 -->
+        <div class="vehicle-card" data-type="pickup">
+          <div class="vehicle-image">
+            <img
+              src="images/pickup-3.jfif"
+              alt="Maybach Luxury"
+              onerror="this.src='https://placehold.co/300x200/8e44ad/white?text=Maybach+Luxury'"
+            />
+          </div>
+          <div class="vehicle-info">
+            <h3 class="vehicle-name">Toyoto Hilux</h3>
+            <p class="vehicle-type">Pickup</p>
+            <div class="vehicle-price">₹5500 per day</div>
+            <div class="vehicle-features">
+              <div class="vehicle-feature">
+                <i class="fas fa-cog"></i>
+                <span>Manual</span>
+              </div>
+              <div class="vehicle-feature">
+                <i class="fas fa-gas-pump"></i>
+                <span>P9 95</span>
+              </div>
+              <div class="vehicle-feature">
+                <i class="fas fa-snowflake"></i>
+                <span>Air Conditioner</span>
+              </div>
+            </div>
+            <a href="vehicles.html" class="view-details-btn">View Details</a>
+          </div>
+        </div>
+        <!-- Vehicle Card 13 -->
+        <div class="vehicle-card" data-type="sport">
+          <div class="vehicle-image">
+            <img
+              src="images/sports-1.jfif"
+              alt="Maybach Luxury"
+              onerror="this.src='https://placehold.co/300x200/8e44ad/white?text=Maybach+Luxury'"
+            />
+          </div>
+          <div class="vehicle-info">
+            <h3 class="vehicle-name">McLaren 720s</h3>
+            <p class="vehicle-type">Sports</p>
+            <div class="vehicle-price">₹15,500 per day</div>
+            <div class="vehicle-features">
+              <div class="vehicle-feature">
+                <i class="fas fa-cog"></i>
+                <span>Automatic</span>
+              </div>
+              <div class="vehicle-feature">
+                <i class="fas fa-gas-pump"></i>
+                <span>P9 95</span>
+              </div>
+              <div class="vehicle-feature">
+                <i class="fas fa-snowflake"></i>
+                <span>Air Conditioner</span>
+              </div>
+            </div>
+            <a href="vehicles.html" class="view-details-btn">View Details</a>
+          </div>
+        </div>
+        <!-- Vehicle Card 14 -->
+        <div class="vehicle-card" data-type="sedan">
+          <div class="vehicle-image">
+            <img
+              src="images/sedan-3.jfif"
+              alt="Maybach Luxury"
+              onerror="this.src='https://placehold.co/300x200/8e44ad/white?text=Maybach+Luxury'"
+            />
+          </div>
+          <div class="vehicle-info">
+            <h3 class="vehicle-name">Hyundai Venue</h3>
+            <p class="vehicle-type">Sedan</p>
+            <div class="vehicle-price">₹4500 per day</div>
+            <div class="vehicle-features">
+              <div class="vehicle-feature">
+                <i class="fas fa-cog"></i>
+                <span>Manual</span>
+              </div>
+              <div class="vehicle-feature">
+                <i class="fas fa-gas-pump"></i>
+                <span>P9 95</span>
+              </div>
+              <div class="vehicle-feature">
+                <i class="fas fa-snowflake"></i>
+                <span>Air Conditioner</span>
+              </div>
+            </div>
+            <a href="vehicles.html" class="view-details-btn">View Details</a>
+          </div>
+        </div>
+        <!-- Vehicle Card 15 -->
+        <div class="vehicle-card" data-type="pickup">
+          <div class="vehicle-image">
+            <img
+              src="images/pickup-2.jfif"
+              alt="Maybach Luxury"
+              onerror="this.src='https://placehold.co/300x200/8e44ad/white?text=Maybach+Luxury'"
+            />
+          </div>
+          <div class="vehicle-info">
+            <h3 class="vehicle-name">Hilux Revo</h3>
+            <p class="vehicle-type">Pickup</p>
+            <div class="vehicle-price">₹5500 per day</div>
+            <div class="vehicle-features">
+              <div class="vehicle-feature">
+                <i class="fas fa-cog"></i>
+                <span>Manual</span>
+              </div>
+              <div class="vehicle-feature">
+                <i class="fas fa-gas-pump"></i>
+                <span>P9 95</span>
+              </div>
+              <div class="vehicle-feature">
+                <i class="fas fa-snowflake"></i>
+                <span>Air Conditioner</span>
+              </div>
+            </div>
+            <a href="vehicles.html" class="view-details-btn">View Details</a>
+          </div>
+        </div>
+        <!-- Vehicle Card 13 -->
+        <div class="vehicle-card" data-type="Sports">
+          <div class="vehicle-image">
+            <img
+              src="images/sports-3.jfif"
+              alt="Maybach Luxury"
+              onerror="this.src='https://placehold.co/300x200/8e44ad/white?text=Maybach+Luxury'"
+            />
+          </div>
+          <div class="vehicle-info">
+            <h3 class="vehicle-name">AUDI R8</h3>
+            <p class="vehicle-type">Sports</p>
+            <div class="vehicle-price">₹10,500 per day</div>
+            <div class="vehicle-features">
+              <div class="vehicle-feature">
+                <i class="fas fa-cog"></i>
+                <span>Automatic</span>
+              </div>
+              <div class="vehicle-feature">
+                <i class="fas fa-gas-pump"></i>
+                <span>P9 95</span>
+              </div>
+              <div class="vehicle-feature">
+                <i class="fas fa-snowflake"></i>
+                <span>Air Conditioner</span>
+              </div>
+            </div>
+            <a href="vehicles.html" class="view-details-btn">View Details</a>
+          </div>
+        </div>
+      </div>
     </div>
-
-    <nav id="nav">
-      <a href="index.html">Home</a>
-      <a href="vehicles.html" class="active">Vehicles</a>
-      <a href="details.html">Details</a>
-      <a href="about.html">About Us</a>
-      <a href="contact.html">Contact Us</a>
-    </nav>
-
-    <div class="contact">
-      <i class="fas fa-phone-alt"></i>
-      <div>
-        <span>Call Us</span>
-        <strong>+91 9989895589</strong>
-      </div>
-    </div>
-
-    <!-- Hamburger Button -->
-    <div class="hamburger" id="hamburger">
-      <span></span>
-      <span></span>
-      <span></span>
-    </div>
-  </header>
-
-  <!-- Vehicles Content -->
-  <div class="vehicles-container">
-    <h1 class="page-title">Select a vehicle group</h1>
-    
-    <!-- Filter Section -->
-    <div class="filter-section">
-      <h2 class="filter-title">Filter by Type</h2>
-      <div class="filter-options">
-        <div class="filter-option active" data-filter="all">All vehicles</div>
-        <div class="filter-option" data-filter="sedan">Sedan</div>
-        <div class="filter-option" data-filter="sport">Sport</div>
-        <div class="filter-option" data-filter="luxury">Luxury</div>
-        <div class="filter-option" data-filter="suv">SUV</div>
-        <div class="filter-option" data-filter="pickup">Pick-Up</div>
-      </div>
-    </div>
-    
-    <!-- Vehicles Grid -->
-    <div class="vehicles-grid">
-      <!-- Vehicle Card 1 -->
-      <div class="vehicle-card" data-type="luxury">
-        <div class="vehicle-image">
-          <img src="images/mercedes.jfif" alt="Mercedes Sedan" onerror="this.src='https://placehold.co/300x200/4a69bd/white?text=Mercedes+Sedan'">
-        </div>
-        <div class="vehicle-info">
-          <h3 class="vehicle-name">Mercedes AMG GT C</h3>
-          <p class="vehicle-type">Luxury</p>
-          <div class="vehicle-price">₹15000 per day</div>
-          <div class="vehicle-features">
-            <div class="vehicle-feature">
-              <i class="fas fa-cog"></i>
-              <span>Automatic</span>
-            </div>
-            <div class="vehicle-feature">
-              <i class="fas fa-gas-pump"></i>
-              <span>P9 95</span>
-            </div>
-            <div class="vehicle-feature">
-              <i class="fas fa-snowflake"></i>
-              <span>Air Conditioner</span>
-            </div>
-          </div>
-          <a href="vehicles.html" class="view-details-btn">View Details</a>
-        </div>
-      </div>
-
-      <!-- Vehicle Card 2 -->
-      <div class="vehicle-card" data-type="sport">
-        <div class="vehicle-image">
-          <img src="images/polo.jfif" alt="Mercedes Sport" onerror="this.src='https://placehold.co/300x200/e74c3c/white?text=Mercedes+Sport'">
-        </div>
-        <div class="vehicle-info">
-          <h3 class="vehicle-name">Polo GT</h3>
-          <p class="vehicle-type">Sports</p>
-          <div class="vehicle-price">₹5000 per day</div>
-          <div class="vehicle-features">
-            <div class="vehicle-feature">
-              <i class="fas fa-cog"></i>
-              <span>Manual</span>
-            </div>
-            <div class="vehicle-feature">
-              <i class="fas fa-gas-pump"></i>
-              <span>P9 95</span>
-            </div>
-            <div class="vehicle-feature">
-              <i class="fas fa-snowflake"></i>
-              <span>Air Conditioner</span>
-            </div>
-          </div>
-          <a href="vehicles.html" class="view-details-btn">View Details</a>
-        </div>
-      </div>
-
-      <!-- Vehicle Card 3 -->
-      <div class="vehicle-card" data-type="sport">
-        <div class="vehicle-image">
-          <img src="images/porsche.jfif" alt="Mercedes Luxury" onerror="this.src='https://placehold.co/300x200/8e44ad/white?text=Mercedes+Luxury'">
-        </div>
-        <div class="vehicle-info">
-          <h3 class="vehicle-name">Porsche 911 GT3</h3>
-          <p class="vehicle-type">Sports</p>
-          <div class="vehicle-price">₹7000 per day</div>
-          <div class="vehicle-features">
-            <div class="vehicle-feature">
-              <i class="fas fa-cog"></i>
-              <span>Automatic</span>
-            </div>
-            <div class="vehicle-feature">
-              <i class="fas fa-gas-pump"></i>
-              <span>P9 95</span>
-            </div>
-            <div class="vehicle-feature">
-              <i class="fas fa-snowflake"></i>
-              <span>Air Conditioner</span>
-            </div>
-          </div>
-          <a href="vehicles.html" class="view-details-btn">View Details</a>
-        </div>
-      </div>
-
-      <!-- Vehicle Card 4 -->
-      <div class="vehicle-card" data-type="suv">
-        <div class="vehicle-image">
-          <img src="images/suv-1.jfif" alt="Porsche SUV" onerror="this.src='https://placehold.co/300x200/f39c12/white?text=Porsche+SUV'">
-        </div>
-        <div class="vehicle-info">
-          <h3 class="vehicle-name">Nissan Rogue</h3>
-          <p class="vehicle-type">SUV</p>
-          <div class="vehicle-price">₹4000 per day</div>
-          <div class="vehicle-features">
-            <div class="vehicle-feature">
-              <i class="fas fa-cog"></i>
-              <span>Manual</span>
-            </div>
-            <div class="vehicle-feature">
-              <i class="fas fa-gas-pump"></i>
-              <span>P9 95</span>
-            </div>
-            <div class="vehicle-feature">
-              <i class="fas fa-snowflake"></i>
-              <span>Air Conditioner</span>
-            </div>
-          </div>
-          <a href="vehicles.html" class="view-details-btn">View Details</a>
-        </div>
-      </div>
-
-      <!-- Vehicle Card 5 -->
-      <div class="vehicle-card" data-type="sedan">
-        <div class="vehicle-image">
-          <img src="images/sedan-1.jfif" alt="Toyota Sedan" onerror="this.src='https://placehold.co/300x200/27ae60/white?text=Toyota+Sedan'">
-        </div>
-        <div class="vehicle-info">
-          <h3 class="vehicle-name">Hyundai Elantra</h3>
-          <p class="vehicle-type">Sedan</p>
-          <div class="vehicle-price">₹3500 per day</div>
-          <div class="vehicle-features">
-            <div class="vehicle-feature">
-              <i class="fas fa-cog"></i>
-              <span>Manual</span>
-            </div>
-            <div class="vehicle-feature">
-              <i class="fas fa-gas-pump"></i>
-              <span>P9 95</span>
-            </div>
-            <div class="vehicle-feature">
-              <i class="fas fa-snowflake"></i>
-              <span>Air Conditioner</span>
-            </div>
-          </div>
-          <a href="vehicles.html" class="view-details-btn">View Details</a>
-        </div>
-      </div>
-
-      <!-- Vehicle Card 6 -->
-      <div class="vehicle-card" data-type="suv">
-        <div class="vehicle-image">
-          <img src="images/suv-2.jfif" alt="Porsche SUV" onerror="this.src='https://placehold.co/300x200/e74c3c/white?text=Porsche+SUV'">
-        </div>
-        <div class="vehicle-info">
-          <h3 class="vehicle-name">Mahindra Scorpio Black N</h3>
-          <p class="vehicle-type">SUV</p>
-          <div class="vehicle-price">₹5000 per day</div>
-          <div class="vehicle-features">
-            <div class="vehicle-feature">
-              <i class="fas fa-cog"></i>
-              <span>Automatic</span>
-            </div>
-            <div class="vehicle-feature">
-              <i class="fas fa-gas-pump"></i>
-              <span>P9 95</span>
-            </div>
-            <div class="vehicle-feature">
-              <i class="fas fa-snowflake"></i>
-              <span>Air Conditioner</span>
-            </div>
-          </div>
-          <a href="vehicles.html" class="view-details-btn">View Details</a>
-        </div>
-      </div>
-
-      <!-- Vehicle Card 7 -->
-      <div class="vehicle-card" data-type="pickup">
-        <div class="vehicle-image">
-          <img src="images/pickup.jfif" alt="Mercedes Premium" onerror="this.src='https://placehold.co/300x200/4a69bd/white?text=Mercedes+Premium'">
-        </div>
-        <div class="vehicle-info">
-          <h3 class="vehicle-name">Ford F-150 Raptor</h3>
-          <p class="vehicle-type">Pickup</p>
-          <div class="vehicle-price">₹2500 per day</div>
-          <div class="vehicle-features">
-            <div class="vehicle-feature">
-              <i class="fas fa-cog"></i>
-              <span>Manual</span>
-            </div>
-            <div class="vehicle-feature">
-              <i class="fas fa-gas-pump"></i>
-              <span>P9 95</span>
-            </div>
-            <div class="vehicle-feature">
-              <i class="fas fa-snowflake"></i>
-              <span>Air Conditioner</span>
-            </div>
-          </div>
-          <a href="vehicles.html" class="view-details-btn">View Details</a>
-        </div>
-      </div>
-
-      <!-- Vehicle Card 8 -->
-      <div class="vehicle-card" data-type="suv">
-        <div class="vehicle-image">
-          <img src="images/suv-3.jfif" alt="Toyota SUV" onerror="this.src='https://placehold.co/300x200/27ae60/white?text=Toyota+SUV'">
-        </div>
-        <div class="vehicle-info">
-          <h3 class="vehicle-name">Chevrolet Suburban</h3>
-          <p class="vehicle-type">SUV</p>
-          <div class="vehicle-price">₹6000 per day</div>
-          <div class="vehicle-features">
-            <div class="vehicle-feature">
-              <i class="fas fa-cog"></i>
-              <span>Manual</span>
-            </div>
-            <div class="vehicle-feature">
-              <i class="fas fa-gas-pump"></i>
-              <span>P9 95</span>
-            </div>
-            <div class="vehicle-feature">
-              <i class="fas fa-snowflake"></i>
-              <span>Air Conditioner</span>
-            </div>
-          </div>
-          <a href="vehicles.html" class="view-details-btn">View Details</a>
-        </div>
-      </div>
-
-      <!-- Vehicle Card 9 -->
-      <div class="vehicle-card" data-type="luxury">
-        <div class="vehicle-image">
-          <img src="images/g-wagon.jfif" alt="G-Wagon" onerror="this.src='https://placehold.co/300x200/8e44ad/white?text=Maybach+Luxury'">
-        </div>
-        <div class="vehicle-info">
-          <h3 class="vehicle-name">G- Wagon</h3>
-          <p class="vehicle-type">Luxury</p>
-          <div class="vehicle-price">₹17000 per day</div>
-          <div class="vehicle-features">
-            <div class="vehicle-feature">
-              <i class="fas fa-cog"></i>
-              <span>Automatic</span>
-            </div>
-            <div class="vehicle-feature">
-              <i class="fas fa-gas-pump"></i>
-              <span>P9 95</span>
-            </div>
-            <div class="vehicle-feature">
-              <i class="fas fa-snowflake"></i>
-              <span>Air Conditioner</span>
-            </div>
-          </div>
-          <a href="vehicles.html" class="view-details-btn">View Details</a>
-        </div>
-      </div>
-      <!-- Vehicle Card 10 -->
-      <div class="vehicle-card" data-type="luxury">
-        <div class="vehicle-image">
-          <img src="images/luxury-1.jfif" alt="Maybach Luxury" onerror="this.src='https://placehold.co/300x200/8e44ad/white?text=Maybach+Luxury'">
-        </div>
-        <div class="vehicle-info">
-          <h3 class="vehicle-name">Rolls - Royce Phantom</h3>
-          <p class="vehicle-type">Luxury</p>
-          <div class="vehicle-price">₹25000 per day</div>
-          <div class="vehicle-features">
-            <div class="vehicle-feature">
-              <i class="fas fa-cog"></i>
-              <span>Automatic</span>
-            </div>
-            <div class="vehicle-feature">
-              <i class="fas fa-gas-pump"></i>
-              <span>P9 95</span>
-            </div>
-            <div class="vehicle-feature">
-              <i class="fas fa-snowflake"></i>
-              <span>Air Conditioner</span>
-            </div>
-          </div>
-          <a href="vehicles.html" class="view-details-btn">View Details</a>
-        </div>
-      </div>
-      <!-- Vehicle Card 11 -->
-      <div class="vehicle-card" data-type="sedan">
-        <div class="vehicle-image">
-          <img src="images/sedan-2.jfif" alt="Maybach Luxury" onerror="this.src='https://placehold.co/300x200/8e44ad/white?text=Maybach+Luxury'">
-        </div>
-        <div class="vehicle-info">
-          <h3 class="vehicle-name">Toyota Camry</h3>
-          <p class="vehicle-type">Sedan</p>
-          <div class="vehicle-price">₹7000 per day</div>
-          <div class="vehicle-features">
-            <div class="vehicle-feature">
-              <i class="fas fa-cog"></i>
-              <span>Automatic</span>
-            </div>
-            <div class="vehicle-feature">
-              <i class="fas fa-gas-pump"></i>
-              <span>P9 95</span>
-            </div>
-            <div class="vehicle-feature">
-              <i class="fas fa-snowflake"></i>
-              <span>Air Conditioner</span>
-            </div>
-          </div>
-          <a href="vehicles.html" class="view-details-btn">View Details</a>
-        </div>
-      </div>
-      <!-- Vehicle Card 12 -->
-      <div class="vehicle-card" data-type="pickup">
-        <div class="vehicle-image">
-          <img src="images/pickup-3.jfif" alt="Maybach Luxury" onerror="this.src='https://placehold.co/300x200/8e44ad/white?text=Maybach+Luxury'">
-        </div>
-        <div class="vehicle-info">
-          <h3 class="vehicle-name">Toyoto Hilux</h3>
-          <p class="vehicle-type">Pickup</p>
-          <div class="vehicle-price">₹5500 per day</div>
-          <div class="vehicle-features">
-            <div class="vehicle-feature">
-              <i class="fas fa-cog"></i>
-              <span>Manual</span>
-            </div>
-            <div class="vehicle-feature">
-              <i class="fas fa-gas-pump"></i>
-              <span>P9 95</span>
-            </div>
-            <div class="vehicle-feature">
-              <i class="fas fa-snowflake"></i>
-              <span>Air Conditioner</span>
-            </div>
-          </div>
-          <a href="vehicles.html" class="view-details-btn">View Details</a>
-        </div>
-      </div>
-       <!-- Vehicle Card 13 -->
-      <div class="vehicle-card" data-type="sport">
-        <div class="vehicle-image">
-          <img src="images/sports-1.jfif" alt="Maybach Luxury" onerror="this.src='https://placehold.co/300x200/8e44ad/white?text=Maybach+Luxury'">
-        </div>
-        <div class="vehicle-info">
-          <h3 class="vehicle-name">McLaren 720s </h3>
-          <p class="vehicle-type">Sports</p>
-          <div class="vehicle-price">₹15,500 per day</div>
-          <div class="vehicle-features">
-            <div class="vehicle-feature">
-              <i class="fas fa-cog"></i>
-              <span>Automatic</span>
-            </div>
-            <div class="vehicle-feature">
-              <i class="fas fa-gas-pump"></i>
-              <span>P9 95</span>
-            </div>
-            <div class="vehicle-feature">
-              <i class="fas fa-snowflake"></i>
-              <span>Air Conditioner</span>
-            </div>
-          </div>
-          <a href="vehicles.html" class="view-details-btn">View Details</a>
-        </div>
-      </div>
-       <!-- Vehicle Card 14 -->
-      <div class="vehicle-card" data-type="sedan">
-        <div class="vehicle-image">
-          <img src="images/sedan-3.jfif" alt="Maybach Luxury" onerror="this.src='https://placehold.co/300x200/8e44ad/white?text=Maybach+Luxury'">
-        </div>
-        <div class="vehicle-info">
-          <h3 class="vehicle-name">Hyundai Venue</h3>
-          <p class="vehicle-type">Sedan</p>
-          <div class="vehicle-price">₹4500 per day</div>
-          <div class="vehicle-features">
-            <div class="vehicle-feature">
-              <i class="fas fa-cog"></i>
-              <span>Manual</span>
-            </div>
-            <div class="vehicle-feature">
-              <i class="fas fa-gas-pump"></i>
-              <span>P9 95</span>
-            </div>
-            <div class="vehicle-feature">
-              <i class="fas fa-snowflake"></i>
-              <span>Air Conditioner</span>
-            </div>
-          </div>
-          <a href="vehicles.html" class="view-details-btn">View Details</a>
-        </div>
-      </div>
-       <!-- Vehicle Card 15 -->
-      <div class="vehicle-card" data-type="pickup">
-        <div class="vehicle-image">
-          <img src="images/pickup-2.jfif" alt="Maybach Luxury" onerror="this.src='https://placehold.co/300x200/8e44ad/white?text=Maybach+Luxury'">
-        </div>
-        <div class="vehicle-info">
-          <h3 class="vehicle-name">Hilux Revo</h3>
-          <p class="vehicle-type">Pickup</p>
-          <div class="vehicle-price">₹5500 per day</div>
-          <div class="vehicle-features">
-            <div class="vehicle-feature">
-              <i class="fas fa-cog"></i>
-              <span>Manual</span>
-            </div>
-            <div class="vehicle-feature">
-              <i class="fas fa-gas-pump"></i>
-              <span>P9 95</span>
-            </div>
-            <div class="vehicle-feature">
-              <i class="fas fa-snowflake"></i>
-              <span>Air Conditioner</span>
-            </div>
-          </div>
-          <a href="vehicles.html" class="view-details-btn">View Details</a>
-        </div>
-      </div>
-       <!-- Vehicle Card 13 -->
-      <div class="vehicle-card" data-type="Sports">
-        <div class="vehicle-image">
-          <img src="images/sports-3.jfif" alt="Maybach Luxury" onerror="this.src='https://placehold.co/300x200/8e44ad/white?text=Maybach+Luxury'">
-        </div>
-        <div class="vehicle-info">
-          <h3 class="vehicle-name">AUDI R8 </h3>
-          <p class="vehicle-type">Sports</p>
-          <div class="vehicle-price">₹10,500 per day</div>
-          <div class="vehicle-features">
-            <div class="vehicle-feature">
-              <i class="fas fa-cog"></i>
-              <span>Automatic</span>
-            </div>
-            <div class="vehicle-feature">
-              <i class="fas fa-gas-pump"></i>
-              <span>P9 95</span>
-            </div>
-            <div class="vehicle-feature">
-              <i class="fas fa-snowflake"></i>
-              <span>Air Conditioner</span>
-            </div>
-          </div>
-          <a href="vehicles.html" class="view-details-btn">View Details</a>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  
 
     <!-- Logo Printing  -->
-  
 
-<section class="brands-wrap">
-    <div class="brands">
-      <div class="brand" title="Toyota">
-        <img alt="Toyota" src="https://cdn.simpleicons.org/toyota/000000" />
-      </div>
-      <div class="brand" title="Ford">
-        <img alt="Ford" src="https://cdn.simpleicons.org/ford/000000" />
-      </div>
-      <div class="brand" title="Rolls-Royce">
-        <img alt="Rolls-Royce" src="https://cdn.simpleicons.org/rollsroyce/000000" />
-      </div>
-      <div class="brand" title="Jeep">
-        <img alt="Jeep" src="https://cdn.simpleicons.org/jeep/000000" />
-      </div>
-      <div class="brand" title="BMW">
-        <img alt="BMW" src="https://cdn.simpleicons.org/bmw/000000" />
-      </div>
-      <div class="brand" title="Audi">
-        <img alt="Audi" src="https://cdn.simpleicons.org/audi/000000" />
-      </div>
-    </div>
-    
-  </section>
-  
-
-  <!-- Footer -->
-  <footer class="footer">
-    <div class="footer-container">
-      <!-- Logo + About -->
-      <div class="footer-column">
-        <div class="footer-logo">
-          <i class="fas fa-car"></i> Car Rental
+    <section class="brands-wrap">
+      <div class="brands">
+        <div class="brand" title="Toyota">
+          <img alt="Toyota" src="https://cdn.simpleicons.org/toyota/000000" />
         </div>
-        <p>Your trusted car rental service, providing comfort, safety, and affordability.</p>
-        <div class="footer-social">
-          <i class="fab fa-facebook-f"></i>
-          <i class="fab fa-twitter"></i>
-          <i class="fab fa-instagram"></i>
-          <i class="fab fa-linkedin-in"></i>
+        <div class="brand" title="Ford">
+          <img alt="Ford" src="https://cdn.simpleicons.org/ford/000000" />
         </div>
-
-        <!-- App Download Buttons -->
-        <div class="footer-apps">
-          <a href="https://play.google.com/"><img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg" alt="Google Play"></a>
-          <a href="https://www.apple.com/in/app-store/"><img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" alt="App Store"></a>
+        <div class="brand" title="Rolls-Royce">
+          <img
+            alt="Rolls-Royce"
+            src="https://cdn.simpleicons.org/rollsroyce/000000"
+          />
+        </div>
+        <div class="brand" title="Hyundai">
+          <img alt="Hyundai" src="https://cdn.simpleicons.org/hyundai/000000" />
+        </div>
+        <div class="brand" title="BMW">
+          <img alt="BMW" src="https://cdn.simpleicons.org/bmw/000000" />
+        </div>
+        <div class="brand" title="Audi">
+          <img alt="Audi" src="https://cdn.simpleicons.org/audi/000000" />
+        </div>
+        <div class="brand" title="Lamborghini">
+          <img
+            alt="Lamborghini"
+            src="https://cdn.simpleicons.org/lamborghini/000000"
+          />
+        </div>
+        <div class="brand" title="Porsche">
+          <img alt="Porsche" src="https://cdn.simpleicons.org/porsche/000000" />
         </div>
       </div>
+    </section>
 
-      <!-- Contact Info -->
-      <div class="footer-column">
-        <h4>Contact Us</h4>
-        <div class="footer-info">
-          <i class="fas fa-envelope"></i>
-          <p>support@carrental.com</p>
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="footer-container">
+        <!-- Logo + About -->
+        <div class="footer-column">
+          <div class="footer-logo"><i class="fas fa-car"></i> Car Rental</div>
+          <p>
+            Your trusted car rental service, providing comfort, safety, and
+            affordability.
+          </p>
+          <div class="footer-social">
+            <i class="fab fa-facebook-f"></i>
+            <i class="fab fa-twitter"></i>
+            <i class="fab fa-instagram"></i>
+            <i class="fab fa-linkedin-in"></i>
+          </div>
+
+          <!-- App Download Buttons -->
+          <div class="footer-apps">
+            <a href="https://play.google.com/"
+              ><img
+                src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg"
+                alt="Google Play"
+            /></a>
+            <a href="https://www.apple.com/in/app-store/"
+              ><img
+                src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg"
+                alt="App Store"
+            /></a>
+          </div>
         </div>
-        <div class="footer-info">
-          <i class="fas fa-phone"></i>
-          <p>+91 9989895589</p>
+
+        <!-- Contact Info -->
+        <div class="footer-column">
+          <h4>Contact Us</h4>
+          <div class="footer-info">
+            <i class="fas fa-envelope"></i>
+            <p>support@carrental.com</p>
+          </div>
+          <div class="footer-info">
+            <i class="fas fa-phone"></i>
+            <p>+91 9989895589</p>
+          </div>
+          <div class="footer-info">
+            <i class="fas fa-map-marker-alt"></i>
+            <p>India</p>
+          </div>
         </div>
-        <div class="footer-info">
-          <i class="fas fa-map-marker-alt"></i>
-          <p>India</p>
+
+        <!-- Useful Links -->
+        <div class="footer-column">
+          <h4>Useful Links</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="vehicles.html">Vehicles</a></li>
+            <li><a href="details.html">Details</a></li>
+          </ul>
+        </div>
+
+        <!-- Vehicles Section -->
+        <div class="footer-column">
+          <h4>Vehicles</h4>
+          <ul>
+            <li><a href="vehicles.html">Sedan Cars</a></li>
+            <li><a href="vehicles.html">Sports Cars</a></li>
+            <li><a href="vehicles.html">Luxury Cars</a></li>
+            <li><a href="vehicles.html">Pick Up Cars</a></li>
+          </ul>
         </div>
       </div>
 
-      <!-- Useful Links -->
-      <div class="footer-column">
-        <h4>Useful Links</h4>
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="vehicles.html">Vehicles</a></li>
-          <li><a href="details.html">Details</a></li>
-        </ul>
+      <!-- Extra Section Below -->
+      <div class="footer-extra">
+        <h4>Subscribe to Our Newsletter</h4>
+        <form class="footer-form">
+          <input type="email" placeholder="Enter your email" required />
+          <button type="submit">Subscribe</button>
+        </form>
       </div>
 
-      <!-- Vehicles Section -->
-      <div class="footer-column">
-        <h4>Vehicles</h4>
-        <ul>
-          <li><a href="vehicles.html">Sedan Cars</a></li>
-          <li><a href="vehicles.html">Sports Cars</a></li>
-          <li><a href="vehicles.html">Luxury Cars</a></li>
-          <li><a href="vehicles.html">Pick Up Cars</a></li>
-        </ul>
+      <!-- Bottom -->
+      <div class="footer-bottom">
+        © 2025 Car Rental. All Rights Reserved. By Shubham & Parth
       </div>
-    </div>
+    </footer>
 
-    <!-- Extra Section Below -->
-    <div class="footer-extra">
-      <h4>Subscribe to Our Newsletter</h4>
-      <form class="footer-form">
-        <input type="email" placeholder="Enter your email" required>
-        <button type="submit">Subscribe</button>
-      </form>
-    </div>
+    <script>
+      // Filter functionality
+      document.addEventListener("DOMContentLoaded", function () {
+        const filterOptions = document.querySelectorAll(".filter-option");
 
-    <!-- Bottom -->
-    <div class="footer-bottom">
-      © 2025 Car Rental. All Rights Reserved. By Shubham & Parth
-    </div>
-  </footer>
+        filterOptions.forEach((option) => {
+          option.addEventListener("click", function () {
+            // Remove active class from all options
+            filterOptions.forEach((opt) => opt.classList.remove("active"));
 
-  <script>
-    // Filter functionality
-    document.addEventListener('DOMContentLoaded', function() {
-      const filterOptions = document.querySelectorAll('.filter-option');
-      
-      filterOptions.forEach(option => {
-        option.addEventListener('click', function() {
-          // Remove active class from all options
-          filterOptions.forEach(opt => opt.classList.remove('active'));
-          
-          // Add active class to clicked option
-          this.classList.add('active');
-          
-          // Get the filter value
-          const filterValue = this.getAttribute('data-filter');
-          
-          // Filter the vehicles
-          filterVehicles(filterValue);
+            // Add active class to clicked option
+            this.classList.add("active");
+
+            // Get the filter value
+            const filterValue = this.getAttribute("data-filter");
+
+            // Filter the vehicles
+            filterVehicles(filterValue);
+          });
         });
-      });
-      
-      function filterVehicles(filter) {
-        const vehicles = document.querySelectorAll('.vehicle-card');
-        
-        vehicles.forEach(vehicle => {
-          if (filter === 'all') {
-            vehicle.style.display = 'block';
-          } else {
-            const vehicleType = vehicle.getAttribute('data-type');
-            if (vehicleType === filter) {
-              vehicle.style.display = 'block';
+
+        function filterVehicles(filter) {
+          const vehicles = document.querySelectorAll(".vehicle-card");
+
+          vehicles.forEach((vehicle) => {
+            if (filter === "all") {
+              vehicle.style.display = "block";
             } else {
-              vehicle.style.display = 'none';
+              const vehicleType = vehicle.getAttribute("data-type");
+              if (vehicleType === filter) {
+                vehicle.style.display = "block";
+              } else {
+                vehicle.style.display = "none";
+              }
             }
-          }
-        });
-      }
-    });
-  </script>
-</body>
+          });
+        }
+      });
+    </script>
+  </body>
 </html>
