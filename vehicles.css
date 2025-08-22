@@ -274,7 +274,7 @@ nav a:hover {
 }
 
 .brand img {
-  height: 60px;              /* Same height for all logos */
+  height: 70px;              /* Same height for all logos */
   width: auto;               /* Keep aspect ratio */
   object-fit: contain;
   transition: transform 0.3s ease;
@@ -505,4 +505,28 @@ nav a:hover {
   .footer-apps {
     justify-content: center;
   }
+}
+.call-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: #673ab7;   /* same purple color */
+  color: #fff;
+  font-size: 14px;
+  font-weight: 600;
+  padding: 8px 16px;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.call-btn i {
+  font-size: 16px;
+  color: #fff;
+}
+
+
+.call-btn:hover {
+  background: #5a2ea0;   /* darker purple on hover */
+  transform: translateY(-2px);
 }
