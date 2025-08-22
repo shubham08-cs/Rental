@@ -51,24 +51,35 @@
     <div class="booking-form">
       <h3>Book your car</h3>
       <form>
+        <label>Car Type </label>
         <select>
-          <option>Car type</option>
+         <option>Luxury</option>
+          <option>Sports</option>
+          <option>SUV</option>
+          <option>Sedan</option>
+          <option>Pick Up</option>
         </select>
+        <label>Place Of Rental</label>
         <select>
-          <option>Place of rental</option>
+          <option>Mumbai</option>
+          <option>Pune</option>
+          <option>Kolhapur</option>
         </select>
+        <label>Place Of Return</label>
         <select>
-          <option>Place of return</option>
+          <option>Dropping Point 1</option>
+          <option>Dropping Point 2</option>
+          <option>Dropping Point 3</option>
         </select>
-        <div class="date-input">
-          <input type="text" placeholder="Rental date">
-          <i class="fas fa-calendar-alt"></i>
-        </div>
-        <div class="date-input">
-          <input type="text" placeholder="Return date">
-          <i class="fas fa-calendar-alt"></i>
-        </div>
-        <button type="submit" class="btn-book">Book now</button>
+         <label>
+          Rental Date
+          <input type="date" name="rental-date">
+        </label>
+        <label>
+          Return Date
+          <input type="date" name="return-date">
+        </label>
+        <button class="btn-book">Book Now</button>
       </form>
     </div>
 
