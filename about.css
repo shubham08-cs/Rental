@@ -1,4 +1,3 @@
-/* ===== RESET & BASE STYLES ===== */
 * {
   margin: 0;
   padding: 0;
@@ -171,6 +170,33 @@ body {
   margin: 0;            /* removes auto center */
 }
 
+.page-header {
+  text-align: center;
+  margin: -20px 0;
+  font-family: 'Poppins', sans-serif;
+}
+
+.page-header h1 {
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.page-header p {
+  font-size: 14px;
+  color: #888;
+}
+
+.page-header p a {
+  text-decoration: none;
+  color: #888;
+  transition: color 0.3s;
+}
+
+.page-header p a:hover {
+  color: #ff9900; /* hover effect */
+}
+
 
 .about-section {
   max-width: 1100px;
@@ -243,7 +269,7 @@ body {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  background: #6b21a8; /* purple */
+  background: #6c63ff; /* purple */
   color: #fff;
   width: 70px;
   height: 70px;
@@ -270,7 +296,7 @@ body {
 .stat h3 {
   font-size: 34px;
   font-weight: 800;
-  color: #6b21a8;
+  color: #6c63ff;
 }
 .stat p {
   font-size: 15px;
@@ -343,7 +369,7 @@ body {
 
 /* Download App Section */
 .download-app {
-  background: #6b21a8; /* Purple theme */
+  background: #6c63ff; /* Purple theme */
   color: #fff;
   padding: 60px 20px;
   border-radius: 15px;
@@ -430,7 +456,7 @@ body {
 
 .review-card .quote {
   font-size: 50px;
-  color: #6b21a8;
+  color: #6c63ff;
   margin: 0;
 }
 
@@ -444,7 +470,7 @@ body {
   display: flex;
   align-items: center;
   gap: 15px;
-  background: #6b21a8;
+  background: #6c63ff;
   padding: 10px;
   border-radius: 10px;
   color: #fff;
@@ -541,7 +567,7 @@ body {
   margin: 50px auto;
   width: 85%;              /* increased width */
   max-width: 1200px;       /* prevents from being oversized */
-  background: #6a0dad;     /* Purple */
+  background: #6c63ff;     /* Purple */
   color: #fff;
   border-radius: 12px;
   overflow: hidden;
@@ -598,7 +624,7 @@ body {
 
 /* About Section Hover */
 .about-grid h4:hover {
-  color: #6a0dad; /* purple theme */
+  color: #6c63ff; /* purple theme */
   transform: translateX(5px);
   transition: 0.3s ease;
 }
@@ -645,7 +671,7 @@ body {
 /* FAQ Hover */
 .faq-item button:hover {
   background: #f3f0fa;
-  color: #6a0dad;
+  color: #6c63ff;
   transition: 0.3s ease;
 }
 .faq-answer p {
