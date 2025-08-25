@@ -112,13 +112,16 @@ nav a:hover {
 
 .footer-container {
   width: 100%;
-  max-width: 1100px;
-  margin: 0 auto;
+  max-width: 100%;       /* ✅ full width */
+  margin: 0;
+  padding: 0 5%;         /* ✅ inner padding */
   display: flex;
   flex-wrap: wrap;
-  gap: 50px;
+  justify-content: space-between; /* ✅ spreads sections across full row */
+  align-items: flex-start;        /* align tops nicely */
+  gap: 80px;             /* ✅ bigger spacing between columns */
+  box-sizing: border-box;
 }
-
 .footer-column {
   flex: 1;
   min-width: 220px;
