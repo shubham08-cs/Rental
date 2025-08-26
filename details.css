@@ -433,9 +433,10 @@ section h3 {
 }
 /* Car Gallery Section */
 .car-gallery {
-    padding: 60px 0;
-    background: #f9f9f9;
+  padding: 25px 0;     /* reduce top/bottom spacing */
+  margin-top: 20px;    /* smaller margin between sections */
 }
+
 
 .car-gallery .container {
     max-width: 1200px;
@@ -778,60 +779,29 @@ section h3 {
         grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
     }
     
-    .car-details-modal {
-        flex-direction: column;
-    }
-    
-    .car-details-image img {
-        border-radius: 12px 12px 0 0;
-    }
-    
-    .specs-grid {
-        grid-template-columns: 1fr;
-    }
-    
-    .car-details-features ul {
-        columns: 1;
-    }
-}
-
-@media (max-width: 480px) {
-    .car-gallery {
-        padding: 40px 0;
-    }
-    
-    .car-gallery h2 {
-        font-size: 28px;
-    }
-    
-    .cars-grid {
-        grid-template-columns: 1fr;
-    }
-    
-    .modal-content {
-        width: 95%;
-        margin: 20px auto;
-    }
-}
-/* ===== FOOTER ===== */
+  }
+  /* ===== FOOTER ===== */
 .footer {
   background: #fff;
-  padding: 70px 5% 40px;
+  padding: 70px 0 40px;
   border-top: 1px solid #ddd;
+  font-family: Arial, sans-serif;
+  width: 100%; /* Full width */
 }
+
 
 .footer-container {
-  width: 100%;
-  max-width: 1100px;
+  max-width: 1200px;       /* keeps text aligned with page */
   margin: 0 auto;
+  padding: 0 ;
   display: flex;
+  justify-content: space-between;
   flex-wrap: wrap;
-  gap: 50px;
+  gap: 40px;
 }
-
 .footer-column {
   flex: 1;
-  min-width: 220px;
+  min-width: 200px;
 }
 
 .footer-logo {
@@ -847,13 +817,16 @@ section h3 {
 }
 
 .footer p {
-  font-size: 16px;
+  font-size: 15px;
   margin: 12px 0;
+  line-height: 1.6;
+  color: #444;
 }
 
 .footer-social {
   display: flex;
   gap: 12px;
+  margin-top: 12px;
 }
 
 .footer-social i {
@@ -870,31 +843,36 @@ section h3 {
 .footer-info {
   display: flex;
   align-items: center;
-  gap: 12px;
+  gap: 10px;
+  margin-bottom: 12px;
 }
 
 .footer-info i {
-  font-size: 20px;
+  font-size: 18px;
   color: orange;
 }
 
 .footer-info p {
-  font-size: 16px;
+  font-size: 15px;
   margin: 0;
+  color: #333;
 }
 
 .footer-column h4 {
-  font-size: 18px;
+  font-size: 17px;
+  font-weight: 600;
   margin-bottom: 14px;
+  color: #111;
 }
 
 .footer-column ul {
   list-style: none;
   padding: 0;
+  margin: 0;
 }
 
 .footer-column ul li {
-  margin-bottom: 8px;
+  margin-bottom: 10px;
 }
 
 .footer-column ul li a {
@@ -908,25 +886,17 @@ section h3 {
   text-decoration: underline;
 }
 
-.footer-bottom {
-  text-align: center;
-  padding-top: 25px;
-  font-size: 14px;
-  color: gray;
-  border-top: 1px solid #eee;
-  margin-top: 30px;
-}
-
-/* Extra Section */
+/* Newsletter Section */
 .footer-extra {
   margin-top: 40px;
   text-align: center;
 }
 
 .footer-extra h4 {
-  font-size: 18px;
+  font-size: 17px;
+  font-weight: 600;
   margin-bottom: 15px;
-  color: #222;
+  color: #111;
 }
 
 .footer-form {
@@ -976,105 +946,43 @@ section h3 {
   transform: scale(1.05);
 }
 
-/* General footer text spacing */
-.footer p,
-.footer-info p,
-.footer-column ul li,
-.footer-column h4 {
-  line-height: 1.6;
+/* Bottom Section */
+.footer-bottom {
+  text-align: center;
+  padding-top: 25px;
+  font-size: 14px;
+  color: gray;
+  border-top: 1px solid #eee;
+  margin-top: 40px;
 }
 
-/* Add spacing between blocks inside each column */
-.footer-column > *:not(:last-child) {
-  margin-bottom: 12px;
+/* ===== RESPONSIVE ===== */
+@media (max-width: 1024px) {
+  .footer-container {
+    gap: 30px;
+    padding: 0 30px;
+  }
 }
 
-/* Increase spacing between footer sections */
-.footer-container {
-  gap: 60px;
-}
-
-/* ===== RESPONSIVE BREAKPOINTS ===== */
 @media (max-width: 768px) {
-  header {
-    padding: 15px 20px;
-  }
-
-  .hamburger {
-    display: flex;
-  }
-
-  nav {
-    display: none;
-    flex-direction: column;
-    background: #fff;
-    position: absolute;
-    top: 100%;
-    right: 0;
-    width: 220px;
-    border-radius: 8px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-    padding: 15px;
-  }
-
-  nav.active {
-    display: flex;
-  }
-
-  nav a {
-    margin: 8px 0;
-  }
-
-  .contact {
-    display: none !important;
-  }
-
-  /* Header positioning for mobile */
-  header {
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  
-  .hamburger {
-    position: absolute;
-    left: 15px;
-    top: 50%;
-    transform: translateY(-50%);
-  }
-  
-  .logo {
-    text-align: center;
-    margin: 0;
-  }
-}
-
-@media (max-width: 480px) {
   .footer-container {
     flex-direction: column;
+    text-align: center;
     gap: 30px;
   }
-  
-  .footer-form {
-    flex-direction: column;
-    align-items: center;
-  }
-  
-  .footer-form input {
-    min-width: auto;
-    width: 100%;
-  }
-  
+
+  .footer-social,
   .footer-apps {
     justify-content: center;
   }
 }
+
+/* Call Button */
 .call-btn {
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  background: #673ab7;   /* same purple color */
+  background: #673ab7;
   color: #fff;
   font-size: 14px;
   font-weight: 600;
@@ -1090,6 +998,14 @@ section h3 {
 }
 
 .call-btn:hover {
-  background: #5a2ea0;   /* darker purple on hover */
+  background: #5a2ea0;
   transform: translateY(-2px);
+}
+/* Global Container - applies to header, main, footer */
+.container,
+.footer-container,
+header .container {
+  max-width: 1800px; /* Increase from 1200px to 1400px (or 1600px if you want bigger) */
+  margin: 0 auto;
+  padding: 0 30px;   /* more breathing space on sides */
 }
