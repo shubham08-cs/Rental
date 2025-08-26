@@ -48,353 +48,700 @@
           <div class="price">₹17,000 <span>Starting Per Day</span></div>
 
           <div class="car-image">
-            <img
-              src="images/bmw-1.jfif"
-              alt="M5" id="main-image" />
+            <img src="images/bmw-1.jfif" alt="Mercedes-Benz S-Class" id="main-image" />
           </div>
 
           <div class="car-thumbnails">
-            <img
-              src="images/bmw-1.jfif"
-              alt="Front view" class="active" onclick="changeImage(this)" />
-            <img
-              src="images/bmw-3.jfif"
-              alt="Side view" onclick="changeImage(this)" />
-            <img
-              src="images/bmw-4.jfif"
-              alt="Interior" onclick="changeImage(this)" />
-            <img
-              src="images/bmw-m5 - Copy.jfif"
-              alt="Dashboard" onclick="changeImage(this)" />
+            <img src="images/bmw-1.jfif" alt="Front view" class="active" onclick="changeImage(this)" />
+            <img src="images/bmw-3.jfif" alt="Side view" onclick="changeImage(this)" />
+            <img src="images/bmw-4.jfif" alt="Interior" onclick="changeImage(this)" />
+            <img src="images/bmw-m5 - Copy.jfif" alt="Dashboard" onclick="changeImage(this)" />
           </div>
         </div>
-    <!-- Features Section -->
-    <section class="features">
-      <h3>Premium Features</h3>
-      <div class="features-grid">
-        <div class="feature-item">
-          <i class="fas fa-snowflake"></i>
-          <span>Dual-Zone Climate Control</span>
+        <!-- Features Section -->
+        <section class="features">
+          <h3>Premium Features</h3>
+          <div class="features-grid">
+            <div class="feature-item">
+              <i class="fas fa-snowflake"></i>
+              <span>Dual-Zone Climate Control</span>
+            </div>
+            <div class="feature-item">
+              <i class="fas fa-map-marked-alt"></i>
+              <span>Navigation System</span>
+            </div>
+            <div class="feature-item">
+              <i class="fas fa-car"></i>
+              <span>Adaptive Cruise Control</span>
+            </div>
+            <div class="feature-item">
+              <i class="fas fa-music"></i>
+              <span>Premium Sound System</span>
+            </div>
+            <div class="feature-item">
+              <i class="fas fa-eye"></i>
+              <span>360-Degree Camera</span>
+            </div>
+            <div class="feature-item">
+              <i class="fas fa-chair"></i>
+              <span>Massage Seats</span>
+            </div>
+            <div class="feature-item">
+              <i class="fas fa-sun"></i>
+              <span>Panoramic Sunroof</span>
+            </div>
+            <div class="feature-item">
+              <i class="fas fa-shield-alt"></i>
+              <span>Advanced Safety Features</span>
+            </div>
+          </div>
+        </section>
+      </div>
+
+      <script>
+        // Image switcher function
+        function changeImage(element) {
+          document.getElementById("main-image").src = element.src;
+
+          // Remove active class from all thumbnails
+          let thumbnails = document.querySelectorAll(".car-thumbnails img");
+          thumbnails.forEach((img) => img.classList.remove("active"));
+
+          // Add active class to clicked thumbnail
+          element.classList.add("active");
+        }
+      </script>
+      <section class="car-gallery">
+        <div class="container">
+          <h2>Our Premium Fleet</h2>
+          <p class="section-subtitle">Choose from our selection of luxury vehicles</p>
+
+          <div class="cars-grid">
+            <!-- Car 1 -->
+            <div class="car-card" data-car-id="1">
+              <div class="car-image">
+                <img
+                  src="https://images.unsplash.com/photo-1564498617702-7032ead7892c?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8bWVyY2VkZXMlMjBhbWclMjBndCUyMGN8ZW58MHx8MHx8fDA%3D"
+                  alt="Mercedes S-Class">
+                <div class="car-overlay">
+                  <button class="view-details-btn" data-car-id="1">View Details</button>
+                </div>
+              </div>
+              <div class="car-info">
+                <h3>Mercedes AMG GT C</h3>
+                <div class="car-price">₹15,000 <span>/ day</span></div>
+                <div class="car-specs">
+                  <span><i class="fas fa-gas-pump"></i> Petrol</span>
+                  <span><i class="fas fa-car"></i> Automatic</span>
+                  <span><i class="fas fa-user"></i> 5 Seater</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Car 2 -->
+            <div class="car-card" data-car-id="2">
+              <div class="car-image">
+                <img
+                  src="https://images.unsplash.com/photo-1603189549723-29a00cd56120?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8Ym13JTIwbTV8ZW58MHx8MHx8fDA%3D"
+                  alt="BMW M5">
+                <div class="car-overlay">
+                  <button class="view-details-btn" data-car-id="2">View Details</button>
+                </div>
+              </div>
+              <div class="car-info">
+                <h3>BMW M5</h3>
+                <div class="car-price">₹19,500 <span>/ day</span></div>
+                <div class="car-specs">
+                  <span><i class="fas fa-gas-pump"></i> Petrol</span>
+                  <span><i class="fas fa-car"></i> Automatic</span>
+                  <span><i class="fas fa-user"></i> 5 Seater</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Car 3 -->
+            <div class="car-card" data-car-id="3">
+              <div class="car-image">
+                <img
+                  src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=900&q=80"
+                  alt="Porsche 911">
+                <div class="car-overlay">
+                  <button class="view-details-btn" data-car-id="3">View Details</button>
+                </div>
+              </div>
+              <div class="car-info">
+                <h3>Porsche 911</h3>
+                <div class="car-price">₹13,000 <span>/ day</span></div>
+                <div class="car-specs">
+                  <span><i class="fas fa-gas-pump"></i> Petrol</span>
+                  <span><i class="fas fa-car"></i> Automatic</span>
+                  <span><i class="fas fa-user"></i> 4 Seater</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Car 4 -->
+            <div class="car-card" data-car-id="4">
+              <div class="car-image">
+                <img
+                  src="https://images.unsplash.com/photo-1532974143451-8162d38a1257?q=80&w=764&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                  alt="Audi Q7">
+                <div class="car-overlay">
+                  <button class="view-details-btn" data-car-id="4">View Details</button>
+                </div>
+              </div>
+              <div class="car-info">
+                <h3>Audi Q7</h3>
+                <div class="car-price">₹11,000 <span>/ day</span></div>
+                <div class="car-specs">
+                  <span><i class="fas fa-gas-pump"></i> Diesel</span>
+                  <span><i class="fas fa-car"></i> Automatic</span>
+                  <span><i class="fas fa-user"></i> 7 Seater</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Car 5 -->
+            <div class="car-card" data-car-id="5">
+              <div class="car-image">
+                <img
+                  src="https://images.unsplash.com/photo-1620547316190-289b3899e010?q=80&w=765&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                  alt="Range Rover">
+                <div class="car-overlay">
+                  <button class="view-details-btn" data-car-id="5">View Details</button>
+                </div>
+              </div>
+              <div class="car-info">
+                <h3>Range Rover</h3>
+                <div class="car-price">₹15,500 <span>/ day</span></div>
+                <div class="car-specs">
+                  <span><i class="fas fa-gas-pump"></i> Diesel</span>
+                  <span><i class="fas fa-car"></i> Automatic</span>
+                  <span><i class="fas fa-user"></i> 5 Seater</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Car 6 -->
+            <div class="car-card" data-car-id="6">
+              <div class="car-image">
+                <img
+                  src="https://images.unsplash.com/photo-1507136566006-cfc505b114fc?q=80&w=721&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                  alt="Jaguar F-Type">
+                <div class="car-overlay">
+                  <button class="view-details-btn" data-car-id="6">View Details</button>
+                </div>
+              </div>
+              <div class="car-info">
+                <h3>Jaguar F-Type</h3>
+                <div class="car-price">10,500 <span>/ day</span></div>
+                <div class="car-specs">
+                  <span><i class="fas fa-gas-pump"></i> Petrol</span>
+                  <span><i class="fas fa-car"></i> Automatic</span>
+                  <span><i class="fas fa-user"></i> 2 Seater</span>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
-        <div class="feature-item">
-          <i class="fas fa-map-marked-alt"></i>
-          <span>Navigation System</span>
-        </div>
-        <div class="feature-item">
-          <i class="fas fa-car"></i>
-          <span>Adaptive Cruise Control</span>
-        </div>
-        <div class="feature-item">
-          <i class="fas fa-music"></i>
-          <span>Premium Sound System</span>
-        </div>
-        <div class="feature-item">
-          <i class="fas fa-eye"></i>
-          <span>360-Degree Camera</span>
-        </div>
-        <div class="feature-item">
-          <i class="fas fa-chair"></i>
-          <span>Massage Seats</span>
-        </div>
-        <div class="feature-item">
-          <i class="fas fa-sun"></i>
-          <span>Panoramic Sunroof</span>
-        </div>
-        <div class="feature-item">
-          <i class="fas fa-shield-alt"></i>
-          <span>Advanced Safety Features</span>
+      </section>
+      <section class="car-gallery">
+        <div class="container">
+          <h2>Our Sports Cars</h2>
+          <p class="section-subtitle">Choose from our selection of sports cars</p>
+
+          <div class="cars-grid">
+            <!-- Car 1 -->
+            <div class="car-card" data-car-id="7">
+              <div class="car-image">
+                <img
+                  src="https://images.unsplash.com/photo-1683115917806-2476660f0708?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                  alt="Polo GT">
+                <div class="car-overlay">
+                  <button class="view-details-btn" data-car-id="7">View Details</button>
+                </div>
+              </div>
+              <div class="car-info">
+                <h3>Polo GT</h3>
+                <div class="car-price">₹5000 <span>/ day</span></div>
+                <div class="car-specs">
+                  <span><i class="fas fa-gas-pump"></i> Petrol</span>
+                  <span><i class="fas fa-car"></i> Automatic</span>
+                  <span><i class="fas fa-user"></i> 4 Seater</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Car 2 -->
+            <div class="car-card" data-car-id="8">
+              <div class="car-image">
+                <img
+                  src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=900&q=80"
+                  alt="Porsche 911">
+                <div class="car-overlay">
+                  <button class="view-details-btn" data-car-id="8">View Details</button>
+                </div>
+              </div>
+              <div class="car-info">
+                <h3>Porsche 911</h3>
+                <div class="car-price">₹13,000 <span>/ day</span></div>
+                <div class="car-specs">
+                  <span><i class="fas fa-gas-pump"></i> Petrol</span>
+                  <span><i class="fas fa-car"></i> Automatic</span>
+                  <span><i class="fas fa-user"></i> 4 Seater</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Car 3 -->
+            <div class="car-card" data-car-id="9">
+              <div class="car-image">
+                <img
+                  src="https://images.unsplash.com/photo-1626141893662-7ca9478808a1?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8bWNsYXJlbiUyMDcyMHN8ZW58MHx8MHx8fDA%3D"
+                  alt="McLaren 720s">
+                <div class="car-overlay">
+                  <button class="view-details-btn" data-car-id="9">View Details</button>
+                </div>
+              </div>
+              <div class="car-info">
+                <h3>McLaren 720s</h3>
+              <div class="car-price">₹15,500 <span>/ day</span></div>
+                <div class="car-specs">
+                  <span><i class="fas fa-gas-pump"></i> Petrol</span>
+                  <span><i class="fas fa-car"></i> Automatic</span>
+                  <span><i class="fas fa-user"></i> 4 Seater</span>
+                </div>
+              </div>
+            </div>
+      </section>
+      <section class="car-gallery">
+        <div class="container">
+          <h2>Our SUV Cars</h2>
+          <p class="section-subtitle">Choose from our selection of suv vehicles</p>
+
+          <div class="cars-grid">
+            <!-- Car 1 -->
+            <div class="car-card" data-car-id="10">
+              <div class="car-image">
+                <img
+                  src="data:image/jpeg;base64,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"
+                  alt="Nissan Rogue">
+                <div class="car-overlay">
+                  <button class="view-details-btn" data-car-id="10">View Details</button>
+                </div>
+              </div>
+              <div class="car-info">
+                <h3>Nissan Rogue</h3>
+                <div class="car-price">₹4000 <span>/ day</span></div>
+                <div class="car-specs">
+                  <span><i class="fas fa-gas-pump"></i> Petrol</span>
+                  <span><i class="fas fa-car"></i> Automatic</span>
+                  <span><i class="fas fa-user"></i> 6 Seater</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Car 2 -->
+            <div class="car-card" data-car-id="11">
+              <div class="car-image">
+                <img
+                  src="data:image/jpeg;base64,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"
+                  alt="Mahindra Scorpio Black N">
+                <div class="car-overlay">
+                  <button class="view-details-btn" data-car-id="11">View Details</button>
+                </div>
+              </div>
+              <div class="car-info">
+                <h3>Mahindra Scorpio Black N</h3>
+                <div class="car-price">₹5000 <span>/ day</span></div>
+                <div class="car-specs">
+                  <span><i class="fas fa-gas-pump"></i> Petrol</span>
+                  <span><i class="fas fa-car"></i> Automatic</span>
+                  <span><i class="fas fa-user"></i> 6 Seater</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Car 3 -->
+            <div class="car-card" data-car-id="12">
+              <div class="car-image">
+                <img
+                  src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBxMTEhUSExIVFhUXGRcXFxcYGRgXFhcXGBcXGBcWGBcYHSggGBolHRgXITElJSkrLi4uGB8zODMtNygtLisBCgoKDg0OGBAQGi0lHx0tLS0tLS0rLS0tLS0tLS0tLS0tLSstLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLf/AABEIAJ8BPgMBIgACEQEDEQH/xAAcAAABBQEBAQAAAAAAAAAAAAADAAECBAUGBwj/xABIEAABAwEEBgUJBAYLAQEBAAABAAIRAwQSITEFQVFhcYEGEyKRsRQyUlOSocHR8CNCQ+EVVGJygtMHFiQzg5OistLi8WPCF//EABkBAQEBAQEBAAAAAAAAAAAAAAABAgMEBf/EACQRAQEBAAICAgMAAgMAAAAAAAABEQISAyFBURMxgSJxBFJh/9oADAMBAAIRAxEAPwDo2CURtNBap03wvt2vkyD3E4aoiqFMFZ1rDQldUwU8blNXELqe6pQpBNMQupXUW6lCmmB3UoRITwpq4FCeESEoTTA4ShEup7qaYFdSuosJQmmB3UrqnCV1NXELqV1Tup7qaYHdSuol1K6ppgd1K6iXU8JpgUJQiwlCauBXUrqLCV1TTArqUIt1K6mmBwkUS6nhNMCupXUSErqaYHCa6i3UrqaYFdTXUa6muq6mMmE4U7qe6umsYiFIFPCe6pq4cOU21Ch3VJrVFHbVUr4QQ1SAUaEE6kRpKCGFGpyFmkShNdUwVIBTVwOE91EhPCmrgV1K6iwlCaYFCUIt1KFdMCupXVJ9Vozc0cSEF1vpD8RveFOx1ol1PdVU6XoDOq0c040vQzFVpjZKdodas3Urq4yj/SI19QMZZKxbeDXO9EE5wAR3kLpqmnrKDBtDPefALM5ytXhYvXUrqz/6wWbVWYeceKLT0xQdlVZ7Tfmr2idat3UoTMtDDkZ4Yqd8bQmmIwlCIAlCagcJ4RLqV1NMDhKES6ldTTA7qUIkJoTVQhKFNNCamIwmhSIUZQZt1PdRbqV1ddZwKE8It1K6ppgcKQClCe6mhlIBNCkAoozRwRGtQGlEa5Zq6LcUCUVoSU1QwphOqeldK0rO0OqOxcYYwCXvd6LGjEn3DXCaLZWJbdPjKlBHrHTc/hAxqcZAxwJyWJpLSlSr/ew1v3aDTI3GqfxHbvNG8gOWeAaj+2SBmY1buKh+mlaNOPcYa9xO6PDJZdtt9T7zqhna4/DBaFGztybMJrdZWNDQ4xOJGsgZDv8ABZ5WSHDnbcYjS92t3eZ8VJ7GjzieZJT2rSR82mLrduuOKpyCc1ibf263l9CGrT9HvJHuUxWpD7p5Ej4qDKQ2oNo2D6+vBS4vG2laLVhAvQcMyTjqH1iiULE+MXubuZA73R2k+irEX/aBrnejdaThleMZT4LWFlcBJa8De0hb4yfKcuV+Gf8Ao2fxKvG/+SzbM510BznXhLHGT5zSQTB3gnmulp1ANqwbc4CvVjJ1yoBqyukd7PeqktOyi8ZVTza0+EKzTtVoblW5dtvg9AZaBGSd1o2Jka9rZ6QWtk4h0NLoDpcQ3MC+044jXrWjZOldoLS4MD2taHktx7LiAHQ0gxiNWtc7aqpgO9EzyyPuM8k2grd1FXES1hN5vpUKkh7eXaA/dCx8tY62j05jz6bh7vEHxWjZ+mlB2sjl+fwXI6Ssgo1XUyZYYLXZyxwljxvg+IWbWbBhwGHPmDs1ptTrHqVn0/QflUb3x4wtKlVa4SHA8wvGxRHDh+SNRqkHsvcOa1rN4R7FCaFy/QvSbn3qb6pcQBAOeuSDOzVuOK6qFqXWLMQITQiJiEQMoZRy1NcV1FGEoVg01EsWtZBhPCJdShNA7qV1EShUDhPCnCpaW0gKN0QC4iSDkBq5qWyLxlv6WoUgFzT+k2ouYP4gPrvVCv0qAkmswATk4Y8i/Fc/yOk8TumyN3GB4pjaG+m3vHwXkr+k73Ymq082mOajS0y9/m1J4QfArH5G/wAT1S3Wl9w9S6lf1F5IYN5gEnhguXZo5gJq1LW2taHCHPa1z7o9XTDARTbu71yVW31tbzwIfPHJNQ0raHvFMF76mYYDUL423YmFO7X447Gjoam4S51Ti5pYPemfTsjMDbaLY+7LSRyD5WG3RdofHWWOvVI9KjWIndhAVkaIt8RSsBb/AIDW/wC8BL5Kn4o0P0rZW4MtDHfu0qzj3gQsbSVbrX3g9xGAgUaww7sUDSth0jQp9ZaRWpNJug32NEkGAGtcNmxZgtBiDVqd7j8Uns6SfDS8n/8AnWP+C74uCQw/CqTvY0f/ALVKn1P3n1O4nxCs0nWYYkvPEYd12FcMgtarAgUiDtcRHsj58lg263Brn03T2aYe47i9jYjMk3j3Bdg3TNl9BgOGTLuXADYO5cTpay3rQ6qwi44kEAETT7PZ83DETuMRkpfX6aEq9IaLBcJeS3CABHIkgQs6t0ipuIhrhjmYw7irXkzK1SLRVNKzti5Sph5mNuED6jat6xN0bTgNuYZF9APPtOaTKzvJfQthc51NjjOInlq90KppZpD6btoc0/6XDwct9mnbL62nzpPH+0IdottiqRefRN0yMLQ2DBH3XDUSt6xjnacx9asFNrluUvIp86htHarjjm4qw2hYj+JTHCtH+5Nac8XYQQYOHeqIrQ6m476b98/9mgcyuyGjLIcqhPCvR/4INbovQeCGueJMiHMfBm8DhE44qCVJnX2NpzfZzcO00iez7JI5ErMqUyRIxLfe35jwJ9ELpdF2IUOsgPf1jC2C0BoN1wkm+SRB2at6zvIarcm+6VakY1OhAzCDUZBkLTqaOAk3ajOQeOQJBjiSd5QHWcZXz/EwtH+kuTVPZLX1L21WHI4heq2C1Nq021G5OHcdYXlPkJOT6Z3S4e9zQux6CWhwvUXRlebDmuywPmk7lZWOc9OshPCdJacUbqV1SSQCupixEupXVVwEsUSxWLqa6rEsVyxRuKyWqN1bjNgIZqXn/SezB9as8mq0hwaQ2zPcQ6GjOiQH8ROOvNdpp+0Pp0r1Nxa4uY2REwXAOz3SvJ9KAOtVpc51YnrHANBbc1GG9YwtacxiVx89/Tt4Z+x20akdqra3nUfJLSCP9ZHuWmNBPFO9U0gSYbAIJuEiYqS7sbwActy5ivo+lMkVCc7pNlcCdl4sETu2qFey0mBw7dMOGLWVbPdO89oY6oyjivLy2z16emZP2tW+sKTyzyqu+MZZcuCccnHEclnWnSdM4GpX9qyMPuEp/JaQhxpNH7Qq0b24x14CapSDvNp9YNjqzWAezaTKqA+XUQImqeNSxu8WlaHQzra1sFOw32Vy1xvms2mA0AXsaVOMj9YKrTs+HmXf2W1LwHB3lgnuWx/RK9rNKPvENvstFNpccC9wF1l4uILjB+8eJSDYtdmtVRsVdLBzTqFa21GkHZ1bIcPcq9k0KWiG6RABMkNp22SdpvPbJXOaZ0BUZ2RTcKzcH0jIfMyC1pPaF3CGycJiMVjaQ0aWMD3Unt7UX3NdTExIALhnmeS1qOnfZ33jfcXAEgFxBcRyc4Cc4LiVbpgbFi9H9JhzQxzhfGGP3thB14K3pHSbGG6XXYi/HnY6hsMYk6hGsiOs5STWLPbQq16TPPcxv7xA8VEaRs2urT9oDxXL1+kFFhPVUy7Hzj2Z3yQXO5oQ6WO10mxx+YWb5V6O3JBEiI1GUPq2bvHwXKWTTFJxmn9i/YcKb9zowH70Aj3KxaukYyax0j0iAAdYwngneGOm7A29ygX0/QB4wuMqdIapyDBynxKA7TVY/iRwDfkp3Xq7Yvp+raqlspuJmmaY3OYCN+IxXHP0pWP4ju+PBCNsqesqe075qXnp1d/Ra2AHkTlLWhoP8N47EUUKW33N+a87Ftqesf7Tvmjs0rWH4ru+fFO51d+LNS9L/S1VbdRLYNJjKg1jzXcsQI58lxw0zXH4p5hp+CKzpBWGtp4t+UK94dXZtspc0G6GnWA+cRjqPzVhtGo377283/By42n0mdk5ncT4Fb1i080tvNfgMwcCJyEDPkrOUqZW3TrVhlaKntO+JKd1stHrCeIYfFqpUdK1X+bZ5/fLGk74xPfCuUdLhv8Ae2d1Men2XU+bmmWjeQBvV2J7EZ17hMDmxvwUtEW+rStDC5jYvBpLcM+fBWLTWJAvDDUFkWwkgkSCCCI1Q4Ow7ld+jPt6+SmlQlOCumOBy5MnSChg11IhPKUq40aE0KSSqIFqiQiKJWjHP9MXxZ5gnttECScZyheZP0Paw0nqK7nVL1R7escxt5+Ja4CsyNh7JXremXva1r2BpuOc90mCGilUAc3DEhxZyleHVOllv1VKg/w2fFi83lvt28c9NEaOtV0jySu3PsCu+6eP9o18FA6OtTBLrHVpgn7tofB77Rms53Sa3n8dwG9rJ9zVTtmnbY6L1oqGJjACO4Ll6dPa43RtYPviwQce2K7xUM6567M61O1WOs6P7Ffj1tovgcAahhZP6VtXrqvu+Sg7SNpP49Xw8E9Htr07LXAjyMjc21FjeTQ+Aqp0VaJc7q3NJJJYCyo2JmCBi7icVnm22j19b2nKAtVfXaK3tu+aeh1Vj6VVbgoWyg6tTAhvWB/WMH/yrkF7f3Xh7eCx9MWagTNn60NMYPaGFhvDAFpLduIOOwI1j0RbajbwrVGtORqViyf4S6fci1dCFvar2tvZxPbNQxrugnF2zBUctjOEkzxMztV3S1N0ts4wDB2t7zi496M6u3rL9Jl1l68AcYjIHadvNWNF2N9aoSDiTLnYdkEwA0OIDqjjg1syTlrIz13lN+Gu2cbPtmM0OI7VS7xAHiVGroZ0TTc2pGoRe7pK0naRb1VU0qTWljqRDngVXlhvBznGoC2ZNLzWtieMmFYVKtOkaTGkspF1RgFJzXOYHuqdnshobJdI+6cQTK1/iz7criDsIV0HAFX9L2UObflrngB19k3atPK+JAMgggyAcCCARCBY6gNINLZgkTz196zmKsurWP1NfP1jctnmpNoUqoLaFCvfjA3muAP7QDcBzQaFGHCGdZj5uJn2cV0tm0vbA0NZYgGjICm9oViVk2fonaHeddZxMnubI96v0+hh+9V7m/EuV79K6Q/VG9x/5Kf6U0hrsrO//st5GfbPd0My+1Ps7uKi7oW7VVHsf9lonTFtwmzM257o271Iaeteuys9opkPbIf0Oq6ntPEEfNZlv0DXpAucyWjNze0Bx1gb4XWN6QWn9UZ/mR8ERvSCvrsrP83/AKqZF9vPEdloNIBzTDs51/sj48wtLSlnaXmoWspgmSxrr0HXGGW5Uql2o9oaMAPfl7gAs4qvV05aHZ1XcoHgrejelFem4XnF7NbTnGuD81sU7DTbTv1AwU5u3niG3tggFzjwGGtZ2ndCBt5zAAW3rzWuD2m5590jJzcJacgQeNvGz5T07rR9QGkC03mw11PHJjgYHIhwjUIUo3d5n3RiuY6FVXOokF5DWFwAEZOhxnmturaLoPaPMrUvpLHr1Gpea1wycAe8SjALN6PT5NQnPq2HvaCtVoXq308+ezBqeFMJKKpv0rSDmsL8XTdwcR2RJxAgc1Grpmg3zqrRvOWcZ5ZmF55U6X075LAJAif2cDB14EnAZ7RGNfRmkoLWMAqFjnOAJcC8ET52N4h144g6sAuN/wCV4t9V14+LlY9S8up+l4p/LqfpeK5qhbZaHGm5hIlzT2iOYME8ERtoZx2Yfniu08vh+3P8Xk+nQeXU/S9xTOt1P0vFYjajScnZ/WtO+o3Y7H62q/k8P/Y/H5PpT6bU+tot6qHPa4wJDcC0gwXQDqXmLui1pEAWdzrrQBDQBOZzcZyaJ45L0npFYxXs76QHbwLZmLwMxOqRI5rxvTejH0HfbU7s44ge4jBw4Lz+W8e3+NdfHOXX3F+09FbWSf7I/wA4H7uUY8tyJW6P2nCbO4ez81yrmNOQ9wQXsGzwXLXRu1ejVpJcfJnY/tM4bcEmdGrT+rO72H4rniAmwU0dG3o5af1Z3cD8UUdG7TdJ6p96YuXYER514mM9W5cxhsTYJo6Q9GrV+rn2qf8AyVa2aNrUQDUp3ATA7TDjwa4lYmCkypCaL9871q2qg11nZRbUuVr3W3Tgx94Qxt/Jr2tEiYH2hjErGZVBgT9SFqaTFAPaKjarnFlObgYBFxolpMucRGuMQRkr8IHpCtDn32kValO5WYRBFRtRrnPyg3msDpH3nEqwz7YVagcGmq49bUc66yjRvG7SBPnPddGAxutA1mN7QtOrZmvLL7ahutLXuAqMYGSwVC1jnNd2wbkQQADi0BYjbIHPqMuUqk1C9lHrBSMOJi4ZAJAEXBMJ1NP5TRLAyiHRRN8vOTw9zKbwG/dHmkSZPakDADCEsvNGonxhatFzoqh1mFLsYH7WR9oyGw95bExqGWpUqldgcZbUJnGHgDuuFKFZtN16QIp1XMBziPkpnpDaTnaKntJMt1Mfh1Pbb/LUvLqXqqntM/lp/QP9O2j19T2kv03aPXP71Py2l6mp7TP5aXllL1NT2mfy0/oj+mK/rX96Z2lq3rXd6I22UvVVPaZ/LT+WUvU1O9n8tP6AjStX1ju9DqW57s3uPMqz5VS9TU9pn8tBqWil6uqP4mfy0/oCyotHQFnNSoP2nATs38llVatM4NFQHe5pHcGhbPR+/iKc37j7t2bwddwLYxkHKMZV4/sqy6vTruLwSKLms7LiPs+qrUw4TgD2HufgMb5zMlW7G1/am60EmpUDv1ir/dUhhIIETnAq1ZjGGFhaaNU1mAVYlnVuBYXw4l7gxpDXm60EdkQNRInOv3G0jXdaM+wwUw2mIdi5ry669xMS66T7lP8A0T0UTR61rDDb+A/ZIBbnuIRXvc8hskkkAAZyTGG9bFk6L2iv26bWhhyc50Td7Jhol33Yy1Lpej3QY0qrK1Sq11wyGBpi9GBl0HA45agunHx2sXycY7+z1abGtaDgAAOAEDwRxbGekstzGg690k+5O27kD8feV7ukeWcq1fLWel4p/LWeksm5GMHume5O9sY/DbwTpDtXiNn0eGggUy85OOJcQYkQDOQwgTvMLe6MF9NwusulxycM2zjJ9KMATlOpdvTuMbdaWAbA2cIiNwx1ojTTJPZGUEyA7VrGvP6K+JPHfl9SZAaNqwGF2POJgjI5aru+OWtU6elQKxpE4gZ7TOWeGeuFctdRrBLTyEHKMRhzzXn2kqlY2xz2UakGBeDXRhjnyV5XC8sek+UYTMDWCAXTyITVKxMZR3A8RHx2KlYLSHMF7s/vSCBhqnirj6rGjF+GeDg7kdq1i6TKs469WEbQTP8A7qXJf0j2F1SziqJ+zOOGNx+Z5ENO4ErqDaaJLQXsE7TA1RgRAjNNba9Mi4ajC0yCM5EGQS3Uk2Fy+nz/AFWlpwKs0nUzTqFwdfAYGQcCSTfLuQwhdJ0m6KuYXOofaU5PZn7Rm6Di9uwjHxPHuYWkggg5HMHgtuNmNu06Kp0atanWfjTAu3THWXm3mwIJb2TM4iYB86RjEdkGOJ8AlWtDnmXGTAEmScBAW5oDotVtDhfPVU9bnm6SP2GnE8cvBNGl0H6LMtTKlSteDQQ1l0wSc3HHMDDLfsXS/wD81sxkipW5PZjjvYum0UyjRptp0yxrGiAAR354nWTxVk18B22e1r4SsW11nGOItv8ARpRuHqqz+swgvLSzMTIa0HaFj2n+ja0NBLalJxAPZF+SQJgYRK9OqVGASS08x9ZbFF1UYdoDeDPw4bE2l48Xglmbiuv0fa5s5c242qwQKhEkCSQLsR57iC4kBgcDiYRumvRlzXutFAXmuJNRgiWuzLmgZtOcZjhlytg0gabpGRkEYZEEHAyDgSIOBldeNceUdVYLBcYwVHOY6pStNY1XE3hUcGXLxGIAuGZODnPByxy7faaNQU6TmtAqtFVjybvU1XFzarJMzSdUYTiexM7QdCrb6doa+bQWue0tAIaGsmp1jtYdBJePvHt+cYVVnk9Kk2k67Xe1xcw6u0ALlxpLngETBu4uPPXWs7CaK/Vssz3OL6lRrWscO01oN0TMuaC+TEwOqJ1hdDU/o/pkmLRVGvMHYZwAgbkbovoKp1htNeOsdJDXRLb2b3RhfOUDIYa4HT3Z7IAAzwjXw+J1Ll5OXvJ8O3DjM9vEbTQcwlpe6QSCJ1gwfAqn1zvSPeV3/TfozUvGvRF8OxewYuBjFwAzB1654rz+o0g4ghXdYsypOe4feOO8putd6R7yp0aReQ1jXOccmtBJPICV3XRro1XpNL3UyKjoAloddGeBEwduGzepy5ZCTXNaK6O2uvBY0hpjtPcGDHKLxkjVgCtF/QS3AkQwkGCBVbnidZC62sK2TmnXdIDs8IOInUEb9PXGOa+WmS6SCJ+9hIOOAXL88n7lW8K4qp0HtjQC51MAxP2k3ZJAmAdmqUWwdArRUY55q02QJbJc693DLeJ4LpLZpYOMGoSXmReOWBbG4CDrw5rorRXY2hRs7YmG3nOjVOYMB2JOzFb4eXjy2/X258pykeN6V0XUs1U0qoF4AEFpvNcDiCCNSuaEc0vDHGGvDmE7A8QTyGK9A6ddFnWiiK9BhNSleBEy6qycQ3W8tMxGYJzMLyunVLHbCDzBC72db/s43Y7JlRjGVaVMXGMlrWkdt5ptqvrvJOLXRdaJOEsw1KFgJp1T1NRwayevZ51JwLS4VGNdIAqNAwOIcYkAgGFltVC0Nl1VtKpcqNIIEOdUaG9ZM54NnObu3E7nRHQDbTVaymAaTLgr18AKgpwG0mjECQ1sgE5XjdwB1JbYlsjttAWV1Oy0WFjyQwF0NBgv7RMk71tNpTi6QdsEYcVbFAiTfwyjDBCNkdeEvkHcDynNe+WZjy58gup3iAKjI1faY9xlTuFvnHuJ+GEo5YwGCDyBHgVJ9AEXQXAbiQRzxTsYAbo+9qwnDxhBNmYcb5E7HPLfcUWk6DcaKmEyTIx5t+CHaWPnXOvBp4TJGKsHHgDd3fPNMQNg7vyTPGM49/hAUAI1uynUYk8IlfO17Uwxp+imLBsEccEgRjjG+cfcoFwyxPw3oCmi2MtusphSYee8+CheE6+YCkSJzOOuQgYUG7D3lCfZmHV70cDjr168JUAc8T9a0UB2jaXoKP6PpejhryyVtg390beCTcpExv1cENUjoyjkWD/TlsQnaCs+fVNPJuS0wNQniY4ncoh+w58Iw2J6TWW7o7Zs+pb3NjwTf1dsvqWzwb8slrOdhnG+J8Urx5pkGQejNl9UO5vySPRmzeqG3JvyWuSY1nfrKiXxjl48UyDMHRiy+qaY3N+SkOjVl9Szu/Jad/E+/wCsipFwwF46sjHDBMgyx0bsvqGatSkzo3ZpwoN14xG75rSmDEj8ticznIjX9a0wZf8AVyzR/cs7sOKX9WrKPwWeyFpGphvx+sMkxq5RG+dnAa0GZ+gLL6hnsgIo0JQ9UzDcFeFU7AidZu44fNBnt0HQ9U32R8tyZugrP6lg/hEbTmFfbaDlke/mcE4r7B9dyCn+hLMMOpb7ATDQdnP4LPYGC0RXGwcfoIYrDHEYavzQUxoGzjDqKe8XGphoWh6pm4XR8Fe60nZlxTNeZiTlkZMc/qEFenYWNPZaAdwIOr5oT9D0Di6iw6ySxpPHHctBrs2685+eCG6twjbj9FBSGgrN6il/lt+Stss4aLrTdAyA7I92A5Kba+zXwj3a1J1bHKDvjAa4O1NEA90T1jo/ed4Spiq+P7x/e7wlLyrHL8vySp2ichluPy3q9qZDiq/VVf7TvmpstlXVXqbfOfq15oDa52CMcAfdEJPflM4fUak7VMgxtlX1tTgXPjxTMrvE9t3e6fcclAVv3twMYqArxmPrvTtTIeoDAADSNfz8UJ9MmDHZnbBjlrQnHMSRt2HkncTrncoqRpOnOZ2/lmVI04dBMzGH5IN/bO1ToVtcY57cOaAzmHWDh3qJzgYRl/6oeU6oG3vTMqYkmBGE6yd6B65cPhG/DFSDIIkCfqcEKrUGRB+CVLOL0nb/AOoDBhJIAOG/ZrJ2JOBMYieahOMQiBk46892xBIg4juKYGDGJ4bdyhMTjiMfgk6pAnUgmyoZj3Ye8prszjhOxQcYMgYpxTxiY4T3oCOnLVu18Uxp6zn9b0FuMbB7+Kk4GAZgTGWaoI6nvnXy3pnWfPGeAxUarZBnvgTChTiTExt1qAjS+Yj47uRT9W7IjjgPoKLcCTJOqclIMcZN7drmNiB4IxyziIwTEmIbz3pqsDUMM8JUQDdybidQhBKq044Hxw3qLsP/ADX/AOJr2Uznx+Kn1t44BA945xj3CNnFRF7ZsgakR+W+OSG4yQdWudfJUTAcMwNez4JCRkBjiD81XfWkhu04Kb3xExvUE57vrFSjP3asNhQevxw55qZdjmgk4YyNmrHiM81G7eGAjKYzlRqObOGY4iVGuLpwywwO1ARo2zG8dyaRnkdY1RgmdTwgnDPDwSD4bG/4oJlmGYE5DPvT3Tnh3qD26gcJkSFF4BEZxyQSp089eP1gmLOI1KJbBEqA1YmMcPmoCMxwkylMTI+KiAcmkzsyCgwnZPOEH//Z"
+                  alt="Chevrolet Suburban">
+                <div class="car-overlay">
+                  <button class="view-details-btn" data-car-id="12">View Details</button>
+                </div>
+              </div>
+              <div class="car-info">
+                <h3>Chevrolet Suburban</h3>
+                <div class="car-price">₹6000 <span>/ day</span></div>
+                <div class="car-specs">
+                  <span><i class="fas fa-gas-pump"></i> Petrol</span>
+                  <span><i class="fas fa-car"></i> Automatic</span>
+                  <span><i class="fas fa-user"></i> 7 Seater</span>
+                </div>
+              </div>
+            </div>
+      </section>
+      <section class="car-gallery">
+        <div class="container">
+          <h2>Our Pick-Up Cars</h2>
+          <p class="section-subtitle">Choose from our selection of pick-up vehicles</p>
+
+          <div class="cars-grid">
+            <!-- Car 1 -->
+            <div class="car-card" data-car-id="10">
+              <div class="car-image">
+                <img
+                  src="https://images.unsplash.com/photo-1564498617702-7032ead7892c?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8bWVyY2VkZXMlMjBhbWclMjBndCUyMGN8ZW58MHx8MHx8fDA%3D"
+                  alt="Mercedes S-Class">
+                <div class="car-overlay">
+                  <button class="view-details-btn" data-car-id="1">View Details</button>
+                </div>
+              </div>
+              <div class="car-info">
+                <h3>Mercedes AMG GT C</h3>
+                <div class="car-price">₹15,000 <span>/ day</span></div>
+                <div class="car-specs">
+                  <span><i class="fas fa-gas-pump"></i> Petrol</span>
+                  <span><i class="fas fa-car"></i> Automatic</span>
+                  <span><i class="fas fa-user"></i> 5 Seater</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Car 2 -->
+            <div class="car-card" data-car-id="11">
+              <div class="car-image">
+                <img
+                  src="https://images.unsplash.com/photo-1603189549723-29a00cd56120?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8Ym13JTIwbTV8ZW58MHx8MHx8fDA%3D"
+                  alt="BMW M5">
+                <div class="car-overlay">
+                  <button class="view-details-btn" data-car-id="2">View Details</button>
+                </div>
+              </div>
+              <div class="car-info">
+                <h3>BMW M5</h3>
+                <div class="car-price">₹19,500 <span>/ day</span></div>
+                <div class="car-specs">
+                  <span><i class="fas fa-gas-pump"></i> Petrol</span>
+                  <span><i class="fas fa-car"></i> Automatic</span>
+                  <span><i class="fas fa-user"></i> 5 Seater</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Car 3 -->
+            <div class="car-card" data-car-id="12">
+              <div class="car-image">
+                <img
+                  src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=900&q=80"
+                  alt="Porsche 911">
+                <div class="car-overlay">
+                  <button class="view-details-btn" data-car-id="3">View Details</button>
+                </div>
+              </div>
+              <div class="car-info">
+                <h3>Porsche 911</h3>
+                <div class="car-price">₹13,000 <span>/ day</span></div>
+                <div class="car-specs">
+                  <span><i class="fas fa-gas-pump"></i> Petrol</span>
+                  <span><i class="fas fa-car"></i> Automatic</span>
+                  <span><i class="fas fa-user"></i> 4 Seater</span>
+                </div>
+              </div>
+            </div>
+      </section>
+
+      <!-- Car Details Modal -->
+      <div class="modal" id="carDetailsModal">
+        <div class="modal-content">
+          <span class="close">&times;</span>
+          <div id="carDetailsContent">
+            <!-- Content will be loaded by JavaScript -->
+          </div>
         </div>
       </div>
-    </section>
-  </div>
 
-  <script>
-    // Image switcher function
-    function changeImage(element) {
-      document.getElementById("main-image").src = element.src;
-
-      // Remove active class from all thumbnails
-      let thumbnails = document.querySelectorAll(".car-thumbnails img");
-      thumbnails.forEach((img) => img.classList.remove("active"));
-
-      // Add active class to clicked thumbnail
-      element.classList.add("active");
-    }
-  </script>
-  <section class="car-gallery">
-        <div class="container">
-            <h2>Our Premium Fleet</h2>
-            <p class="section-subtitle">Choose from our selection of luxury vehicles</p>
-            
-            <div class="cars-grid">
-                <!-- Car 1 -->
-                <div class="car-card" data-car-id="1">
-                    <div class="car-image">
-                        <img src="https://images.unsplash.com/photo-1564498617702-7032ead7892c?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8bWVyY2VkZXMlMjBhbWclMjBndCUyMGN8ZW58MHx8MHx8fDA%3D" alt="Mercedes S-Class">
-                        <div class="car-overlay">
-                            <button class="view-details-btn" data-car-id="1">View Details</button>
-                        </div>
-                    </div>
-                    <div class="car-info">
-                        <h3>Mercedes AMG GT C</h3>
-                        <div class="car-price">₹15,000 <span>/ day</span></div>
-                        <div class="car-specs">
-                            <span><i class="fas fa-gas-pump"></i> Petrol</span>
-                            <span><i class="fas fa-car"></i> Automatic</span>
-                            <span><i class="fas fa-user"></i> 5 Seater</span>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Car 2 -->
-                <div class="car-card" data-car-id="2">
-                    <div class="car-image">
-                        <img src="https://images.unsplash.com/photo-1603189549723-29a00cd56120?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8Ym13JTIwbTV8ZW58MHx8MHx8fDA%3D" alt="BMW M5">
-                        <div class="car-overlay">
-                            <button class="view-details-btn" data-car-id="2">View Details</button>
-                        </div>
-                    </div>
-                    <div class="car-info">
-                        <h3>BMW M5</h3>
-                        <div class="car-price">₹19,500 <span>/ day</span></div>
-                        <div class="car-specs">
-                            <span><i class="fas fa-gas-pump"></i> Petrol</span>
-                            <span><i class="fas fa-car"></i> Automatic</span>
-                            <span><i class="fas fa-user"></i> 5 Seater</span>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Car 3 -->
-                <div class="car-card" data-car-id="3">
-                    <div class="car-image">
-                        <img src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=900&q=80" alt="Porsche 911">
-                        <div class="car-overlay">
-                            <button class="view-details-btn" data-car-id="3">View Details</button>
-                        </div>
-                    </div>
-                    <div class="car-info">
-                        <h3>Porsche 911</h3>
-                        <div class="car-price">₹13,000 <span>/ day</span></div>
-                        <div class="car-specs">
-                            <span><i class="fas fa-gas-pump"></i> Petrol</span>
-                            <span><i class="fas fa-car"></i> Automatic</span>
-                            <span><i class="fas fa-user"></i> 4 Seater</span>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Car 4 -->
-                <div class="car-card" data-car-id="4">
-                    <div class="car-image">
-                        <img src="https://images.unsplash.com/photo-1532974143451-8162d38a1257?q=80&w=764&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Audi Q7">
-                        <div class="car-overlay">
-                            <button class="view-details-btn" data-car-id="4">View Details</button>
-                        </div>
-                    </div>
-                    <div class="car-info">
-                        <h3>Audi Q7</h3>
-                        <div class="car-price">₹11,000 <span>/ day</span></div>
-                        <div class="car-specs">
-                            <span><i class="fas fa-gas-pump"></i> Diesel</span>
-                            <span><i class="fas fa-car"></i> Automatic</span>
-                            <span><i class="fas fa-user"></i> 7 Seater</span>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Car 5 -->
-                <div class="car-card" data-car-id="5">
-                    <div class="car-image">
-                        <img src="https://images.unsplash.com/photo-1620547316190-289b3899e010?q=80&w=765&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Range Rover">
-                        <div class="car-overlay">
-                            <button class="view-details-btn" data-car-id="5">View Details</button>
-                        </div>
-                    </div>
-                    <div class="car-info">
-                        <h3>Range Rover</h3>
-                        <div class="car-price">₹15,500 <span>/ day</span></div>
-                        <div class="car-specs">
-                            <span><i class="fas fa-gas-pump"></i> Diesel</span>
-                            <span><i class="fas fa-car"></i> Automatic</span>
-                            <span><i class="fas fa-user"></i> 5 Seater</span>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Car 6 -->
-                <div class="car-card" data-car-id="6">
-                    <div class="car-image">
-                        <img src="https://images.unsplash.com/photo-1507136566006-cfc505b114fc?q=80&w=721&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Jaguar F-Type">
-                        <div class="car-overlay">
-                            <button class="view-details-btn" data-car-id="6">View Details</button>
-                        </div>
-                    </div>
-                    <div class="car-info">
-                        <h3>Jaguar F-Type</h3>
-                        <div class="car-price">10,500 <span>/ day</span></div>
-                        <div class="car-specs">
-                            <span><i class="fas fa-gas-pump"></i> Petrol</span>
-                            <span><i class="fas fa-car"></i> Automatic</span>
-                            <span><i class="fas fa-user"></i> 2 Seater</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Car Details Modal -->
-    <div class="modal" id="carDetailsModal">
-        <div class="modal-content">
-            <span class="close">&times;</span>
-            <div id="carDetailsContent">
-                <!-- Content will be loaded by JavaScript -->
-            </div>
-        </div>
-    </div>
-
-    <script>
+      <script>
         // Car data
         const carData = {
-            1: {
-                name: "Meredes AMG GT C",
-                price: "₹15,000",
-                image: "https://images.unsplash.com/photo-1564498617702-7032ead7892c?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8bWVyY2VkZXMlMjBhbWclMjBndCUyMGN8ZW58MHx8MHx8fDA%3D",
-                specs: {
-                    engine: "4.0L V8 Hybrid",
-                    horsepower: "550 HP",
-                    transmission: "9-Speed Automatic",
-                    topSpeed: "305 mph",
-                    fuelEconomy: "23 MPG combined",
-                    seating: "5 Persons"
-                },
-                features: [
-                    "Dual-Zone Climate Control",
-                    "Navigation System",
-                    "Adaptive Cruise Control",
-                    "Premium Sound System",
-                    "360-Degree Camera",
-                    "Massage Seats",
-                    "Panoramic Sunroof",
-                    "Advanced Safety Features"
-                ]
+          1: {
+            name: "Meredes AMG GT C",
+            price: "₹15,000",
+            image: "https://images.unsplash.com/photo-1564498617702-7032ead7892c?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8bWVyY2VkZXMlMjBhbWclMjBndCUyMGN8ZW58MHx8MHx8fDA%3D",
+            specs: {
+              engine: "4.0L V8 Hybrid",
+              horsepower: "550 HP",
+              transmission: "9-Speed Automatic",
+              topSpeed: "305 mph",
+              fuelEconomy: "23 MPG combined",
+              seating: "5 Persons"
             },
-            2: {
-                name: "BMW M5",
-                price: "₹17,500",
-                image: "https://images.unsplash.com/photo-1603189549723-29a00cd56120?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8Ym13JTIwbTV8ZW58MHx8MHx8fDA%3D",
-                specs: {
-                    engine: "4.4L V8 Hybrid",
-                    horsepower: "727 HP",
-                    transmission: "9-Speed Automatic",
-                    topSpeed: "310 mph",
-                    fuelEconomy: "23 MPG combined",
-                    seating: "5 Persons"
-                },
-                features: [
-                    "M Sport Differential",
-                    "Adaptive M Suspension",
-                    "M Sport Exhaust",
-                    "Carbon Fiber Roof",
-                    "Heated Steering Wheel",
-                    "Harman Kardon Sound System",
-                    "Head-Up Display",
-                    "Parking Assistant Plus"
-                ]
+            features: [
+              "Dual-Zone Climate Control",
+              "Navigation System",
+              "Adaptive Cruise Control",
+              "Premium Sound System",
+              "360-Degree Camera",
+              "Massage Seats",
+              "Panoramic Sunroof",
+              "Advanced Safety Features"
+            ]
+          },
+          2: {
+            name: "BMW M5",
+            price: "₹17,500",
+            image: "https://images.unsplash.com/photo-1603189549723-29a00cd56120?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8Ym13JTIwbTV8ZW58MHx8MHx8fDA%3D",
+            specs: {
+              engine: "4.4L V8 Hybrid",
+              horsepower: "727 HP",
+              transmission: "9-Speed Automatic",
+              topSpeed: "310 mph",
+              fuelEconomy: "23 MPG combined",
+              seating: "5 Persons"
             },
-            3: {
-                name: "Porsche 911",
-                price: "₹13,000",
-                image: "https://images.unsplash.com/photo-1503376780353-7e6692767b70?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=900&q=80",
-                specs: {
-                    engine: "3.0L Twin-Turbo Flat-6",
-                    horsepower: "443 HP",
-                    transmission: "8-Speed PDK",
-                    topSpeed: "191 mph",
-                    fuelEconomy: "24 MPG combined",
-                    seating: "4 Persons"
-                },
-                features: [
-                    "Sport Chrono Package",
-                    "Porsche Active Suspension",
-                    "Sports Exhaust System",
-                    "20-inch Carrera S Wheels",
-                    "Bose Surround Sound",
-                    "Porsche Communication Management",
-                    "Sport Seats Plus",
-                    "LED Headlights"
-                ]
+            features: [
+              "M Sport Differential",
+              "Adaptive M Suspension",
+              "M Sport Exhaust",
+              "Carbon Fiber Roof",
+              "Heated Steering Wheel",
+              "Harman Kardon Sound System",
+              "Head-Up Display",
+              "Parking Assistant Plus"
+            ]
+          },
+          3: {
+            name: "Porsche 911",
+            price: "₹13,000",
+            image: "https://images.unsplash.com/photo-1503376780353-7e6692767b70?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=900&q=80",
+            specs: {
+              engine: "3.0L Twin-Turbo Flat-6",
+              horsepower: "443 HP",
+              transmission: "8-Speed PDK",
+              topSpeed: "191 mph",
+              fuelEconomy: "24 MPG combined",
+              seating: "4 Persons"
             },
-            4: {
-                name: "Audi Q7",
-                price: "₹11,000",
-                image: "https://images.unsplash.com/photo-1532974143451-8162d38a1257?q=80&w=764&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-                specs: {
-                    engine: "3.0L V6 Turbo Diesel",
-                    horsepower: "335 HP",
-                    transmission: "8-Speed Tiptronic",
-                    topSpeed: "130 mph",
-                    fuelEconomy: "28 MPG combined",
-                    seating: "7 Persons"
-                },
-                features: [
-                    "Quattro All-Wheel Drive",
-                    "Adaptive Air Suspension",
-                    "Virtual Cockpit",
-                    "MMI Navigation Plus",
-                    "Bang & Olufsen Sound System",
-                    "Panoramic Sunroof",
-                    "Audi Pre Sense",
-                    "Four-Zone Climate Control"
-                ]
+            features: [
+              "Sport Chrono Package",
+              "Porsche Active Suspension",
+              "Sports Exhaust System",
+              "20-inch Carrera S Wheels",
+              "Bose Surround Sound",
+              "Porsche Communication Management",
+              "Sport Seats Plus",
+              "LED Headlights"
+            ]
+          },
+          4: {
+            name: "Audi Q7",
+            price: "₹11,000",
+            image: "https://images.unsplash.com/photo-1532974143451-8162d38a1257?q=80&w=764&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+            specs: {
+              engine: "3.0L V6 Turbo Diesel",
+              horsepower: "335 HP",
+              transmission: "8-Speed Tiptronic",
+              topSpeed: "130 mph",
+              fuelEconomy: "28 MPG combined",
+              seating: "7 Persons"
             },
-            5: {
-                name: "Range Rover",
-                price: "₹15,500",
-                image: "https://images.unsplash.com/photo-1620547316190-289b3899e010?q=80&w=765&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-                specs: {
-                    engine: "3.0L Turbo Diesel",
-                    horsepower: "355 HP",
-                    transmission: "8-Speed Automatic",
-                    topSpeed: "130 mph",
-                    fuelEconomy: "26 MPG combined",
-                    seating: "5 Persons"
-                },
-                features: [
-                    "Terrain Response 2",
-                    "All-Terrain Progress Control",
-                    "Adaptive Dynamics",
-                    "Meridian Sound System",
-                    "Touch Pro Duo Infotainment",
-                    "Activity Key",
-                    "ClearSight Ground View",
-                    "Advanced Tow Assist"
-                ]
+            features: [
+              "Quattro All-Wheel Drive",
+              "Adaptive Air Suspension",
+              "Virtual Cockpit",
+              "MMI Navigation Plus",
+              "Bang & Olufsen Sound System",
+              "Panoramic Sunroof",
+              "Audi Pre Sense",
+              "Four-Zone Climate Control"
+            ]
+          },
+          5: {
+            name: "Range Rover",
+            price: "₹15,500",
+            image: "https://images.unsplash.com/photo-1620547316190-289b3899e010?q=80&w=765&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+            specs: {
+              engine: "3.0L Turbo Diesel",
+              horsepower: "355 HP",
+              transmission: "8-Speed Automatic",
+              topSpeed: "130 mph",
+              fuelEconomy: "26 MPG combined",
+              seating: "5 Persons"
             },
-            6: {
-                name: "Jaguar F-Type",
-                price: "₹10,500",
-                image: "https://images.unsplash.com/photo-1507136566006-cfc505b114fc?q=80&w=721&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-                specs: {
-                    engine: "2.0L Turbocharged I4",
-                    horsepower: "296 HP",
-                    transmission: "8-Speed Automatic",
-                    topSpeed: "155 mph",
-                    fuelEconomy: "28 MPG combined",
-                    seating: "2 Persons"
-                },
-                features: [
-                    "JaguarDrive Control",
-                    "Sport Exhaust System",
-                    "Configurable Dynamics",
-                    "Touch Pro Infotainment",
-                    "Meridian Sound System",
-                    "Performance Brakes",
-                    "Jaguar Smart Key",
-                    "Windsor Leather Seats"
-                ]
-            }
+            features: [
+              "Terrain Response 2",
+              "All-Terrain Progress Control",
+              "Adaptive Dynamics",
+              "Meridian Sound System",
+              "Touch Pro Duo Infotainment",
+              "Activity Key",
+              "ClearSight Ground View",
+              "Advanced Tow Assist"
+            ]
+          },
+          6: {
+            name: "Jaguar F-Type",
+            price: "₹10,500",
+            image: "https://images.unsplash.com/photo-1507136566006-cfc505b114fc?q=80&w=721&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+            specs: {
+              engine: "2.0L Turbocharged I4",
+              horsepower: "296 HP",
+              transmission: "8-Speed Automatic",
+              topSpeed: "155 mph",
+              fuelEconomy: "28 MPG combined",
+              seating: "2 Persons"
+            },
+            features: [
+              "JaguarDrive Control",
+              "Sport Exhaust System",
+              "Configurable Dynamics",
+              "Touch Pro Infotainment",
+              "Meridian Sound System",
+              "Performance Brakes",
+              "Jaguar Smart Key",
+              "Windsor Leather Seats"
+            ]
+          },
+            7: {
+            name: "Polo GT",
+            price: "₹5000",
+            image: "https://images.unsplash.com/photo-1683115917806-2476660f0708?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+            specs: {
+              engine: "1.0L Turbocharged",
+              horsepower: "109 HP",
+              transmission: "6-Speed Automatic",
+              topSpeed: "190 mph",
+              fuelEconomy: "28 MPG combined",
+              seating: "2 Persons"
+            },
+            features: [
+                "Turbocharged TSI Engine",
+                "DSG Automatic Transmission",
+                "Sporty Alloy Wheels",
+                "Flat-Bottom Steering Wheel",
+                "Touchscreen Infotainment System",
+                "Apple CarPlay & Android Auto",
+                "Automatic Climate Control",
+               "Sport Seats with Bolstering"
+            ]
+          },
+           8: {
+            name: "Porsche 911",
+            price: "₹13,000",
+            image: "https://images.unsplash.com/photo-1503376780353-7e6692767b70?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=900&q=80",
+            specs: {
+              engine: "3.0L Twin-Turbo Flat-6",
+              horsepower: "443 HP",
+              transmission: "8-Speed PDK",
+              topSpeed: "191 mph",
+              fuelEconomy: "24 MPG combined",
+              seating: "4 Persons"
+            },
+            features: [
+              "Sport Chrono Package",
+              "Porsche Active Suspension",
+              "Sports Exhaust System",
+              "20-inch Carrera S Wheels",
+              "Bose Surround Sound",
+              "Porsche Communication Management",
+              "Sport Seats Plus",
+              "LED Headlights"
+            ]
+          },
+           9: {
+            name: "McLaren 720s",
+            price: "₹13,000",
+            image: "https://images.unsplash.com/photo-1626141892008-498eacf87c79?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8bWNsYXJlbiUyMDcyMHN8ZW58MHx8MHx8fDA%3D",
+            specs: {
+              engine: "4.0L Twin-Turbocharged V8",
+              horsepower: "710 HP",
+              transmission: "7-Speed Dual-Clutch",
+              topSpeed: "212 mph",
+              fuelEconomy: "18 MPG combined",
+              seating: "2 Persons"
+            },
+            features: [
+               "Carbon Fiber Monocage II Chassis",
+              "Proactive Chassis Control II",
+              "Variable Drift Control",
+              "Active Aero with Rear Wing",
+              "Electro-Hydraulic Power Steering",
+              "McLaren Track Telemetry",
+              "Bowers & Wilkins Premium Audio",
+              "Dihedral Doors"
+            ]
+          },
+           10: {
+            name: "Nissan Rogue",
+            price: "₹4000",
+            image: "data:image/jpeg;base64,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",
+            specs: {
+              engine: "2.5L Inline-4",
+              horsepower: "181 HP",
+              transmission: "CVT Automatic",
+              topSpeed: "120 mph",
+              fuelEconomy: "30 MPG combined",
+              seating: "6 Persons"
+            },
+            features: [
+                "Nissan Safety Shield 360",
+                "ProPILOT Assist",
+                "Intelligent All-Wheel Drive",
+                "Panoramic Sunroof",
+                "Apple CarPlay & Android Auto",
+                "Bose Premium Audio System",
+                "Divide-N-Hide Cargo System",
+                "Leather-Appointed Seating"
+            ]
+          },
+           11: {
+            name: "Mahindra Scorpio Black n",
+            price: "₹5000",
+            image: "data:image/jpeg;base64,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",
+            specs: {
+               engine: "2.2L mHawk Diesel / 2.0L Turbo Petrol",
+                horsepower: "200 HP (Petrol) / 175 HP (Diesel)",
+                transmission: "6-Speed Manual / 6-Speed Automatic",
+                topSpeed: "165 km/h",
+                fuelEconomy: "14–16 km/l",
+                seating: "7 Persons"
+            },
+            features: [
+              "Mahindra AdrenoX Infotainment",
+              "Sony 3D Immersive Audio",
+              "Wireless Android Auto & Apple CarPlay",
+              "Dual-Zone Climate Control",
+              "Alexa Built-in Voice Commands",
+              "Captain Seats (Optional)",
+              "Advanced Driver Information Display",
+              "Terrain Management System (4Xplore 4WD)"
+            ]
+          },
+           12: {
+            name: "Chevrolet Suburban",
+            price: "₹6000",
+            image: "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%3D",
+            specs: {
+              engine: "5.3L V8 / 6.2L V8",
+              horsepower: "355 HP (5.3L) / 420 HP (6.2L)",
+              transmission: "10-Speed Automatic",
+              topSpeed: "154 mph",
+              fuelEconomy: "16–20 MPG combined",
+              seating: "7–8 Persons"
+            },
+            features: [
+                "Magnetic Ride Control Suspension",
+                "Chevrolet Infotainment 3 System",
+                "Bose 10-Speaker Surround Sound",
+                "Apple CarPlay & Android Auto",
+                "Tri-Zone Automatic Climate Control",
+                "Panoramic Sunroof",
+                "Hands-Free Power Liftgate",
+                "Advanced Safety Assist Package"
+            ]
+          },
         };
 
         // Modal functionality
@@ -404,30 +751,30 @@
 
         // Add event listeners to all view details buttons
         document.querySelectorAll('.view-details-btn').forEach(button => {
-            button.addEventListener('click', function() {
-                const carId = this.getAttribute('data-car-id');
-                showCarDetails(carId);
-            });
+          button.addEventListener('click', function () {
+            const carId = this.getAttribute('data-car-id');
+            showCarDetails(carId);
+          });
         });
 
         // Close modal when clicking on X
-        closeBtn.addEventListener('click', function() {
-            modal.style.display = "none";
+        closeBtn.addEventListener('click', function () {
+          modal.style.display = "none";
         });
 
         // Close modal when clicking outside of it
-        window.addEventListener('click', function(event) {
-            if (event.target == modal) {
-                modal.style.display = "none";
-            }
+        window.addEventListener('click', function (event) {
+          if (event.target == modal) {
+            modal.style.display = "none";
+          }
         });
 
         // Function to show car details in modal
         function showCarDetails(carId) {
-            const car = carData[carId];
-            
-            if (car) {
-                carDetailsContent.innerHTML = `
+          const car = carData[carId];
+
+          if (car) {
+            carDetailsContent.innerHTML = `
                     <div class="car-details-modal">
                         <div class="car-details-image">
                             <img src="${car.image}" alt="${car.name}">
@@ -483,99 +830,98 @@
                         </div>
                     </div>
                 `;
-                
-                modal.style.display = "block";
-                
-                // Add event listener to rent now button
-                document.querySelector('.rent-now-btn').addEventListener('click', function() {
-                    alert(`You are renting the ${car.name}!`);
-                });
-            }
+
+            modal.style.display = "block";
+
+            // Add event listener to rent now button
+            document.querySelector('.rent-now-btn').addEventListener('click', function () {
+              alert(`You are renting the ${car.name}!`);
+            });
+          }
         }
-    </script>
-  <!-- ===== FOOTER ===== -->
-  <footer class="footer">
-    <div class="footer-container">
-      <!-- Logo + About -->
-      <div class="footer-column">
-        <div class="footer-logo"><i class="fas fa-car"></i> Car Rental</div>
-        <p>
-          Your trusted car rental service, providing comfort, safety, and
-          affordability.
-        </p>
-        <div class="footer-social">
-          <i class="fab fa-facebook-f"></i>
-          <i class="fab fa-twitter"></i>
-          <i class="fab fa-instagram"></i>
-          <i class="fab fa-linkedin-in"></i>
+      </script>
+      <!-- ===== FOOTER ===== -->
+      <footer class="footer">
+        <div class="footer-container">
+          <!-- Logo + About -->
+          <div class="footer-column">
+            <div class="footer-logo"><i class="fas fa-car"></i> Car Rental</div>
+            <p>
+              Your trusted car rental service, providing comfort, safety, and
+              affordability.
+            </p>
+            <div class="footer-social">
+              <i class="fab fa-facebook-f"></i>
+              <i class="fab fa-twitter"></i>
+              <i class="fab fa-instagram"></i>
+              <i class="fab fa-linkedin-in"></i>
+            </div>
+
+            <!-- App Download Buttons -->
+            <div class="footer-apps">
+              <a href="https://play.google.com/"><img
+                  src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg"
+                  alt="Google Play" /></a>
+              <a href="https://www.apple.com/in/app-store/"><img
+                  src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg"
+                  alt="App Store" /></a>
+            </div>
+          </div>
+
+          <!-- Contact Info -->
+          <div class="footer-column">
+            <h4>Contact Us</h4>
+            <div class="footer-info">
+              <i class="fas fa-envelope"></i>
+              <p>support@carrental.com</p>
+            </div>
+            <div class="footer-info">
+              <i class="fas fa-phone"></i>
+              <p>+91 9989895589</p>
+            </div>
+            <div class="footer-info">
+              <i class="fas fa-map-marker-alt"></i>
+              <p>India</p>
+            </div>
+          </div>
+
+          <!-- Useful Links -->
+          <div class="footer-column">
+            <h4>Useful Links</h4>
+            <ul>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="about.html">About</a></li>
+              <li><a href="vehicles.html">Vehicels</a></li>
+              <li><a href="details.html">Details</a></li>
+            </ul>
+          </div>
+
+          <!-- Vehicles Section -->
+          <div class="footer-column">
+            <h4>Vehicles</h4>
+            <ul>
+              <li><a href="vehicles.html">Sedan Cars</a></li>
+              <li><a href="vehicles.html">Sports Cars</a></li>
+              <li><a href="vehicles.html">Luxury Cars</a></li>
+              <li><a href="vehicles.html">Pick Up Cars</a></li>
+            </ul>
+          </div>
         </div>
 
-        <!-- App Download Buttons -->
-        <div class="footer-apps">
-          <a href="https://play.google.com/"><img
-              src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg"
-              alt="Google Play" /></a>
-          <a href="https://www.apple.com/in/app-store/"><img
-              src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg"
-              alt="App Store" /></a>
+        <!-- Extra Section Below -->
+        <div class="footer-extra">
+          <h4>Subscribe to Our Newsletter</h4>
+          <form class="footer-form">
+            <input type="email" placeholder="Enter your email" required />
+            <button type="submit">Subscribe</button>
+          </form>
         </div>
-      </div>
 
-      <!-- Contact Info -->
-      <div class="footer-column">
-        <h4>Contact Us</h4>
-        <div class="footer-info">
-          <i class="fas fa-envelope"></i>
-          <p>support@carrental.com</p>
+        <!-- Bottom -->
+        <div class="footer-bottom">
+          © 2025 Car Rental. All Rights Reserved. By Shubham & Parth
         </div>
-        <div class="footer-info">
-          <i class="fas fa-phone"></i>
-          <p>+91 9989895589</p>
-        </div>
-        <div class="footer-info">
-          <i class="fas fa-map-marker-alt"></i>
-          <p>India</p>
-        </div>
-      </div>
-
-      <!-- Useful Links -->
-      <div class="footer-column">
-        <h4>Useful Links</h4>
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="vehicles.html">Vehicels</a></li>
-          <li><a href="details.html">Details</a></li>
-        </ul>
-      </div>
-
-      <!-- Vehicles Section -->
-      <div class="footer-column">
-        <h4>Vehicles</h4>
-        <ul>
-          <li><a href="vehicles.html">Sedan Cars</a></li>
-          <li><a href="vehicles.html">Sports Cars</a></li>
-          <li><a href="vehicles.html">Luxury Cars</a></li>
-          <li><a href="vehicles.html">Pick Up Cars</a></li>
-        </ul>
-      </div>
-    </div>
-
-    <!-- Extra Section Below -->
-    <div class="footer-extra">
-      <h4>Subscribe to Our Newsletter</h4>
-      <form class="footer-form">
-        <input type="email" placeholder="Enter your email" required />
-        <button type="submit">Subscribe</button>
-      </form>
-    </div>
-
-    <!-- Bottom -->
-    <div class="footer-bottom">
-      © 2025 Car Rental. All Rights Reserved. By Shubham & Parth
-    </div>
-  </footer>
+      </footer>
 </body>
 
 </html>
-
