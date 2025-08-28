@@ -26,6 +26,20 @@ header {
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
   transition: box-shadow 0.3s ease, background 0.3s ease;
 }
+.logo {
+  display: flex;
+  align-items: center;
+  font-size: 22px;
+  font-weight: 600;
+  color: #000;
+}
+
+.logo-img {
+  height: 40px;   /* adjust as needed */
+  width: auto;
+  margin-right: 8px; /* spacing before text */
+}
+
 
 .logo {
   font-size: 20px;
@@ -112,16 +126,13 @@ nav a:hover {
 
 .footer-container {
   width: 100%;
-  max-width: 100%;       /* ✅ full width */
-  margin: 0;
-  padding: 0 5%;         /* ✅ inner padding */
+  max-width: 1100px;
+  margin: 0 auto;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between; /* ✅ spreads sections across full row */
-  align-items: flex-start;        /* align tops nicely */
-  gap: 80px;             /* ✅ bigger spacing between columns */
-  box-sizing: border-box;
+  gap: 50px;
 }
+
 .footer-column {
   flex: 1;
   min-width: 220px;
@@ -577,25 +588,37 @@ nav a:hover {
   padding: 0 5px 12px;
 }
 .brands-wrap {
-  width: 100%;
-  padding: 40px 5%; /* padding instead of fixed container */
+  padding: 40px 0;
   background: #f9f9f9;
-  text-align: center;
+  overflow: hidden; /* hide scrollbar */
+  width: 100%;
 }
 
-.brands {
+.brands-slider {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+.brands-track {
+  display: flex;
+  width: calc(250px * 16); /* 16 logos total (8 original + 8 duplicate) */
+  animation: scroll 25s linear infinite;
+}
+
+.brand {
+  width: 250px;
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-wrap: wrap;
-  gap: 40px;
 }
+
 .brand img {
-  height: 70px;              /* Same height for all logos */
-  width: auto;               /* Keep aspect ratio */
+  height: 70px;
+  width: auto;
   object-fit: contain;
   transition: transform 0.3s ease;
-  filter: grayscale(100%);   /* Stylish black & white */
+  filter: grayscale(100%);
   opacity: 0.8;
 }
 
@@ -603,6 +626,12 @@ nav a:hover {
   transform: scale(1.15);
   filter: grayscale(0%);
   opacity: 1;
+}
+
+/* Infinite sliding animation */
+@keyframes scroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
 }
 .call-btn {
   display: inline-flex;
