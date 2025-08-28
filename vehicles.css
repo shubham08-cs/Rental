@@ -34,6 +34,19 @@ header {
   display: flex;
   align-items: center;
 }
+.logo {
+  display: flex;
+  align-items: center;
+  font-size: 22px;
+  font-weight: 600;
+  color: #000;
+}
+
+.logo-img {
+  height: 40px;   /* adjust as needed */
+  width: auto;
+  margin-right: 8px; /* spacing before text */
+}
 
 .logo i {
   margin-right: 8px;
@@ -259,26 +272,35 @@ nav a:hover {
 .brands-wrap {
   padding: 40px 0;
   background: #f9f9f9;
-  text-align: center;
+  overflow: hidden; /* hide scrollbar */
   width: 100%;
 }
 
-.brands {
+.brands-slider {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+.brands-track {
   display: flex;
-  justify-content: center;   /* Center all logos */
+  width: calc(250px * 16); /* 16 logos total (8 original + 8 duplicate) */
+  animation: scroll 25s linear infinite;
+}
+
+.brand {
+  width: 250px;
+  display: flex;
+  justify-content: center;
   align-items: center;
-  flex-wrap: wrap;           /* Wrap on smaller screens */
-  max-width: 1200px;
-  margin: 0 auto;
-  gap: 40px;                 /* Space between logos */
 }
 
 .brand img {
-  height: 70px;              /* Same height for all logos */
-  width: auto;               /* Keep aspect ratio */
+  height: 70px;
+  width: auto;
   object-fit: contain;
   transition: transform 0.3s ease;
-  filter: grayscale(100%);   /* Stylish black & white */
+  filter: grayscale(100%);
   opacity: 0.8;
 }
 
@@ -287,6 +309,13 @@ nav a:hover {
   filter: grayscale(0%);
   opacity: 1;
 }
+
+/* Infinite sliding animation */
+@keyframes scroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
 
 /* ===== Responsive ===== */
 @media (max-width: 768px) {
