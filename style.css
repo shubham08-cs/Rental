@@ -49,6 +49,19 @@ header {
   display: flex;
   align-items: center;
 }
+.logo {
+  display: flex;
+  align-items: center;
+  font-size: 22px;
+  font-weight: 600;
+  color: #000;
+}
+
+.logo-img {
+  height: 40px;   /* adjust as needed */
+  width: auto;
+  margin-right: 8px; /* spacing before text */
+}
 
 .logo i {
   margin-right: 8px;
@@ -481,13 +494,19 @@ nav a:hover {
 }
 
 .car-card {
-  background: #fff;
+  background-size: cover;
+  background-position: center;
+  height: 300px;        /* card height */
+  color: #fff;          /* text readable on image */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end; /* push text down */
+  padding: 20px;
   border-radius: 14px;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
-  padding: 16px;
-  text-align: center;
-  transition: transform 0.3s, box-shadow 0.3s;
+  position: relative;
+  overflow: hidden;
 }
+
 
 .car-card:hover {
   transform: translateY(-5px);
@@ -500,7 +519,9 @@ nav a:hover {
   object-fit: contain;
   margin-bottom: 14px;
 }
-
+.car-card img {
+  display: none; /* Hide img tag if using background-image */
+}
 .car-info h3 {
   font-size: 16px;
   font-weight: 700;
@@ -518,7 +539,7 @@ nav a:hover {
   display: block;
   font-size: 16px;
   font-weight: 700;
-  color: #6c63ff;
+  color: #fff;
   margin-bottom: 12px;
 }
 
