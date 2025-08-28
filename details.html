@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Car Rental</title>
+  <title>KeyGo</title>
   <link rel="stylesheet" href="details.css" />
   <script src="vehicles.js"></script>
 
@@ -15,7 +15,11 @@
 <body>
   <!-- Navbar -->
   <header>
-    <div class="logo"><i class="fas fa-car"></i> Car Rental</div>
+ <div class="logo">
+  <img src="images/logo.jfif" alt="KeyGo Logo" class="logo-img">
+  <span>KeyGo</span>
+</div>
+
 
     <nav>
       <a href="index.html">Home</a>
@@ -390,39 +394,39 @@
 
           <div class="cars-grid">
             <!-- Car 1 -->
-            <div class="car-card" data-car-id="10">
+            <div class="car-card" data-car-id="13">
               <div class="car-image">
                 <img
-                  src="https://images.unsplash.com/photo-1564498617702-7032ead7892c?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8bWVyY2VkZXMlMjBhbWclMjBndCUyMGN8ZW58MHx8MHx8fDA%3D"
-                  alt="Mercedes S-Class">
+                  src="https://images.unsplash.com/photo-1705458003086-ec1a2340a7a9?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8Zm9yZCUyMHJhcHRvciUyMGYlMjAxNTB8ZW58MHx8MHx8fDA%3D"
+                  alt="Ford Raptor F-150">
                 <div class="car-overlay">
-                  <button class="view-details-btn" data-car-id="1">View Details</button>
+                  <button class="view-details-btn" data-car-id="13">View Details</button>
                 </div>
               </div>
               <div class="car-info">
-                <h3>Mercedes AMG GT C</h3>
-                <div class="car-price">₹15,000 <span>/ day</span></div>
+                <h3>Ford Raptor F-150</h3>
+                <div class="car-price">₹2500<span>/ day</span></div>
                 <div class="car-specs">
-                  <span><i class="fas fa-gas-pump"></i> Petrol</span>
-                  <span><i class="fas fa-car"></i> Automatic</span>
+                  <span><i class="fas fa-gas-pump"></i> Diesal</span>
+                  <span><i class="fas fa-car"></i>Manual</span>
                   <span><i class="fas fa-user"></i> 5 Seater</span>
                 </div>
               </div>
             </div>
 
             <!-- Car 2 -->
-            <div class="car-card" data-car-id="11">
+            <div class="car-card" data-car-id="14">
               <div class="car-image">
                 <img
-                  src="https://images.unsplash.com/photo-1603189549723-29a00cd56120?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8Ym13JTIwbTV8ZW58MHx8MHx8fDA%3D"
-                  alt="BMW M5">
+                  src="https://images.unsplash.com/photo-1621993202323-f438eec934ff?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8dG95b3RhJTIwaGlsdXh8ZW58MHx8MHx8fDA%3D"
+                  alt="Toyota Hilux">
                 <div class="car-overlay">
-                  <button class="view-details-btn" data-car-id="2">View Details</button>
+                  <button class="view-details-btn" data-car-id="14">View Details</button>
                 </div>
               </div>
               <div class="car-info">
-                <h3>BMW M5</h3>
-                <div class="car-price">₹19,500 <span>/ day</span></div>
+                <h3>Toyota Hilux</h3>
+                <div class="car-price">₹4,500 <span>/ day</span></div>
                 <div class="car-specs">
                   <span><i class="fas fa-gas-pump"></i> Petrol</span>
                   <span><i class="fas fa-car"></i> Automatic</span>
@@ -432,18 +436,18 @@
             </div>
 
             <!-- Car 3 -->
-            <div class="car-card" data-car-id="12">
+            <div class="car-card" data-car-id="15">
               <div class="car-image">
                 <img
-                  src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=900&q=80"
-                  alt="Porsche 911">
+                  src="https://www.toyota.com.kh/content/dam/cambodia/models/pickup/hilux-rally/feature/3.jpg"
+                  alt="Hilux Revo">
                 <div class="car-overlay">
-                  <button class="view-details-btn" data-car-id="3">View Details</button>
+                  <button class="view-details-btn" data-car-id="15">View Details</button>
                 </div>
               </div>
               <div class="car-info">
-                <h3>Porsche 911</h3>
-                <div class="car-price">₹13,000 <span>/ day</span></div>
+                <h3>Hilux Revo</h3>
+                <div class="car-price">₹5,500 <span>/ day</span></div>
                 <div class="car-specs">
                   <span><i class="fas fa-gas-pump"></i> Petrol</span>
                   <span><i class="fas fa-car"></i> Automatic</span>
@@ -742,8 +746,78 @@
                 "Advanced Safety Assist Package"
             ]
           },
-        };
+        13: {
+             name: "Ford Raptor F-150",
+             price: "₹6000",
+             image: "https://images.unsplash.com/photo-1705458003086-ec1a2340a7a9?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8Zm9yZCUyMHJhcHRvciUyMGYlMjAxNTB8ZW58MHx8MHx8fDA%3D",
+             specs: {
+                   engine: "3.5L Twin-Turbocharged V6 EcoBoost",
+                   horsepower: "450 HP",
+                   transmission: "10-Speed Automatic",
+                   topSpeed: "120 mph",
+                   fuelEconomy: "15–18 MPG combined",
+                   seating: "5 Persons"
+           },
+    features: [
+        "FOX Live Valve Racing Shocks",
+        "Terrain Management System with 7 Drive Modes",
+        "High-Strength, Military-Grade Aluminum Body",
+        "SYNC 4 with 12-inch Touchscreen",
+        "Apple CarPlay & Android Auto",
+        "360-Degree Camera with Split-View",
+        "Trail Control Off-Road Cruise Control",
+        "B&O Sound System by Bang & Olufsen"
+    ]
+},
+14: {
+    name: "Toyota Hilux",
+    price: "₹4500",
+    image: "https://images.unsplash.com/photo-1621993202323-f438eec934ff?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8dG95b3RhJTIwaGlsdXh8ZW58MHx8MHx8fDA%3D",
+    specs: {
+        engine: "2.8L 4-Cylinder Turbo Diesel",
+        horsepower: "204 HP",
+        transmission: "6-Speed Automatic / Manual",
+        topSpeed: "180 km/h",
+        fuelEconomy: "12–14 km/l",
+        seating: "5 Persons"
+    },
+    features: [
+        "Durable Body-on-Frame Construction",
+        "Toyota Safety Sense",
+        "Hill-Start Assist & Downhill Assist Control",
+        "Smart Entry & Push Start System",
+        "8-inch Touchscreen with Apple CarPlay & Android Auto",
+        "LED Headlamps with DRLs",
+        "Dual-Zone Automatic Climate Control",
+        "Rear Differential Lock"
+    ]
+},
+15: {
+    name: "Toyota Hilux Revo",
+    price: "₹5000",
+    image: "https://www.toyota.com.kh/content/dam/cambodia/models/pickup/hilux-rally/feature/3.jpg",
+    specs: {
+        engine: "2.8L GD-6 Turbo Diesel",
+        horsepower: "204 HP",
+        transmission: "6-Speed Automatic with Sequential Shift",
+        topSpeed: "185 km/h",
+        fuelEconomy: "11–13 km/l",
+        seating: "5 Persons"
+    },
+    features: [
+        "Reinforced Ladder Frame Chassis",
+        "Adaptive Cruise Control",
+        "Electronic Stability Control (ESC)",
+        "Premium Leather Upholstery",
+        "9-inch Infotainment System with JBL Audio",
+        "Wireless Charging Pad",
+        "360-Degree Panoramic Camera",
+        "Off-Road Traction Control System"
+    ]
+}
 
+        };
+        
         // Modal functionality
         const modal = document.getElementById("carDetailsModal");
         const closeBtn = document.querySelector(".close");
@@ -845,7 +919,7 @@
         <div class="footer-container">
           <!-- Logo + About -->
           <div class="footer-column">
-            <div class="footer-logo"><i class="fas fa-car"></i> Car Rental</div>
+            <div class="footer-logo"><i class="fas fa-car"></i>KeyGo</div>
             <p>
               Your trusted car rental service, providing comfort, safety, and
               affordability.
@@ -873,7 +947,7 @@
             <h4>Contact Us</h4>
             <div class="footer-info">
               <i class="fas fa-envelope"></i>
-              <p>support@carrental.com</p>
+              <p>support@keygo.com</p>
             </div>
             <div class="footer-info">
               <i class="fas fa-phone"></i>
@@ -919,7 +993,7 @@
 
         <!-- Bottom -->
         <div class="footer-bottom">
-          © 2025 Car Rental. All Rights Reserved. By Shubham & Parth
+          © 2025 KeyGo. All Rights Reserved. By Shubham & Parth
         </div>
       </footer>
 </body>
