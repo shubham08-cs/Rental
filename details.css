@@ -33,6 +33,19 @@ header {
   display: flex;
   align-items: center;
 }
+.logo {
+  display: flex;
+  align-items: center;
+  font-size: 22px;
+  font-weight: 600;
+  color: #000;
+}
+
+.logo-img {
+  height: 40px;   /* adjust as needed */
+  width: auto;
+  margin-right: 8px; /* spacing before text */
+}
 
 .logo i {
   margin-right: 8px;
