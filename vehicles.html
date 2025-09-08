@@ -17,33 +17,33 @@
   </head>
   <body>
     <!-- Navbar -->
-    <header>
-   <div class="logo">
+<header>
+<div class="logo">
   <img src="images/logo.jfif" alt="KeyGo Logo" class="logo-img">
   <span>KeyGo</span>
 </div>
 
-      <nav id="nav">
-        <a href="index.html">Home</a>
-        <a href="vehicles.html" class="active">Vehicles</a>
-        <a href="details.html">Details</a>
-        <a href="about.html">About Us</a>
-        <a href="contact.html">Contact Us</a>
-      </nav>
 
-      <div class="contact">
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="vehicles.html">Vehicles</a>
+    <a href="details.html">Details</a>
+    <a href="about.html">About Us</a>
+     <a href="contact.html">Contact Us</a>
+  </nav>
+
+ <div class="contact">
   <a href="tel:+919000000000" class="call-btn">
     <i class="fas fa-phone-alt"></i> Call Us
   </a>
 </div>
-
-      <!-- Hamburger Button -->
-      <div class="hamburger" id="hamburger">
-        <span></span>
-        <span></span>
-        <span></span>
-      </div>
-    </header>
+  <!-- Hamburger Button -->
+  <div class="hamburger" id="hamburger">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</header>
 
     <!-- Vehicles Content -->
     <div class="vehicles-container">
@@ -710,5 +710,14 @@
         }
       });
     </script>
+    <script>
+  const hamburger = document.querySelector(".hamburger");
+  const nav = document.querySelector("nav");
+
+  hamburger.addEventListener("click", () => {
+    hamburger.classList.toggle("active");
+    nav.classList.toggle("active");
+  });
+</script>
   </body>
 </html>
