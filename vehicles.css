@@ -9,7 +9,7 @@ body {
   font-family: 'Poppins', sans-serif;
   color: #000;
   overflow-x: hidden;
-  background-color: #f8f9fa;
+  background: #fff;
 }
 
 /* ===== HEADER & NAVIGATION ===== */
@@ -25,15 +25,8 @@ header {
   width: 100%;
   z-index: 1000;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
-  transition: box-shadow 0.3s ease, background 0.3s ease;
 }
 
-.logo {
-  font-size: 20px;
-  font-weight: 600;
-  display: flex;
-  align-items: center;
-}
 .logo {
   display: flex;
   align-items: center;
@@ -41,24 +34,26 @@ header {
   font-weight: 600;
   color: #000;
 }
-
 .logo-img {
-  height: 40px;   /* adjust as needed */
+  height: 40px;
   width: auto;
-  margin-right: 8px; /* spacing before text */
+  margin-right: 8px;
 }
 
 .logo i {
   margin-right: 8px;
 }
 
+/* Center nav (desktop) */
 nav {
   display: flex;
   align-items: center;
+  justify-content: center; /* keeps links centered */
+  gap: 20px;               /* even spacing between links */
 }
 
 nav a {
-  margin: 0 15px;
+  margin: 0;               /* remove extra side margin */
   text-decoration: none;
   font-weight: 500;
   color: #000;
@@ -69,6 +64,7 @@ nav a:hover {
   color: orange;
 }
 
+/* Contact (right) */
 .contact {
   display: flex;
   align-items: center;
@@ -94,7 +90,6 @@ nav a:hover {
   flex-direction: column;
   cursor: pointer;
   gap: 5px;
-  margin-left: auto;
 }
 
 .hamburger span {
@@ -105,17 +100,66 @@ nav a:hover {
   transition: all 0.3s ease;
 }
 
+/* Toggle Animation */
 .hamburger.active span:nth-child(1) {
   transform: rotate(45deg) translate(5px, 5px);
 }
-
 .hamburger.active span:nth-child(2) {
   opacity: 0;
 }
-
 .hamburger.active span:nth-child(3) {
   transform: rotate(-45deg) translate(5px, -5px);
 }
+
+/* ===== RESPONSIVE HEADER ===== */
+@media (max-width: 992px) {
+  header {
+    justify-content: center; /* center the logo */
+    position: relative;
+  }
+
+  /* Hamburger left */
+  .hamburger {
+    display: flex;
+    position: absolute;
+    left: 20px;
+  }
+
+  /* Logo center */
+  .logo {
+    margin: 0 auto;
+  }
+
+  /* Contact right */
+  .contact {
+    position: absolute;
+    right: 20px;
+  }
+
+  /* Hide nav initially */
+ nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;   /* adjust spacing */
+  flex: unset; /* prevents forced stretching */
+}
+
+nav a {
+  margin: 0;
+  text-decoration: none;
+  font-weight: 500;
+  color: #000;
+  transition: color 0.3s;
+}
+
+  nav.active {
+    display: flex;
+  }
+}
+
+/* ===== VEHICLES CONTENT ===== */
+/* (unchanged from your code) */
 
 /* ===== VEHICLES CONTENT ===== */
 .vehicles-container {
@@ -558,4 +602,87 @@ nav a:hover {
 .call-btn:hover {
   background: #5a2ea0;   /* darker purple on hover */
   transform: translateY(-2px);
+}
+/* ===== RESPONSIVE HEADER ===== */
+@media (max-width: 992px) {
+  nav {
+    position: absolute;
+    top: 70px;
+    right: 0;
+    width: 100%;
+    flex-direction: column;
+    background: #fff;
+    display: none;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  }
+
+  nav.active {
+    display: flex;
+  }
+
+  nav a {
+    padding: 15px;
+    margin: 0;
+    border-bottom: 1px solid #eee;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+
+  .contact {
+    display: none; /* hide phone on small screens (optional) */
+  }
+}
+@media (max-width: 992px) {
+  header {
+    position: relative;
+    justify-content: center; /* keeps logo centered */
+  }
+
+  /* Hamburger stays on far left */
+  .hamburger {
+    display: flex;
+    position: absolute;
+    top: 50%;
+    left: 20px;
+    transform: translateY(-50%);
+  }
+
+  /* Logo in center */
+  .logo {
+    margin: 0 auto;
+  }
+
+  /* Contact stays on far right */
+  .contact {
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+  }
+
+  /* Hide nav until toggled */
+  nav {
+    position: absolute;
+    top: 70px;
+    left: 0;
+    width: 100%;
+    flex-direction: column;
+    background: #fff;
+    display: none;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  }
+
+  nav.active {
+    display: flex;
+  }
+
+  nav a {
+    padding: 15px;
+    margin: 0;
+    border-bottom: 1px solid #eee;
+  }
 }
