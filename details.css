@@ -9,8 +9,8 @@ body {
   font-family: 'Poppins', sans-serif;
   color: #000;
   overflow-x: hidden;
+  background: #fff;
 }
-
 /* ===== HEADER & NAVIGATION ===== */
 header {
   display: flex;
@@ -24,15 +24,8 @@ header {
   width: 100%;
   z-index: 1000;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
-  transition: box-shadow 0.3s ease, background 0.3s ease;
 }
 
-.logo {
-  font-size: 20px;
-  font-weight: 600;
-  display: flex;
-  align-items: center;
-}
 .logo {
   display: flex;
   align-items: center;
@@ -42,13 +35,18 @@ header {
 }
 
 .logo-img {
-  height: 40px;   /* adjust as needed */
+  height: 40px;
   width: auto;
-  margin-right: 8px; /* spacing before text */
+  margin-right: 8px;
 }
 
 .logo i {
   margin-right: 8px;
+}
+
+nav {
+  display: flex;
+  align-items: center;
 }
 
 nav {
@@ -67,6 +65,7 @@ nav a {
 nav a:hover {
   color: orange;
 }
+
 
 .contact {
   display: flex;
@@ -104,14 +103,13 @@ nav a:hover {
   transition: all 0.3s ease;
 }
 
+
 .hamburger.active span:nth-child(1) {
   transform: rotate(45deg) translate(5px, 5px);
 }
-
 .hamburger.active span:nth-child(2) {
   opacity: 0;
 }
-
 .hamburger.active span:nth-child(3) {
   transform: rotate(-45deg) translate(5px, -5px);
 }
@@ -1021,4 +1019,172 @@ header .container {
   max-width: 1800px; /* Increase from 1200px to 1400px (or 1600px if you want bigger) */
   margin: 0 auto;
   padding: 0 30px;   /* more breathing space on sides */
+}
+/* ===== RESPONSIVE HEADER ===== */
+@media (max-width: 992px) {
+  nav {
+    position: absolute;
+    top: 70px;
+    right: 0;
+    width: 100%;
+    flex-direction: column;
+    background: #fff;
+    display: none;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  }
+
+  nav.active {
+    display: flex;
+  }
+
+  nav a {
+    padding: 15px;
+    margin: 0;
+    border-bottom: 1px solid #eee;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+
+  .contact {
+    display: none; /* hide phone on small screens (optional) */
+  }
+}
+@media (max-width: 992px) {
+  header {
+    position: relative;
+    justify-content: center; /* keeps logo centered */
+  }
+
+  /* Hamburger stays on far left */
+  .hamburger {
+    display: flex;
+    position: absolute;
+    top: 50%;
+    left: 20px;
+    transform: translateY(-50%);
+  }
+
+  /* Logo in center */
+  .logo {
+    margin: 0 auto;
+  }
+
+  /* Contact stays on far right */
+  .contact {
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+  }
+
+  /* Hide nav until toggled */
+  nav {
+    position: absolute;
+    top: 70px;
+    left: 0;
+    width: 100%;
+    flex-direction: column;
+    background: #fff;
+    display: none;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  }
+
+  nav.active {
+    display: flex;
+  }
+
+  nav a {
+    padding: 15px;
+    margin: 0;
+    border-bottom: 1px solid #eee;
+  }
+}
+/* ===== NAVBAR MOBILE RESPONSIVE ===== */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  gap: 5px;
+  z-index: 1001;
+}
+
+.hamburger span {
+  width: 25px;
+  height: 3px;
+  background: #000;
+  border-radius: 3px;
+  transition: all 0.3s ease;
+}
+
+/* Hamburger active state (turn into "X") */
+.hamburger.active span:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+.hamburger.active span:nth-child(2) {
+  opacity: 0;
+}
+.hamburger.active span:nth-child(3) {
+  transform: rotate(-45deg) translate(5px, -5px);
+}
+
+/* Mobile menu */
+@media (max-width: 768px) {
+  header {
+    justify-content: center;
+    position: relative;
+  }
+
+  .hamburger {
+    display: flex;
+    position: absolute;
+    top: 50%;
+    left: 15px;
+    transform: translateY(-50%);
+  }
+
+  .logo {
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  nav {
+    position: fixed;
+    top: 0;
+    left: -100%;
+    width: 70%;
+    max-width: 280px;
+    height: 100%;
+    background: #fff;
+    flex-direction: column;
+    padding: 60px 20px;
+    transition: left 0.3s ease;
+    z-index: 1000;
+  }
+
+  nav.active {
+    left: 0;
+  }
+
+  nav a {
+    margin: 15px 0;
+    font-size: 16px;
+    text-align: left;
+  }
+
+  /* Dark overlay */
+  .nav-overlay {
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: rgba(0,0,0,0.5);
+    display: none;
+    z-index: 999;
+  }
+  .nav-overlay.active {
+    display: block;
+  }
 }
