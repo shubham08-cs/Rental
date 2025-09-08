@@ -28,7 +28,7 @@
       <a href="about.html">About Us</a>
       <a href="contact.html">Contact Us</a>
     </nav>
-
+    
     <div class="contact">
       <a href="tel:+919000000000" class="call-btn">
         <i class="fas fa-phone-alt"></i> Call Us
@@ -996,6 +996,17 @@
           © 2025 KeyGo. All Rights Reserved. By Shubham & Parth
         </div>
       </footer>
+      <script>
+  const hamburger = document.querySelector(".hamburger");
+  const nav = document.querySelector("nav");
+
+  hamburger.addEventListener("click", () => {
+    hamburger.classList.toggle("active");
+    nav.classList.toggle("active");
+  });
+</script>
+<div class="overlay"></div>
+<script src="hamburger.js" defer></script>
 </body>
 
 </html>
