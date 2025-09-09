@@ -13,6 +13,19 @@ body {
   line-height: 1.6;
 }
 
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 993px) {
+  .container,
+  .car-details,
+  .car-gallery,
+  .features,
+  .footer-container {
+    max-width: 1200px;   /* adjust width for perfect center */
+    margin: 0 auto;      /* centers the content */
+  }
+}
+
+
 .container {
   max-width: 1800px;
   margin: 0 auto;
@@ -1133,7 +1146,7 @@ nav a:hover {
   }
   
   .container {
-    max-width: 100%;
+    max-width: 100%;-
     padding: 0;
   }
 }
