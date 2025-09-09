@@ -34,6 +34,7 @@ header {
   font-weight: 600;
   color: #000;
 }
+
 .logo-img {
   height: 40px;
   width: auto;
@@ -48,12 +49,12 @@ header {
 nav {
   display: flex;
   align-items: center;
-  justify-content: center; /* keeps links centered */
-  gap: 20px;               /* even spacing between links */
+  justify-content: center;
+  gap: 20px;
 }
 
 nav a {
-  margin: 0;               /* remove extra side margin */
+  margin: 0;
   text-decoration: none;
   font-weight: 500;
   color: #000;
@@ -104,62 +105,39 @@ nav a:hover {
 .hamburger.active span:nth-child(1) {
   transform: rotate(45deg) translate(5px, 5px);
 }
+
 .hamburger.active span:nth-child(2) {
   opacity: 0;
 }
+
 .hamburger.active span:nth-child(3) {
   transform: rotate(-45deg) translate(5px, -5px);
 }
 
-/* ===== RESPONSIVE HEADER ===== */
-@media (max-width: 992px) {
-  header {
-    justify-content: center; /* center the logo */
-    position: relative;
-  }
-
-  /* Hamburger left */
-  .hamburger {
-    display: flex;
-    position: absolute;
-    left: 20px;
-  }
-
-  /* Logo center */
-  .logo {
-    margin: 0 auto;
-  }
-
-  /* Contact right */
-  .contact {
-    position: absolute;
-    right: 20px;
-  }
-
-  /* Hide nav initially */
- nav {
-  display: flex;
+/* Call Button */
+.call-btn {
+  display: inline-flex;
   align-items: center;
-  justify-content: center;
-  gap: 20px;   /* adjust spacing */
-  flex: unset; /* prevents forced stretching */
-}
-
-nav a {
-  margin: 0;
+  gap: 8px;
+  background: #673ab7;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 600;
+  padding: 8px 16px;
+  border-radius: 6px;
   text-decoration: none;
-  font-weight: 500;
-  color: #000;
-  transition: color 0.3s;
+  transition: background 0.3s ease, transform 0.2s ease;
 }
 
-  nav.active {
-    display: flex;
-  }
+.call-btn i {
+  font-size: 16px;
+  color: #fff;
 }
 
-/* ===== VEHICLES CONTENT ===== */
-/* (unchanged from your code) */
+.call-btn:hover {
+  background: #5a2ea0;
+  transform: translateY(-2px);
+}
 
 /* ===== VEHICLES CONTENT ===== */
 .vehicles-container {
@@ -312,11 +290,10 @@ nav a {
 }
 
 /* ===== BRAND LOGOS ===== */
-/* ===== Logo Printing Section ===== */
 .brands-wrap {
   padding: 40px 0;
   background: #f9f9f9;
-  overflow: hidden; /* hide scrollbar */
+  overflow: hidden;
   width: 100%;
 }
 
@@ -328,7 +305,7 @@ nav a {
 
 .brands-track {
   display: flex;
-  width: calc(250px * 16); /* 16 logos total (8 original + 8 duplicate) */
+  width: calc(250px * 16);
   animation: scroll 25s linear infinite;
 }
 
@@ -356,46 +333,28 @@ nav a {
 
 /* Infinite sliding animation */
 @keyframes scroll {
-  0% { transform: translateX(0); }
-  100% { transform: translateX(-50%); }
-}
-
-
-/* ===== Responsive ===== */
-@media (max-width: 768px) {
-  .brand img {
-    height: 50px;
+  0% {
+    transform: translateX(0);
   }
-  .brands {
-    gap: 25px;
-  }
-}
-
-@media (max-width: 480px) {
-  .brand img {
-    height: 40px;
-  }
-  .brands {
-    gap: 20px;
+  100% {
+    transform: translateX(-50%);
   }
 }
 
 /* ===== FOOTER ===== */
-
-/* ===== FOOTER STYLES ===== */
 .footer {
   background: #fff;
   padding: 70px 0 40px;
   border-top: 1px solid #ddd;
   font-family: Arial, sans-serif;
-  width: 100%;           /* Full width */
+  width: 100%;
 }
 
 .footer-container {
-  width: 100%;           /* Stretch container */
-  max-width: 100%;       /* Remove the fixed 1200px */
+  width: 100%;
+  max-width: 100%;
   margin: 0 auto;
-  padding: 0 8%;         /* Adjust left-right spacing */
+  padding: 0 8%;
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
@@ -559,114 +518,49 @@ nav a {
   margin-top: 40px;
 }
 
-/* ===== RESPONSIVE ===== */
-@media (max-width: 1024px) {
-  .footer-container {
-    gap: 30px;
+/* ===== RESPONSIVE BREAKPOINTS ===== */
+
+/* Large devices (desktops, less than 1200px) */
+@media (max-width: 1200px) {
+  .vehicles-container {
     padding: 0 30px;
   }
-}
-
-@media (max-width: 768px) {
+  
   .footer-container {
-    flex-direction: column;
-    text-align: center;
-    gap: 30px;
-  }
-
-  .footer-social,
-  .footer-apps {
-    justify-content: center;
+    padding: 0 5%;
   }
 }
-.call-btn {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  background: #673ab7;   /* same purple color */
-  color: #fff;
-  font-size: 14px;
-  font-weight: 600;
-  padding: 8px 16px;
-  border-radius: 6px;
-  text-decoration: none;
-  transition: background 0.3s ease, transform 0.2s ease;
-}
 
-.call-btn i {
-  font-size: 16px;
-  color: #fff;
-}
-
-
-.call-btn:hover {
-  background: #5a2ea0;   /* darker purple on hover */
-  transform: translateY(-2px);
-}
-/* ===== RESPONSIVE HEADER ===== */
-@media (max-width: 992px) {
-  nav {
-    position: absolute;
-    top: 70px;
-    right: 0;
-    width: 100%;
-    flex-direction: column;
-    background: #fff;
-    display: none;
-    text-align: center;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-  }
-
-  nav.active {
-    display: flex;
-  }
-
-  nav a {
-    padding: 15px;
-    margin: 0;
-    border-bottom: 1px solid #eee;
-  }
-
-  .hamburger {
-    display: flex;
-  }
-
-  .contact {
-    display: none; /* hide phone on small screens (optional) */
-  }
-}
+/* Medium devices (tablets, less than 992px) */
 @media (max-width: 992px) {
   header {
+    justify-content: center;
     position: relative;
-    justify-content: center; /* keeps logo centered */
+    padding: 15px 20px;
   }
 
-  /* Hamburger stays on far left */
   .hamburger {
     display: flex;
     position: absolute;
-    top: 50%;
     left: 20px;
+    top: 50%;
     transform: translateY(-50%);
   }
 
-  /* Logo in center */
   .logo {
     margin: 0 auto;
   }
 
-  /* Contact stays on far right */
   .contact {
     position: absolute;
-    top: 50%;
     right: 20px;
+    top: 50%;
     transform: translateY(-50%);
   }
 
-  /* Hide nav until toggled */
   nav {
     position: absolute;
-    top: 70px;
+    top: 100%;
     left: 0;
     width: 100%;
     flex-direction: column;
@@ -674,6 +568,7 @@ nav a {
     display: none;
     text-align: center;
     box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    z-index: 999;
   }
 
   nav.active {
@@ -684,5 +579,265 @@ nav a {
     padding: 15px;
     margin: 0;
     border-bottom: 1px solid #eee;
+    width: 100%;
+  }
+  
+  .vehicles-grid {
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 20px;
+  }
+  
+  .filter-options {
+    gap: 10px;
+  }
+  
+  .filter-option {
+    padding: 8px 16px;
+    font-size: 13px;
+  }
+  
+  .footer-container {
+    gap: 30px;
+  }
+}
+
+/* Small devices (landscape phones, less than 768px) */
+@media (max-width: 768px) {
+  .vehicles-container {
+    margin: 40px auto;
+    padding: 0 15px;
+  }
+  
+  .page-title {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  
+  .filter-section {
+    padding: 20px;
+    margin-bottom: 25px;
+  }
+  
+  .filter-title {
+    font-size: 16px;
+    text-align: center;
+  }
+  
+  .filter-options {
+    justify-content: center;
+  }
+  
+  .vehicle-image {
+    height: 180px;
+  }
+  
+  .vehicle-info {
+    padding: 15px;
+  }
+  
+  .vehicle-name {
+    font-size: 16px;
+  }
+  
+  .vehicle-price {
+    font-size: 18px;
+  }
+  
+  .brand img {
+    height: 50px;
+  }
+  
+  .brand {
+    width: 200px;
+  }
+  
+  .brands-track {
+    width: calc(200px * 16);
+  }
+  
+  .footer {
+    padding: 50px 0 30px;
+  }
+  
+  .footer-container {
+    flex-direction: column;
+    text-align: center;
+    gap: 30px;
+    padding: 0 20px;
+  }
+  
+  .footer-social, 
+  .footer-apps {
+    justify-content: center;
+  }
+  
+  .footer-form {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .footer-form input {
+    min-width: auto;
+    width: 100%;
+    max-width: 300px;
+  }
+  
+  .footer-bottom {
+    margin-top: 30px;
+    padding-top: 20px;
+  }
+  
+  /* Improve touch targets for mobile */
+  nav a, .footer-column ul li a, .view-details-btn, 
+  .filter-option, .footer-form button {
+    min-height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+/* Extra small devices (portrait phones, less than 576px) */
+@media (max-width: 576px) {
+  header {
+    padding: 12px 15px;
+  }
+  
+  .logo {
+    font-size: 18px;
+  }
+  
+  .logo-img {
+    height: 35px;
+  }
+  
+  .contact {
+    display: none;
+  }
+  
+  .vehicles-grid {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+  
+  .filter-options {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .filter-option {
+    width: 100%;
+    text-align: center;
+    max-width: 200px;
+  }
+  
+  .vehicle-image {
+    height: 160px;
+  }
+  
+  .brand img {
+    height: 40px;
+  }
+  
+  .brand {
+    width: 150px;
+  }
+  
+  .brands-track {
+    width: calc(150px * 16);
+  }
+  
+  .footer-form input {
+    padding: 8px 12px;
+    font-size: 13px;
+  }
+  
+  .footer-form button {
+    padding: 8px 16px;
+    font-size: 13px;
+  }
+  
+  .footer-apps img {
+    height: 35px;
+  }
+  
+  .footer-column {
+    min-width: 100%;
+  }
+}
+
+/* Very small devices (less than 400px) */
+@media (max-width: 400px) {
+  .page-title {
+    font-size: 22px;
+  }
+  
+  .vehicle-name {
+    font-size: 15px;
+  }
+  
+  .vehicle-price {
+    font-size: 16px;
+  }
+  
+  .vehicle-feature {
+    font-size: 13px;
+  }
+  
+  .view-details-btn {
+    padding: 10px;
+    font-size: 14px;
+  }
+  
+  .brand {
+    width: 120px;
+  }
+  
+  .brands-track {
+    width: calc(120px * 16);
+  }
+}
+
+/* Prevent horizontal scrolling */
+html, body {
+  overflow-x: hidden;
+  width: 100%;
+}
+
+/* Smooth transitions for all interactive elements */
+nav a, .footer-column ul li a, .view-details-btn, 
+.filter-option, .footer-form button, .footer-apps img,
+.footer-social i, .call-btn, .brand img {
+  transition: all 0.3s ease;
+}
+
+/* High-resolution displays */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  /* You can add high-resolution background images here if needed */
+}
+
+/* Print styles */
+@media print {
+  header, .filter-section, .footer {
+    display: none;
+  }
+  
+  body {
+    color: #000;
+    background: #fff;
+  }
+  
+  .vehicles-container {
+    margin: 20px auto;
+  }
+  
+  .vehicles-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+  }
+  
+  .vehicle-card {
+    box-shadow: none;
+    border: 1px solid #ddd;
   }
 }
