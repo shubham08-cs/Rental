@@ -1,4 +1,4 @@
-v* {
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -81,13 +81,12 @@ nav a:hover {
   font-size: 14px;
 }
 
-/* Hamburger Menu */
+/* Hamburger Menu - Fixed to left side */
 .hamburger {
   display: none;
   flex-direction: column;
   cursor: pointer;
   gap: 5px;
-  margin-left: auto;
 }
 
 .hamburger span {
@@ -856,6 +855,7 @@ nav a:hover {
     height: 35px;
   }
   
+  /* Hamburger menu fixed to left side */
   .hamburger {
     display: flex;
     position: absolute;
@@ -870,7 +870,7 @@ nav a:hover {
     background: #fff;
     position: absolute;
     top: 100%;
-    right: 0;
+    left: 0;
     width: 220px;
     border-radius: 8px;
     box-shadow: 0 4px 12px rgba(0,0,0,0.1);
@@ -1212,4 +1212,41 @@ nav a, .footer-column ul li a, .faq-question, .cta-button,
     color: #000;
     background: #fff;
   }
+}
+
+/* Mobile: keep hamburger always on left for all sections */
+@media (max-width: 768px) {
+  header {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 5%;
+  }
+
+  .hamburger {
+    display: flex;
+    position: absolute;
+    left: 16px;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1202;
+  }
+
+  .logo {
+    margin: 0 auto;
+    text-align: center;
+    z-index: 1201;
+  }
+
+  .contact {
+    position: absolute;
+    right: 16px;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1201;
+  }
+
+  .nav-overlay { z-index: 1200; }
+  nav { z-index: 1199; }
 }
