@@ -1,37 +1,30 @@
-document.addEventListener("DOMContentLoaded", function () {
+
   const hamburger = document.querySelector(".hamburger");
   const nav = document.querySelector("nav");
-  const overlay = document.querySelector(".overlay");
-  const body = document.body;
+  const overlay = document.querySelector(".nav-overlay");
+  const navLinks = document.querySelectorAll("nav a");
 
-  if (hamburger && nav) {
-    // Toggle menu
-    hamburger.addEventListener("click", function (e) {
-      e.stopPropagation();
-      this.classList.toggle("active");
-      nav.classList.toggle("active");
-      if (overlay) overlay.classList.toggle("active");
-      body.classList.toggle("no-scroll");
-    });
+  // Toggle menu
+  hamburger.addEventListener("click", () => {
+    hamburger.classList.toggle("active");
+    nav.classList.toggle("active");
+    overlay.classList.toggle("active");
+  });
 
-    // Close when clicking outside
-    document.addEventListener("click", function (e) {
-      if (!nav.contains(e.target) && !hamburger.contains(e.target)) {
-        hamburger.classList.remove("active");
-        nav.classList.remove("active");
-        if (overlay) overlay.classList.remove("active");
-        body.classList.remove("no-scroll");
-      }
-    });
+  // Close when overlay is clicked
+  overlay.addEventListener("click", () => {
+    hamburger.classList.remove("active");
+    nav.classList.remove("active");
+    overlay.classList.remove("active");
+  });
 
-    // Close when clicking nav links
-    document.querySelectorAll("nav a").forEach((link) => {
-      link.addEventListener("click", () => {
-        hamburger.classList.remove("active");
-        nav.classList.remove("active");
-        if (overlay) overlay.classList.remove("active");
-        body.classList.remove("no-scroll");
-      });
+  // Close when any nav link is clicked
+  navLinks.forEach(link => {
+    link.addEventListener("click", () => {
+      hamburger.classList.remove("active");
+      nav.classList.remove("active");
+      overlay.classList.remove("active");
     });
-  }
-});
+  });
+
+
