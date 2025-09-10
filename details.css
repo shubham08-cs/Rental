@@ -1017,19 +1017,20 @@ nav a:hover {
 
 .footer-container {
   width: 100%;
-  max-width: 1200px;   /* 👈 matches vehicles-container */
-  margin: 0 auto;      /* 👈 center align */
-  padding: 0 20px;     /* 👈 same inner spacing */
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
   display: flex;
   justify-content: space-between;
-  flex-wrap: wrap;
+  align-items: flex-start;   /* 👈 align all columns top */
+  flex-wrap: nowrap;         /* 👈 keep in one line */
   gap: 40px;
 }
 
 
 .footer-column {
   flex: 1;
-  min-width: 250px; /* Increased min-width for wider columns */
+  min-width: 220px;          /* 👈 prevents breaking */
 }
 
 .footer-logo {
@@ -1210,12 +1211,14 @@ nav a:hover {
 }
 
 /* App Store & Play Store Badges */
+/* App Store & Play Store Badges - keep inline */
 .footer-apps {
   margin-top: 20px;
   display: flex;
   gap: 15px;
-  flex-wrap: wrap;
-  justify-content: center;
+  justify-content: flex-start; /* 👈 left aligned */
+  align-items: center;
+  flex-wrap: nowrap;           /* 👈 prevent wrapping */
 }
 
 .footer-apps img {
