@@ -101,32 +101,33 @@ nav a:hover {
   font-size: 14px;
 }
 
-/* Hamburger Menu */
-.hamburger {
-  display: none;
-  flex-direction: column;
-  cursor: pointer;
-  gap: 5px;
-  z-index: 1001;
-}
+ /* Hamburger Menu - Updated styling */
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+            gap: 5px;
+            z-index: 1001;
+        }
 
-.hamburger span {
-  width: 25px;
-  height: 3px;
-  background: #000;
-  border-radius: 3px;
-  transition: all 0.3s ease;
-}
+        .hamburger span {
+            width: 25px;
+            height: 3px;
+            background: #000;
+            border-radius: 3px;
+            transition: all 0.3s ease;
+        }
 
-.hamburger.active span:nth-child(1) {
-  transform: rotate(45deg) translate(5px, 5px);
-}
-.hamburger.active span:nth-child(2) {
-  opacity: 0;
-}
-.hamburger.active span:nth-child(3) {
-  transform: rotate(-45deg) translate(5px, -5px);
-}
+        .hamburger.active span:nth-child(1) {
+            transform: rotate(45deg) translate(5px, 5px);
+        }
+        .hamburger.active span:nth-child(2) {
+            opacity: 0;
+        }
+        .hamburger.active span:nth-child(3) {
+            transform: rotate(-45deg) translate(5px, -5px);
+        }
+
 
 /* Nav Overlay */
 .nav-overlay {
@@ -986,6 +987,7 @@ nav a:hover {
     margin: 15px 0;
     font-size: 16px;
     text-align: left;
+    border-bottom: 1px solid #eee;
   }
   
   /* Car Details */
@@ -1146,10 +1148,62 @@ nav a:hover {
   }
   
   .container {
-    max-width: 100%;-
+    max-width: 100%;
     padding: 0;
   }
 }
+/* Small devices (landscape phones, 576px - 768px) */
+@media (max-width: 768px) {
+  /* Header and Navigation */
+  header {
+    justify-content: center;
+    position: relative;
+  }
+
+  .hamburger {
+    display: flex;
+    position: absolute;
+    top: 50%;
+    left: 15px;
+    transform: translateY(-50%);
+  }
+
+  .logo {
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  nav {
+    position: fixed;
+    top: 0;
+    left: -100%;
+    width: 70%;
+    max-width: 280px;
+    height: 100%;
+    background: #fff;
+    flex-direction: column;
+    padding: 60px 20px;
+    transition: left 0.3s ease;
+    z-index: 1000;
+  }
+
+  nav.active {
+    left: 0;
+  }
+
+  nav a {
+    margin:0;
+    font-size: 16px;   /* ✅ match Vehicles page */
+    font-weight: 500;  /* ✅ keep same thickness */
+    text-align: left;
+    border-bottom: 1px solid #eee;
+      display: block;       /* make <a> take full width */
+  width: 100%;          /* stretch to menu width */
+  padding: 15px 0;      /* extra spacing for tap area */
+  text-align: center;
+  }
+}
+
 
 
 
