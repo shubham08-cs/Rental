@@ -859,13 +859,14 @@
         left: 0;
       }
 
-      nav a {
-        margin: 12px 0;
-        padding: 12px 0;
-        font-size: 18px;
-        border-bottom: 1px solid #f0f0f0;
-        width: 100%;
-      }
+       nav a {
+    padding: 15px 0;
+    margin: 0;
+    border-bottom: 1px solid #eee;  /* 👈 creates the line */
+    width: 100%;                    /* 👈 makes it span full width */
+    display: block;                 /* 👈 ensures the border spans full width */
+    text-align: center;             /* 👈 centers the text */
+}
 
       .contact {
         display: none;
