@@ -347,9 +347,34 @@
     text-align: center;             /* 👈 centers the text */
 }
 
-            .contact {
-                display: none !important;
-            }
+           .contact {
+  display: flex;
+  align-items: center;
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 1002; /* keep above nav + hamburger */
+}
+
+.call-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: #673ab7;
+  color: #fff;
+  font-size: 8px;
+  font-weight: 600;
+  padding: 8px 12px;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.call-btn i {
+  font-size: 8px;
+  color: #fff;
+}
 
             /* Header positioning for mobile */
             header {
@@ -643,26 +668,429 @@
             100% { transform: translateX(-50%); }
         }
         
-        .call-btn {
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            background: #673ab7;   /* same purple color */
-            color: #fff;
-            font-size: 14px;
-            font-weight: 600;
-            padding: 8px 16px;
-            border-radius: 6px;
-            text-decoration: none;
-            transition: background 0.3s ease, transform 0.2s ease;
-        }
+      /* Call Button */
+.call-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: #673ab7;
+  color: #fff;
+  font-size: 10px;
+  font-weight: 600;
+  padding: 8px 12px;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
 
-        .call-btn i {
-            font-size: 16px;
-            color: #fff;
-        }
+.call-btn i {
+  font-size: 8px;
+  color: #fff;
+}
 
-        .call-btn:hover {
-            background: #5a2ea0;   /* darker purple on hover */
-            transform: translateY(-2px);
-        }
+.call-btn:hover {
+  background: #5a2ea0;
+  transform: translateY(-2px);
+}
+/* ===== FOOTER ===== */
+.footer {
+  background: #fff;
+  padding: 80px 5% 50px;
+  border-top: 1px solid #ddd;
+  width: 100%;
+}
+
+.footer-container {
+  width: 100%;
+  max-width: 1200px;   /* 👈 matches vehicles-container */
+  margin: 0 auto;      /* 👈 center align */
+  padding: 0 20px;     /* 👈 same inner spacing */
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 40px;
+}
+
+
+.footer-column {
+  flex: 1;
+  min-width: 250px; /* Increased min-width for wider columns */
+}
+
+.footer-logo {
+  font-size: 24px; /* Slightly larger logo */
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.footer-logo i {
+  font-size: 28px;
+}
+
+.footer p {
+  font-size: 16px;
+  margin: 15px 0;
+  line-height: 1.7;
+}
+
+.footer-social {
+  display: flex;
+  gap: 15px;
+  margin-top: 15px;
+}
+
+.footer-social i {
+  font-size: 22px;
+  color: #444;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.footer-social i:hover {
+  color: #6c63ff;
+  transform: translateY(-3px);
+}
+
+.footer-info {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 15px;
+}
+
+.footer-info i {
+  font-size: 22px;
+  color: orange;
+}
+
+.footer-info p {
+  font-size: 16px;
+  margin: 0;
+}
+
+.footer-column h4 {
+  font-size: 20px;
+  margin-bottom: 20px;
+  color: #222;
+  position: relative;
+  padding-bottom: 10px;
+}
+
+.footer-column h4:after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 40px;
+  height: 3px;
+  background: #6c63ff;
+}
+
+.footer-column ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-column ul li {
+  margin-bottom: 12px;
+  transition: transform 0.3s ease;
+}
+
+.footer-column ul li:hover {
+  transform: translateX(5px);
+}
+
+.footer-column ul li a {
+  color: #555;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.footer-column ul li a:before {
+  content: "→";
+  color: #6c63ff;
+  font-weight: bold;
+  transition: transform 0.3s ease;
+}
+
+.footer-column ul li a:hover {
+  color: #6c63ff;
+  text-decoration: none;
+}
+
+.footer-column ul li a:hover:before {
+  transform: translateX(3px);
+}
+
+.footer-bottom {
+  text-align: center;
+  padding-top: 30px;
+  font-size: 14px;
+  color: #777;
+  border-top: 1px solid #eee;
+  margin-top: 50px;
+  width: 100%;
+}
+
+/* Extra Section */
+.footer-extra {
+  margin-top: 50px;
+  text-align: center;
+  width: 100%;
+}
+
+.footer-extra h4 {
+  font-size: 22px;
+  margin-bottom: 20px;
+  color: #222;
+}
+
+.footer-form {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  flex-wrap: wrap;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.footer-form input {
+  padding: 12px 18px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 16px;
+  min-width: 300px;
+  transition: all 0.3s ease;
+}
+
+.footer-form input:focus {
+  outline: none;
+  border-color: #6c63ff;
+  box-shadow: 0 0 0 3px rgba(108, 99, 255, 0.1);
+}
+
+.footer-form button {
+  background: #6c63ff;
+  color: #fff;
+  padding: 12px 25px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.footer-form button:hover {
+  background: #574fdd;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(108, 99, 255, 0.2);
+}
+
+/* App Store & Play Store Badges */
+.footer-apps {
+  margin-top: 20px;
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.footer-apps img {
+  height: 45px;
+  transition: all 0.3s ease;
+  border-radius: 10px;
+}
+
+.footer-apps img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* General footer text spacing */
+.footer p,
+.footer-info p,
+.footer-column ul li,
+.footer-column h4 {
+  line-height: 1.6;
+}
+
+/* Add spacing between blocks inside each column */
+.footer-column > *:not(:last-child) {
+  margin-bottom: 15px;
+}
+
+/* ===== FOOTER RESPONSIVE FIX ===== */
+
+/* For tablets & below */
+@media (max-width: 1200px) {
+  .footer-container {
+    max-width: 1000px;
+    gap: 50px;
+  }
+}
+
+@media (max-width: 1100px) {
+  .footer-container {
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+    gap: 40px;
+    max-width: 800px;
+  }
+
+  .footer-column {
+    width: 100%;
+    text-align: left;
+  }
+
+  .footer-logo,
+  .footer-info,
+  .footer-social,
+  .footer-apps {
+    justify-content: flex-start !important;
+    text-align: left;
+  }
+
+  /* Keep form centered */
+  .footer-form {
+    justify-content: center !important;
+    align-items: center !important;
+    text-align: center;
+    width: 100%;
+  }
+}
+
+/* For small phones */
+@media (max-width: 768px) {
+  .footer {
+    padding: 60px 20px 40px;
+  }
+  
+  .footer-container {
+    align-items: flex-start;
+    text-align: left;
+    gap: 35px;
+    padding: 0 20px;
+  }
+
+  /* Keep form centered on small screens too */
+  .footer-form {
+    flex-direction: column;
+    justify-content: center !important;
+    align-items: center !important;
+    text-align: center;
+    width: 100%;
+  }
+
+  .footer-form input {
+    min-width: auto;
+    width: 100%;
+    max-width: 300px;
+  }
+
+  .footer-apps {
+    justify-content: center;
+  }
+  
+  .footer-logo {
+    font-size: 22px;
+  }
+  
+  .footer p {
+    font-size: 15px;
+  }
+  
+  .footer-column h4 {
+    font-size: 18px;
+  }
+  
+  .footer-form input {
+    padding: 10px 15px;
+    font-size: 15px;
+  }
+  
+  .footer-form button {
+    padding: 10px 20px;
+    font-size: 14px;
+    min-height: 44px;
+  }
+  
+  .footer-apps img {
+    height: 40px;
+  }
+  
+  .footer-bottom {
+    margin-top: 30px;
+    padding-top: 25px;
+  }
+}
+
+@media (max-width: 576px) {
+  .footer {
+    padding: 50px 15px 30px;
+  }
+  
+  .footer-container {
+    gap: 30px;
+    padding: 0 15px;
+  }
+  
+  .footer-logo {
+    font-size: 20px;
+  }
+  
+  .footer p {
+    font-size: 14px;
+  }
+  
+  .footer-column h4 {
+    font-size: 16px;
+  }
+  
+  .footer-form input {
+    padding: 8px 12px;
+    font-size: 14px;
+  }
+  
+  .footer-form button {
+    padding: 8px 16px;
+    font-size: 13px;
+  }
+  
+  .footer-apps img {
+    height: 35px;
+  }
+  
+  .footer-bottom {
+    margin-top: 25px;
+    padding-top: 20px;
+    font-size: 13px;
+  }
+  
+  .footer-column ul li a {
+    min-height: 44px;
+    display: flex;
+    align-items: center;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
