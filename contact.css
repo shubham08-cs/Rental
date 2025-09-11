@@ -357,23 +357,6 @@
   z-index: 1002; /* keep above nav + hamburger */
 }
 
-.call-btn {
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-  background: #673ab7;
-  color: #fff;
-  font-size: 8px;
-  font-weight: 600;
-  padding: 8px 12px;
-  border-radius: 5px;
-  text-decoration: none;
-  transition: background 0.3s ease, transform 0.2s ease;
-}
-
-.call-btn i {
-  font-size: 8px;
-  color: #fff;
 }
 
             /* Header positioning for mobile */
@@ -388,7 +371,7 @@
                 text-align: center;
                 margin: 0;
             }
-        }
+        
 
         @media (max-width: 480px) {
             .footer-container {
@@ -675,7 +658,7 @@
   gap: 8px;
   background: #673ab7;
   color: #fff;
-  font-size: 10px;
+  font-size: 15px;
   font-weight: 600;
   padding: 8px 12px;
   border-radius: 5px;
@@ -684,7 +667,7 @@
 }
 
 .call-btn i {
-  font-size: 8px;
+  font-size: 15px;
   color: #fff;
 }
 
@@ -980,7 +963,24 @@
     gap: 35px;
     padding: 0 20px;
   }
+.call-btn{
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: #673ab7;
+  color: #fff;
+  font-size: 8px;
+  font-weight: 600;
+  padding: 8px 14px;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
 
+.call-btn i {
+  font-size: 8px;
+  color: #fff;
+}
   /* Keep form centered on small screens too */
   .footer-form {
     flex-direction: column;
