@@ -58,39 +58,67 @@
           </a>
       </div>
 
-      <div class="booking-form">
-        <h2>Book Your Car</h2>
-        <label>Car Type </label>
-        <select>
-          <option>Luxury</option>
-          <option>Sports</option>
-          <option>SUV</option>
-          <option>Sedan</option>
-          <option>Pick Up</option>
+     <div class="booking-form">
+  <h2>Book Your Car</h2>
+  <form action="https://api.web3forms.com/submit" method="POST">
+    <input type="hidden" name="access_key" value="aada718c-fc1c-491d-9bc3-15921f31fbff">
 
-        </select>
-        <label>Place Of Rental</label>
-        <select>
-          <option>Mumbai</option>
-          <option>Pune</option>
-          <option>Kolhapur</option>
-        </select>
-        <label>Place Of Return</label>
-        <select>
-          <option>Dropping Point 1</option>
-          <option>Dropping Point 2</option>
-          <option>Dropping Point 3</option>
-        </select>
-        <label>
-          Rental Date
-          <input type="date" name="rental-date">
-        </label>
-        <label>
-          Return Date
-          <input type="date" name="return-date">
-        </label>
-        <button class="btn-book">Book Now</button>
-      </div>
+    <label>Car Type </label>
+    <select name="car_type" required>
+      <option value="Luxury">Luxury</option>
+      <option value="Sports">Sports</option>
+      <option value="SUV">SUV</option>
+      <option value="Sedan">Sedan</option>
+      <option value="Pick Up">Pick Up</option>
+    </select>
+
+    <label>Place Of Rental</label>
+    <select name="rental_place" required>
+      <option value="Mumbai">Mumbai</option>
+      <option value="Pune">Pune</option>
+      <option value="Kolhapur">Kolhapur</option>
+    </select>
+
+    <label>Place Of Return</label>
+    <select name="return_place" required>
+      <option value="Dropping Point 1">Dropping Point 1</option>
+      <option value="Dropping Point 2">Dropping Point 2</option>
+      <option value="Dropping Point 3">Dropping Point 3</option>
+    </select>
+
+    <label>
+      Rental Date
+      <input type="date" name="rental_date" required>
+    </label>
+
+    <label>
+      Return Date
+      <input type="date" name="return_date" required>
+    </label>
+
+    <!-- Extra user info -->
+    <label>
+      Your Name
+      <input type="text" name="name" required>
+    </label>
+
+    <label>
+      Email
+      <input type="email" name="email" required>
+    </label>
+
+    <label>
+      Phone
+      <input type="tel" name="phone" required>
+    </label>
+
+    <!-- Optional redirect to thank you page -->
+    <!-- <input type="hidden" name="redirect" value="thankyou.html"> -->
+
+    <button class="btn-book" type="submit">Book Now</button>
+  </form>
+</div>
+
     </div>
 
    
