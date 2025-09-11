@@ -131,19 +131,19 @@ nav a:hover {
 .call-btn {
   display: inline-flex;
   align-items: center;
-  gap: 8px;
+  gap: 10px;
   background: #673ab7;
   color: #fff;
-  font-size: 8px;
+  font-size: 12px;
   font-weight: 600;
-  padding: 8px 8px;
+  padding: 10px 16px;
   border-radius: 5px;
   text-decoration: none;
   transition: background 0.3s ease, transform 0.2s ease;
 }
 
 .call-btn i {
-  font-size:8px;
+  font-size:15px;
   color: #fff;
 }
 
@@ -840,24 +840,23 @@ nav a:hover {
         z-index: 1002;
     }
 
-    .call-btn {
-        display: inline-flex;
+ .call-btn {
+   display: inline-flex;
         align-items: center;
-        gap: 6px;
+        gap: 10px;
         background: #673ab7;
         color: #fff;
         font-size: 8px;
         font-weight: 600;
-        padding: 8px 12px;
+        padding: 8px 14px;
         border-radius: 5px;
         text-decoration: none;
         transition: background 0.3s ease, transform 0.2s ease;
-    }
+  }
 
-    .call-btn i {
-        font-size: 8px;
-        color: #fff;
-    }
+  .call-btn i {
+    font-size: 10px;
+  }
     
     .vehicles-grid {
         grid-template-columns: 1fr;
