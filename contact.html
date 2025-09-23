@@ -2,321 +2,314 @@
 <html lang="en">
 
 <head>
-  
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>KeyGo</title>
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
-
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
   <link rel="stylesheet" href="contact.css">
-  <script src="vehicles.js"></script>
-
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
+
 <body>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
 
   <!-- Navbar -->
-   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
-<header>
-<div class="logo">
-  <img src="images/logo.jfif" alt="KeyGo Logo" class="logo-img">
-  <span>KeyGo</span>
-</div>
-
-  <nav>
-    <a href="index.html">Home</a>
-    <a href="vehicles.html">Vehicles</a>
-    <a href="details.html">Details</a>
-    <a href="about.html">About Us</a>
-     <a href="contact.html">Contact Us</a>
-  </nav>
-
-   <div class="contact">
-  <a href="tel:+919000000000" class="call-btn">
-    <i class="fas fa-phone-alt"></i> Call Us
-  </a>
-</div>
-
-  <!-- Hamburger Button -->
-  <div class="hamburger" id="hamburger">
-    <span></span>
-    <span></span>
-    <span></span>
-  </div>
-</header>
-<section class="page-header">
-  <h1>Contact Us</h1>
-  <p><a href="index.html">Home</a> / Contact Us</p>
-</section>
-<section class="contact-section">
-  <div class="contact-container">
-    <!-- Booking Form -->
-    <div class="booking-form">
-      <h3>Book your car</h3>
-     <form action="connect2.php" method="POST">
-  <input type="hidden" name="access_key" value="aada718c-fc1c-491d-9bc3-15921f31fbff">
-
-  <label>Car Type </label>
-<select name="car_type" required>
-  <option value="Luxury">Luxury</option>
-  <option value="Sports">Sports</option>
-  <option value="SUV">SUV</option>
-  <option value="Sedan">Sedan</option>
-  <option value="Pick Up">Pick Up</option>
-</select>
-
-<label>Car Name</label>
-<select name="car_name" required> <!-- ✅ FIXED -->
-  <option value="AUDI R8">AUDI R8</option>
-  <option value="McLaren 720s">McLaren 720s</option>
-  <option value="Hyundai Venue">Hyundai Venue</option>
-  <option value="Hilux Revo">Hilux Revo</option>
-  <option value="Toyoto Hilux">Toyoto Hilux</option>
-  <option value="Toyota Camry">Toyota Camry</option>
-  <option value="Rolls - Royce Phantom">Rolls - Royce Phantom</option>
-  <option value="G- Wagon">G- Wagon</option>
-  <option value="Chevrolet Suburban">Chevrolet Suburban</option>
-  <option value="Ford F-150 Raptor">Ford F-150 Raptor</option>
-  <option value="Mahindra Scorpio Black N">Mahindra Scorpio Black N</option>
-  <option value="Hyundai Elantra">Hyundai Elantra</option>
-  <option value="Nissan Rogue">Nissan Rogue</option>
-  <option value="Porsche 911 GT3">Porsche 911 GT3</option>
-  <option value="Polo GT">Polo GT</option>
-  <option value="Mercedes AMG GT C">Mercedes AMG GT C</option>
-</select>
-
-
-  <label>Place Of Rental</label>
-  <select name="rental_place" required>
-    <option value="Mumbai">Mumbai</option>
-    <option value="Pune">Pune</option>
-    <option value="Kolhapur">Kolhapur</option>
-  </select>
-
-  <label>Place Of Return</label>
-  <select name="return_place" required>
-    <option value="Dropping Point 1">Dropping Point 1</option>
-    <option value="Dropping Point 2">Dropping Point 2</option>
-    <option value="Dropping Point 3">Dropping Point 3</option>
-  </select>
-
-  <label>
-    Rental Date
-    <input type="date" name="rental_date" required>
-  </label>
-
-  <label>
-    Return Date
-    <input type="date" name="return_date" required>
-  </label>
-
-  <!-- User info fields (needed so you can contact them back) -->
-  <label>
-    Your Name
-    <input type="text" name="name" required>
-  </label>
-
-  <label>
-    Email
-    <input type="email" name="email" required>
-  </label>
-
-  <label>
-    Phone
-    <input type="tel" name="phone" required>
-  </label>
-
-  <button class="btn-book" type="submit">Book Now</button>
-</form>
-
-    </div>
-
-    <!-- Image -->
-    <div class="contact-image">
-      <img src="images/car-rent.jfif" alt="Contact image">
-    </div>
-  </div>
-
-  <!-- Contact Info Row -->
-  <div class="contact-info">
-    <div class="info-item">
-      <div class="icon"><i class="fas fa-map-marker-alt"></i></div>
-      <div>
-        <span>Address</span>
-        <strong>Oxford Ave. Cary, NC 27511</strong>
-      </div>
-    </div>
-
-    <div class="info-item">
-      <div class="icon"><i class="fas fa-envelope"></i></div>
-      <div>
-        <span>Email</span>
-        <strong>nwiger@yahoo.com</strong>
-      </div>
-    </div>
-
-    <div class="info-item">
-      <div class="icon"><i class="fas fa-phone-alt"></i></div>
-      <div>
-        <span>Phone</span>
-        <strong>+537 547-6401</strong>
-      </div>
-    </div>
-
-    <div class="info-item">
-      <div class="icon"><i class="fas fa-clock"></i></div>
-      <div>
-        <span>Opening hours</span>
-        <strong>Sun–Mon: 10am - 10pm</strong>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="blog-section">
-  <h2 class="blog-title">Latest blog posts &amp; news</h2>
-
-  <div class="blog-container">
-    <div class="blog-card">
-      <img src="images/blog1 (1).jfif" alt="Blog post">
-      <h3>How To Choose The Right Car</h3>
-      <p>News / 12April 2024</p>
-    </div>
-
-    <div class="blog-card">
-      <img src="images/blog1 (2).jfif" alt="Blog post">
-      <h3>Which plan is right for me?</h3>
-      <p>News / 12April 2024</p>
-    </div>
-
-    <div class="blog-card">
-      <img src="images/blog1 (3).jfif" alt="Blog post">
-      <h3>Enjoy Speed, Choice &amp; Total Control</h3>
-      <p>News / 12April 2024</p>
-    </div>
-  </div>
-</section>
-
- <!-- Logo Printing  -->
-
-  <!-- Logo Printing -->
-<section class="brands-wrap">
-  <div class="brands-slider">
-    <div class="brands-track">
-      <div class="brand"><img src="https://cdn.simpleicons.org/toyota/000000" alt="Toyota"></div>
-      <div class="brand"><img src="https://cdn.simpleicons.org/ford/000000" alt="Ford"></div>
-      <div class="brand"><img src="https://cdn.simpleicons.org/rollsroyce/000000" alt="Rolls-Royce"></div>
-      <div class="brand"><img src="https://cdn.simpleicons.org/hyundai/000000" alt="Hyundai"></div>
-      <div class="brand"><img src="https://cdn.simpleicons.org/bmw/000000" alt="BMW"></div>
-      <div class="brand"><img src="https://cdn.simpleicons.org/audi/000000" alt="Audi"></div>
-      <div class="brand"><img src="https://cdn.simpleicons.org/lamborghini/000000" alt="Lamborghini"></div>
-      <div class="brand"><img src="https://cdn.simpleicons.org/porsche/000000" alt="Porsche"></div>
-
-      <!-- Duplicate logos for smooth infinite loop -->
-      <div class="brand"><img src="https://cdn.simpleicons.org/toyota/000000" alt="Toyota"></div>
-      <div class="brand"><img src="https://cdn.simpleicons.org/ford/000000" alt="Ford"></div>
-      <div class="brand"><img src="https://cdn.simpleicons.org/rollsroyce/000000" alt="Rolls-Royce"></div>
-      <div class="brand"><img src="https://cdn.simpleicons.org/hyundai/000000" alt="Hyundai"></div>
-      <div class="brand"><img src="https://cdn.simpleicons.org/bmw/000000" alt="BMW"></div>
-      <div class="brand"><img src="https://cdn.simpleicons.org/audi/000000" alt="Audi"></div>
-      <div class="brand"><img src="https://cdn.simpleicons.org/lamborghini/000000" alt="Lamborghini"></div>
-      <div class="brand"><img src="https://cdn.simpleicons.org/porsche/000000" alt="Porsche"></div>
-    </div>
-  </div>
-</section>
-
-
-<!-- ===== FOOTER ===== -->
-<footer class="footer">
-  <div class="footer-container">
-
-    <!-- Logo + About -->
-    <div class="footer-column">
+  <header>
     <div class="logo">
-  <img src="images/logo.jfif" alt="KeyGo Logo" class="logo-img">
-  <span>KeyGo</span>
-</div>
-      <p>Your trusted car rental service, providing comfort, safety, and affordability.</p>
-      <div class="footer-social">
-        <i class="fab fa-facebook-f"></i>
-        <i class="fab fa-twitter"></i>
-        <i class="fab fa-instagram"></i>
-        <i class="fab fa-linkedin-in"></i>
+      <img src="images/logo.jfif" alt="KeyGo Logo" class="logo-img">
+      <span>KeyGo</span>
+    </div>
+
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="vehicles.html">Vehicles</a>
+      <a href="details.html">Details</a>
+      <a href="about.html">About Us</a>
+      <a href="contact.html">Contact Us</a>
+    </nav>
+
+    <div class="contact">
+      <a href="tel:+919000000000" class="call-btn">
+        <i class="fas fa-phone-alt"></i> Call Us
+      </a>
+    </div>
+
+    <!-- Hamburger Button -->
+    <div class="hamburger" id="hamburger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </header>
+
+  <section class="page-header">
+    <h1>Contact Us</h1>
+    <p><a href="index.html">Home</a> / Contact Us</p>
+  </section>
+
+  <section class="contact-section">
+    <div class="contact-container">
+      <!-- Booking Form -->
+      <div class="booking-form">
+        <h3>Book your car</h3>
+        <form action="connect2.php" method="POST">
+          <input type="hidden" name="access_key" value="aada718c-fc1c-491d-9bc3-15921f31fbff">
+
+          <label>Car Type</label>
+          <select id="car_type" name="car_type" required>
+            <option value="">-- Select Car Type --</option>
+            <option value="Luxury">Luxury</option>
+            <option value="Sports">Sports</option>
+            <option value="SUV">SUV</option>
+            <option value="Sedan">Sedan</option>
+            <option value="Pick Up">Pick Up</option>
+          </select>
+
+          <label>Car Name</label>
+          <select id="car_name" name="car_name" required>
+            <option value="">-- Select Car Name --</option>
+          </select>
+
+          <label>Place Of Rental</label>
+          <select name="rental_place" required>
+            <option value="Mumbai">Mumbai</option>
+            <option value="Pune">Pune</option>
+            <option value="Kolhapur">Kolhapur</option>
+          </select>
+
+          <label>Place Of Return</label>
+          <select name="return_place" required>
+            <option value="Dropping Point 1">Dropping Point 1</option>
+            <option value="Dropping Point 2">Dropping Point 2</option>
+            <option value="Dropping Point 3">Dropping Point 3</option>
+          </select>
+
+          <label>Rental Date
+            <input type="date" name="rental_date" required>
+          </label>
+
+          <label>Return Date
+            <input type="date" name="return_date" required>
+          </label>
+
+          <label>Your Name
+            <input type="text" name="name" required>
+          </label>
+
+          <label>Email
+            <input type="email" name="email" required>
+          </label>
+
+          <label>Phone
+            <input type="tel" name="phone" required>
+          </label>
+
+          <button class="btn-book" type="submit">Book Now</button>
+        </form>
       </div>
 
-      <!-- App Download Buttons -->
-      <div class="footer-apps">
-        <a href="https://play.google.com/"><img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg" alt="Google Play"></a>
-        <a href="https://www.apple.com/in/app-store/"><img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" alt="App Store"></a>
+      <!-- Image -->
+      <div class="contact-image">
+        <img src="images/car-rent.jfif" alt="Contact image">
       </div>
     </div>
 
-    <!-- Contact Info -->
-    <div class="footer-column">
-      <h4>Contact Us</h4>
-      <div class="footer-info">
-        <i class="fas fa-envelope"></i>
-        <p>support@keygo.com</p>
+    <!-- Contact Info Row -->
+    <div class="contact-info">
+      <div class="info-item">
+        <div class="icon"><i class="fas fa-map-marker-alt"></i></div>
+        <div>
+          <span>Address</span>
+          <strong>Oxford Ave. Cary, NC 27511</strong>
+        </div>
       </div>
-      <div class="footer-info">
-        <i class="fas fa-phone"></i>
-        <p>+91 9989895589</p>
+
+      <div class="info-item">
+        <div class="icon"><i class="fas fa-envelope"></i></div>
+        <div>
+          <span>Email</span>
+          <strong>nwiger@yahoo.com</strong>
+        </div>
       </div>
-      <div class="footer-info">
-        <i class="fas fa-map-marker-alt"></i>
-        <p>India</p>
+
+      <div class="info-item">
+        <div class="icon"><i class="fas fa-phone-alt"></i></div>
+        <div>
+          <span>Phone</span>
+          <strong>+537 547-6401</strong>
+        </div>
+      </div>
+
+      <div class="info-item">
+        <div class="icon"><i class="fas fa-clock"></i></div>
+        <div>
+          <span>Opening hours</span>
+          <strong>Sun–Mon: 10am - 10pm</strong>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Blog Section -->
+  <section class="blog-section">
+    <h2 class="blog-title">Latest blog posts &amp; news</h2>
+    <div class="blog-container">
+      <div class="blog-card">
+        <img src="images/blog1 (1).jfif" alt="Blog post">
+        <h3>How To Choose The Right Car</h3>
+        <p>News / 12April 2024</p>
+      </div>
+      <div class="blog-card">
+        <img src="images/blog1 (2).jfif" alt="Blog post">
+        <h3>Which plan is right for me?</h3>
+        <p>News / 12April 2024</p>
+      </div>
+      <div class="blog-card">
+        <img src="images/blog1 (3).jfif" alt="Blog post">
+        <h3>Enjoy Speed, Choice &amp; Total Control</h3>
+        <p>News / 12April 2024</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Brand Logos Section -->
+  <section class="brands-wrap">
+    <div class="brands-slider">
+      <div class="brands-track">
+        <div class="brand"><img src="https://cdn.simpleicons.org/toyota/000000" alt="Toyota"></div>
+        <div class="brand"><img src="https://cdn.simpleicons.org/ford/000000" alt="Ford"></div>
+        <div class="brand"><img src="https://cdn.simpleicons.org/rollsroyce/000000" alt="Rolls-Royce"></div>
+        <div class="brand"><img src="https://cdn.simpleicons.org/hyundai/000000" alt="Hyundai"></div>
+        <div class="brand"><img src="https://cdn.simpleicons.org/bmw/000000" alt="BMW"></div>
+        <div class="brand"><img src="https://cdn.simpleicons.org/audi/000000" alt="Audi"></div>
+        <div class="brand"><img src="https://cdn.simpleicons.org/lamborghini/000000" alt="Lamborghini"></div>
+        <div class="brand"><img src="https://cdn.simpleicons.org/porsche/000000" alt="Porsche"></div>
+        <!-- Duplicate logos for smooth infinite loop -->
+        <div class="brand"><img src="https://cdn.simpleicons.org/toyota/000000" alt="Toyota"></div>
+        <div class="brand"><img src="https://cdn.simpleicons.org/ford/000000" alt="Ford"></div>
+        <div class="brand"><img src="https://cdn.simpleicons.org/rollsroyce/000000" alt="Rolls-Royce"></div>
+        <div class="brand"><img src="https://cdn.simpleicons.org/hyundai/000000" alt="Hyundai"></div>
+        <div class="brand"><img src="https://cdn.simpleicons.org/bmw/000000" alt="BMW"></div>
+        <div class="brand"><img src="https://cdn.simpleicons.org/audi/000000" alt="Audi"></div>
+        <div class="brand"><img src="https://cdn.simpleicons.org/lamborghini/000000" alt="Lamborghini"></div>
+        <div class="brand"><img src="https://cdn.simpleicons.org/porsche/000000" alt="Porsche"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-column">
+        <div class="logo">
+          <img src="images/logo.jfif" alt="KeyGo Logo" class="logo-img">
+          <span>KeyGo</span>
+        </div>
+        <p>Your trusted car rental service, providing comfort, safety, and affordability.</p>
+        <div class="footer-social">
+          <i class="fab fa-facebook-f"></i>
+          <i class="fab fa-twitter"></i>
+          <i class="fab fa-instagram"></i>
+          <i class="fab fa-linkedin-in"></i>
+        </div>
+        <div class="footer-apps">
+          <a href="https://play.google.com/"><img
+              src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg"
+              alt="Google Play"></a>
+          <a href="https://www.apple.com/in/app-store/"><img
+              src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg"
+              alt="App Store"></a>
+        </div>
+      </div>
+
+      <div class="footer-column">
+        <h4>Contact Us</h4>
+        <div class="footer-info">
+          <i class="fas fa-envelope"></i>
+          <p>support@keygo.com</p>
+        </div>
+        <div class="footer-info">
+          <i class="fas fa-phone"></i>
+          <p>+91 9989895589</p>
+        </div>
+        <div class="footer-info">
+          <i class="fas fa-map-marker-alt"></i>
+          <p>India</p>
+        </div>
+      </div>
+
+      <div class="footer-column">
+        <h4>Useful Links</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="vehicles.html">Vehicels</a></li>
+          <li><a href="details.html">Details</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-column">
+        <h4>Vehicles</h4>
+        <ul>
+          <li><a href="vehicles.html">Sedan Cars</a></li>
+          <li><a href="vehicles.html">Sports Cars</a></li>
+          <li><a href="vehicles.html">Luxury Cars</a></li>
+          <li><a href="vehicles.html">Pick Up Cars</a></li>
+        </ul>
       </div>
     </div>
 
-    <!-- Useful Links -->
-    <div class="footer-column">
-      <h4>Useful Links</h4>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="vehicles.html">Vehicels</a></li>
-        <li><a href="details.html">Details</a></li>
-      </ul>
+    <div class="footer-extra">
+      <h4>Subscribe to Our Newsletter</h4>
+      <form class="footer-form">
+        <input type="email" placeholder="Enter your email" required>
+        <button type="submit">Subscribe</button>
+      </form>
     </div>
 
-    <!-- Vehicles Section -->
-    <div class="footer-column">
-      <h4>Vehicles</h4>
-      <ul>
-        <li><a href="vehicles.html">Sedan Cars</a></li>
-        <li><a href="vehicles.html">Sports Cars</a></li>
-        <li><a href="vehicles.html">Luxury Cars</a></li>
-        <li><a href="vehicles.html">Pick Up Cars</a></li>
-      </ul>
+    <div class="footer-bottom">
+      © 2025 KeyGo. All Rights Reserved. By Shubham & Parth
     </div>
+  </footer>
 
-  </div>
+  <!-- Scripts -->
+  <script>
+    const hamburger = document.querySelector(".hamburger");
+    const nav = document.querySelector("nav");
 
-  <!-- Extra Section Below -->
-  <div class="footer-extra">
-    <h4>Subscribe to Our Newsletter</h4>
-    <form class="footer-form">
-      <input type="email" placeholder="Enter your email" required>
-      <button type="submit">Subscribe</button>
-    </form>
-  </div>
+    hamburger.addEventListener("click", () => {
+      hamburger.classList.toggle("active");
+      nav.classList.toggle("active");
+    });
 
-  <!-- Bottom -->
-  <div class="footer-bottom">
-    © 2025 KeyGo. All Rights Reserved. By Shubham & Parth
-  </div>
-</footer>
-<script>
-  const hamburger = document.querySelector(".hamburger");
-  const nav = document.querySelector("nav");
+    // Car Type → Car Name dynamic script
+    const carOptions = {
+      "Luxury": ["Rolls - Royce Phantom", "Mercedes AMG GT C", "Audi R8", "G- Wagon"],
+      "Sports": ["McLaren 720s", "Porsche 911 GT3", "Polo GT", "BMW M5"],
+      "SUV": ["Hyundai Venue", "Chevrolet Suburban", "Nissan Rogue", "Mahindra Scorpio Black N", "G- Wagon"],
+      "Sedan": ["Toyota Camry", "Hyundai Elantra", "Ford"],
+      "Pick Up": ["Hilux Revo", "Toyoto Hilux", "Ford F-150 Raptor"]
+    };
 
-  hamburger.addEventListener("click", () => {
-    hamburger.classList.toggle("active");
-    nav.classList.toggle("active");
-  });
-</script>
+    const carTypeSelect = document.getElementById("car_type");
+    const carNameSelect = document.getElementById("car_name");
 
+    carTypeSelect.addEventListener("change", function () {
+      const selectedType = this.value;
+      carNameSelect.innerHTML = '<option value="">-- Select Car Name --</option>';
+      if (selectedType && carOptions[selectedType]) {
+        carOptions[selectedType].forEach(car => {
+          const option = document.createElement("option");
+          option.value = car;
+          option.textContent = car;
+          carNameSelect.appendChild(option);
+        });
+      }
+    });
+  </script>
 </body>
 
 </html>
